@@ -1,0 +1,56 @@
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+
+.fa-linkedin {
+    background: white;
+    color: #007bb5;
+    font-size: 3em;
+  }
+
+.fa-github {
+    background: white;
+    color: black;
+    font-size: 3em;
+  }
+
+.fa-gamepad {
+    background: white;
+    color: black;
+  }
+
+.fa-keyboard {
+    background: white;
+    color: black;
+  }
+
+.v4-tease {
+    display: block;
+    padding: 15px 20px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background-color: #0275d8;
+  }
+
+.text-muted {
+  font-size: .75em;
+}
+
+.react-screenshots img {
+  width: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.web-screenshots img {
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
