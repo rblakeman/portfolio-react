@@ -1,51 +1,81 @@
-import React, { Component } from 'react';
-
+import React, { Component } from 'react'
+import Paper from '@material-ui/core/Paper'
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    margin: 16,
+    padding: 16,
+    backgroundColor: '#f7fafd'
+  },
+  text: {
+    margin: 15,
+    maxWidth: 500
+  },
+  title: {
+    fontSize: '50px',
+    color: '#5a5a5a',
+    fontWeight: 400,
+    lineHeight: 1,
+    marginBottom: 15
+  },
+  date: {
+    fontSize: '38px',
+    color: '#6c757d',
+    fontWeight: 400,
+    lineHeight: 1,
+    letterSpacing: '-0.05rem',
+    marginTop: 15,
+    marginBottom: 20
+  },
+  description: {
+    fontSize: '1.25rem',
+    color: '#5a5a5a',
+    fontWeight: 300,
+    lineHeight: 1.5,
+    marginTop: 10
+  },
+  picture: {
+    marginLeft: 15
+  }
+}
 
 export default class Event extends Component {
+  renderText() {
+    return (
+      <div style={styles.text}>
+        <div style={styles.title}>{this.props.title}</div>
+        <div style={styles.date}>{this.props.date}</div>
+        <div style={styles.description}>{this.props.contents}</div>
+      </div>
+    )
+  }
 
-    renderEvent() {
-        const {orientation} = this.props
-        if (orientation === "left")
-        {
-            return (
-                <div class="row featurette">
-                    <div class="col-md-7">
-                        <h2 class="featurette-heading">{this.props.title}
-                            <br />
-                            <span class="text-muted">{this.props.date}</span>
-                        </h2>
-                        <p class="lead">{this.props.contents}</p>
-                    </div>
-                    <div class="col-md-5">
-                        <img class="featurette-image img-fluid mx-auto" src={this.props.image} alt="Graduation Image" />
-                    </div>
-                </div>
-            )
-        }
-        else if (orientation === "right")
-        {
-            return (
-                <div class="row featurette">
-                    <div class="col-md-7 order-md-2">
-                        <h2 class="featurette-heading">{this.props.title}
-                            <br />
-                            <span class="text-muted">{this.props.date}</span>
-                        </h2>
-                        <p class="lead">{this.props.contents}</p>
-                    </div>
-                    <div class="col-md-5 order-md-1">
-                        <img class="featurette-image img-fluid mx-auto" src={this.props.image} alt="Graduation Image" />
-                    </div>
-                </div>
-            )
-        }
-    }
+  renderPicture() {
+    return (
+      <div style={styles.picture}>
+        <img src={this.props.image} alt="Event Image" />
+      </div>
+    )
+  }
 
-    render() {
-        return (
-            <div>
-                {this.renderEvent()}
-            </div>
-        )
+  render() {
+    if (this.props.orientation === 'flipped') {
+      return (
+        <Paper style={styles.container}>
+          {this.renderPicture()}
+          {this.renderText()}
+        </Paper>
+      )
+    } else {
+      return (
+        <Paper style={styles.container}>
+          {this.renderText()}
+          {this.renderPicture()}
+        </Paper>
+      )
     }
+  }
 }

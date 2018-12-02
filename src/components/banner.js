@@ -1,26 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+const styles = {
+  box: {
+    backgroundColor: '#e9ecef',
+    padding: '4rem 2rem',
+    textAlign: 'center',
+    fontSize: '2.5rem',
+    fontWeight: 500,
+    color: '#5a5a5a',
+    marginBottom: 50
+  }
+}
 
 export default class Banner extends Component {
-    renderBanner() {
-        return (
-            <section class="jumbotron text-center">
-                <div class="container">
-                    <h1 class="jumbotron-heading">{this.props.title}</h1>
-                    <p class="lead text-muted">{this.props.subtitle}</p>
-                    <p>
-                    {/* <!--<a href="#" class="btn btn-primary my-2">Main call to action</a>--> */}
-                    {/* <!--<a href="https://sites.google.com/csumb.edu/vxgi" class="btn btn-secondary my-2">Original Website</a>--> */}
-                    </p>
-                </div>
-            </section>
-        )
-    }
+  renderBanner() {
+    return (
+      <div>
+        <h1>{this.props.title}</h1>
+        <p>{this.props.subtitle}</p>
+        <p>
+          {/* <a href="#">Primary Button</a> */}
+          {/* <a href="#">Secondary Button</a> */}
+        </p>
+      </div>
+    )
+  }
 
-    render() {
-        return (
-            <div>
-                {this.renderBanner()}
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div style={styles.box}>
+        {this.props.text}
+        {this.props.description}
+      </div>
+    )
+  }
 }

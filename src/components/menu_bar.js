@@ -1,37 +1,45 @@
-import React from 'react';
+import React from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import AppBar from '@material-ui/core/AppBar'
+import MenuItem from '@material-ui/core/MenuItem'
+const styles = {
+  appBar: {
+    display: 'flex',
+    flexDirection: 'row',
+    backgroundColor: '#343a40',
+    justifyContent: 'space-between'
+  },
+  left: {
+    display: 'flex',
+    flexDirection: 'row'
+  },
+  linkText: { color: '#ddd', textDecoration: 'none' },
+  nameText: { color: '#fff', textDecoration: 'none', fontSize: 'larger' }
+}
 
-export default(props) => {
-    return (
-        <header>
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a class="navbar-brand" href="index.html">Ryan Blakeman</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Software</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Games</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Research</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav mr-right">
-                        <a class="nav-link" href="#">Resume</a>
-                    </ul>
-                </div>
-                
-            </nav>
-        </header>
-    )
+export default (props) => {
+  return (
+    <AppBar style={styles.appBar}>
+      <div style={styles.left}>
+        <Link style={{ textDecoration: 'none' }} to="/">
+          <MenuItem style={styles.nameText}>Ryan Blakeman</MenuItem>
+        </Link>
+        <Link style={styles.linkText} to="/">
+          <MenuItem style={styles.linkText}>Home</MenuItem>
+        </Link>
+        <Link style={styles.linkText} to="/software/">
+          <MenuItem style={styles.linkText}>Software</MenuItem>
+        </Link>
+        <Link style={styles.linkText} to="/games/">
+          <MenuItem style={styles.linkText}>Games</MenuItem>
+        </Link>
+        <Link style={styles.linkText} to="/research/">
+          <MenuItem style={styles.linkText}>Research</MenuItem>
+        </Link>
+      </div>
+      <Link style={styles.linkText} to="/resume/">
+        <MenuItem style={styles.linkText}>Resume</MenuItem>
+      </Link>
+    </AppBar>
+  )
 }

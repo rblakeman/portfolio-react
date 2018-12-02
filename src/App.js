@@ -1,31 +1,43 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-import HeaderLinks from './components/header'
-import MenuBar from './components/menu_bar';
-import NotificationBar from './components/notification_bar';
-import Footer from './components/footer';
-import Content from './containers/content';
+import MenuBar from './components/menu_bar'
+import NotificationBar from './components/notification_bar'
+import Footer from './components/footer'
+
+import Home from './containers/home'
+import Software from './containers/software'
+import Games from './containers/games'
+import Research from './containers/research'
+import Resume from './containers/resume'
+
+const styles = {
+  root: {
+    fontFamily:
+      '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  }
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <HeaderLinks />
-        <body>
-          <main role="main">
-            <NotificationBar />
-            <MenuBar />
-            <Content page="home"/>
-            <Footer />
-          </main>
-        </body>
-      </div>
-    );
+      <Router style={styles.root} className="App">
+        <div>
+          <NotificationBar />
+          <MenuBar />
+          <Route path="/" exact component={Home} />
+          <Route path="/software/" component={Software} />
+          <Route path="/games/" component={Games} />
+          <Route path="/research/" component={Research} />
+          <Route path="/resume/" component={Resume} />
+          <Footer />
+        </div>
+      </Router>
+    )
   }
 }
 
-export default App;
-
+export default App
 
 /*
 App
