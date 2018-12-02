@@ -1,7 +1,7 @@
 {
   "main.css": "/portfolio-react/static/css/main.e674413b.chunk.css",
-  "main.js": "/portfolio-react/static/js/main.13fc9c94.chunk.js",
-  "main.js.map": "/portfolio-react/static/js/main.13fc9c94.chunk.js.map",
+  "main.js": "/portfolio-react/static/js/main.2958807e.chunk.js",
+  "main.js.map": "/portfolio-react/static/js/main.2958807e.chunk.js.map",
   "static/js/1.665b32ff.chunk.js": "/portfolio-react/static/js/1.665b32ff.chunk.js",
   "static/js/1.665b32ff.chunk.js.map": "/portfolio-react/static/js/1.665b32ff.chunk.js.map",
   "runtime~main.js": "/portfolio-react/static/js/runtime~main.9338e8a0.js",
@@ -17,6 +17,6 @@
   "static/media/csumb_logo.png": "/portfolio-react/static/media/csumb_logo.d94303e7.png",
   "static/css/main.e674413b.chunk.css.map": "/portfolio-react/static/css/main.e674413b.chunk.css.map",
   "index.html": "/portfolio-react/index.html",
-  "precache-manifest.f8c67247acad3a1bfb7c87177a4879bf.js": "/portfolio-react/precache-manifest.f8c67247acad3a1bfb7c87177a4879bf.js",
+  "precache-manifest.15cd0dd2ebdfca7f04780e7ecbd0ce40.js": "/portfolio-react/precache-manifest.15cd0dd2ebdfca7f04780e7ecbd0ce40.js",
   "service-worker.js": "/portfolio-react/service-worker.js"
 }
