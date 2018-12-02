@@ -25,11 +25,12 @@ class App extends Component {
         <div>
           <NotificationBar />
           <MenuBar />
-          <Route path="/" exact component={Home} />
-          <Route path="/software/" component={Software} />
-          <Route path="/games/" component={Games} />
-          <Route path="/research/" component={Research} />
-          <Route path="/resume/" component={Resume} />
+          <Route path="/portfolio-react" exact component={Home} />
+          <Route path="/portfolio-react/home" component={Home} />
+          <Route path="/portfolio-react/software" component={Software} />
+          <Route path="/portfolio-react/games" component={Games} />
+          <Route path="/portfolio-react/research" component={Research} />
+          <Route path="/portfolio-react/resume" component={Resume} />
           <Footer />
         </div>
       </Router>

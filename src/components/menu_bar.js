@@ -21,23 +21,23 @@ export default (props) => {
   return (
     <AppBar style={styles.appBar}>
       <div style={styles.left}>
-        <Link style={{ textDecoration: 'none' }} to="/">
+        <Link style={{ textDecoration: 'none' }} to="/portfolio-react/home">
           <MenuItem style={styles.nameText}>Ryan Blakeman</MenuItem>
         </Link>
-        <Link style={styles.linkText} to="/">
+        <Link style={styles.linkText} to="/portfolio-react/home">
           <MenuItem style={styles.linkText}>Home</MenuItem>
         </Link>
-        <Link style={styles.linkText} to="/software/">
+        <Link style={styles.linkText} to="/portfolio-react/software">
           <MenuItem style={styles.linkText}>Software</MenuItem>
         </Link>
-        <Link style={styles.linkText} to="/games/">
+        <Link style={styles.linkText} to="/portfolio-react/games">
           <MenuItem style={styles.linkText}>Games</MenuItem>
         </Link>
-        <Link style={styles.linkText} to="/research/">
+        <Link style={styles.linkText} to="/portfolio-react/research">
           <MenuItem style={styles.linkText}>Research</MenuItem>
         </Link>
       </div>
-      <Link style={styles.linkText} to="/resume/">
+      <Link style={styles.linkText} to="/portfolio-react/resume">
         <MenuItem style={styles.linkText}>Resume</MenuItem>
       </Link>
     </AppBar>
