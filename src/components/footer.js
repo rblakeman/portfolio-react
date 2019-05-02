@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { CircleArrow as ScrollUpButton } from 'react-scroll-up-button'
+import ScrollToTop from 'react-scroll-up'
+import KeyboardArrowUpRounded from '@material-ui/icons/KeyboardArrowUpRounded'
 const styles = {
   footer: {
     display: 'flex',
@@ -16,9 +17,9 @@ const styles = {
 export default (props) => {
   return (
     <div style={styles.footer}>
-      <p>
-        <ScrollUpButton />
-      </p>
+      <ScrollToTop showUnder={160}>
+        <KeyboardArrowUpRounded />
+      </ScrollToTop>
       <p style={{ margin: 0 }}>
         &copy; 2018 Ryan Blakeman &middot;
         <a href="mailto:rblakeman31@gmail.com">Email</a> &middot;
