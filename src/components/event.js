@@ -56,7 +56,14 @@ export default class Event extends Component {
   renderPicture() {
     return (
       <div style={styles.picture}>
-        <img src={this.props.image} alt="Event Image" />
+        <img
+          style={{
+            borderRadius: '5px',
+            boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 5px 1px'
+          }}
+          src={this.props.image}
+          alt="Event"
+        />
       </div>
     )
   }
