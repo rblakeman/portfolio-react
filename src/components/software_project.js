@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
-import Paper from '@material-ui/core/Paper'
+import React, { useState } from 'react'
+import _ from 'lodash'
+
+import { Paper, Button, Divider } from '@material-ui/core'
 const styles = {
   container: {
     display: 'flex',
@@ -10,10 +12,20 @@ const styles = {
     padding: 16,
     backgroundColor: '#f7fafd'
   },
-  text: {
+  left: {
+    display: 'flex',
+    flexDirection: 'column',
     margin: 15,
     maxWidth: 500
   },
+  right: {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '15px 0px',
+    maxWidth: '500px'
+  },
+
+  //left
   title: {
     fontSize: '50px',
     color: '#5a5a5a',
@@ -37,58 +49,108 @@ const styles = {
     lineHeight: 1.5,
     marginTop: 10
   },
-  picture: {
-    marginLeft: 15
+
+  //right
+  picture: {},
+  buttons: { alignSelf: 'center' },
+  buttonSelected: {
+    backgroundColor: 'rgb(2, 117, 216)',
+    color: 'white',
+    margin: '0px 5px'
+  },
+  buttonUnselected: {
+    backgroundColor: 'white',
+    color: 'black',
+    margin: '0px 5px'
   }
 }
 
-export default class SoftwareProject extends Component {
-  renderText() {
-    if (this.props.list) {
-      return (
-        <div style={styles.text}>
-          <div style={styles.title}>{this.props.title}</div>
-          <div style={styles.tags}>{this.props.tags}</div>
-          <div style={styles.description}>
-            {this.props.contents}
-            {this.renderList()}
-          </div>
-        </div>
-      )
-    } else {
-      return (
-        <div style={styles.text}>
-          <div style={styles.title}>{this.props.title}</div>
-          <div style={styles.tags}>{this.props.tags}</div>
-          <div style={styles.description}>{this.props.contents}</div>
-        </div>
-      )
-    }
-  }
+export default function SoftwareProject({
+  title,
+  tags,
+  contents,
+  list,
+  images
+}) {
+  const [currImage, setCurrImage] = useState(images[0].img)
 
-  renderList() {
+  const renderLeftSide = () => {
     return (
-      <ul>
-        <li>{this.props.list}</li>
-        <li>{this.props.list2}</li>
-      </ul>
-    )
-  }
-
-  renderPicture() {
-    return (
-      <div style={styles.picture}>
-        <img src={this.props.image} alt="Software Project Image" />
+      <div style={styles.left}>
+        <div style={styles.title}>{title}</div>
+        <div style={styles.tags}>{tags}</div>
+        <div style={styles.description}>
+          {contents}
+          {list ? (list.length > 0 ? renderList() : null) : null}
+        </div>
       </div>
     )
   }
 
-  render() {
+  const renderList = () => {
     return (
-      <Paper style={styles.container}>
-        {this.renderText()}
-        {this.renderPicture()}
-      </Paper>
+      <ul>
+        {_.map(list, (li, idx) => {
+          return <li key={idx}>{li}</li>
+        })}
+      </ul>
     )
   }
+
+  const renderRightSide = () => {
+    return (
+      <div style={styles.right}>
+        <div style={styles.picture}>
+          <img
+            style={{
+              borderRadius: '10px',
+              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
+              maxWidth: '500px'
+            }}
+            src={currImage}
+            alt="Software Project"
+          />
+        </div>
+        <Divider variant="middle" style={{ margin: '20px 0px' }} />
+        <div style={styles.buttons}>
+          {_.map(images, (image, idx) => {
+            if (currImage === image.img)
+              return (
+                <Button
+                  variant="outlined"
+                  style={styles.buttonSelected}
+                  key={idx}
+                  onClick={(ev) => {
+                    ev.preventDefault()
+                    setCurrImage(image.img)
+                  }}
+                >
+                  {image.text}
+                </Button>
+              )
+            return (
+              <Button
+                variant="outlined"
+                style={styles.buttonUnselected}
+                key={idx}
+                onClick={(ev) => {
+                  ev.preventDefault()
+                  setCurrImage(image.img)
+                }}
+              >
+                {image.text}
+              </Button>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <Paper style={styles.container}>
+      {renderLeftSide()}
+      {renderRightSide()}
+    </Paper>
+  )
 }
