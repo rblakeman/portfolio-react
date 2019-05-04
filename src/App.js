@@ -5,11 +5,11 @@ import MenuBar from './components/menu_bar'
 import NotificationBar from './components/notification_bar'
 import Footer from './components/footer'
 
-import Home from './containers/home'
-import Software from './containers/software'
-import Games from './containers/games'
-import Research from './containers/research'
-import Resume from './containers/resume'
+import Home from './pages/home'
+import Software from './pages/software'
+import Games from './pages/games'
+import Research from './pages/research'
+import Resume from './pages/resume'
 
 const styles = {
   root: {

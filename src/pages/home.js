@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
+import _ from 'lodash'
+import moment from 'moment'
+import { BarLoader } from 'react-spinners'
 import Divider from '@material-ui/core/Divider'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
@@ -17,6 +21,7 @@ import Event_GDC18 from '../img/events/gdc_2018.jpeg'
 import Event_UROC from '../img/events/uroc_symposium_2017.jpg'
 import Event_GameJam from '../img/events/gamejam_2017.jpg'
 import Event_GDC17 from '../img/events/gdc_2017.jpg'
+import { Typography } from '@material-ui/core'
 const styles = {
   root: {
     margin: 32
@@ -52,7 +57,8 @@ const styles = {
     fontSize: '1.25rem',
     color: '#5a5a5a',
     fontWeight: 300,
-    lineHeight: 1.5
+    lineHeight: 1.5,
+    padding: '30px 0px'
   },
   icons: {
     fontSize: '3em'
@@ -67,6 +73,9 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-evenly'
   },
+  chart: {
+    padding: 16
+  },
   events: {
     padding: 16
   }
@@ -78,19 +87,23 @@ export default class Home extends Component {
       <div style={styles.root}>
         <div style={styles.intro}>
           <div style={styles.header}>
-            <h2 style={styles.name}>Ryan Blakeman</h2>
-            <h2 style={styles.titles}>
-              Game Developer | <br /> Software Engineer | <br /> Full Stack
-              Developer
-            </h2>
-            <p style={styles.description}>
-              I am a recent CSUMB graduate, where I received my B.S. in Computer
-              Science. In my time at school I focused on Game Development while
-              also co-developing my Software Engineering and Web Development
-              skills. I have an abundance of projects with a cumulative research
+            <Typography variant="h2" style={styles.name}>
+              Ryan Blakeman
+            </Typography>
+            <Typography variant="h2" style={styles.titles}>
+              <div>Game Developer</div>
+              <div>Software Engineer</div>
+              <div>Full Stack Developer</div>
+            </Typography>
+            <Typography style={styles.description}>
+              I am a Software Engineer at Robin Care Inc. Last spring I
+              graduated from CSUMB where I received my B.S. in Computer Science.
+              In my time at school I focused on Game Development while also
+              co-developing my Software Engineering and Web Development skills.
+              I have an abundance of projects with a cumulative research
               project.
-            </p>
-            <p style={styles.icons}>
+            </Typography>
+            <Typography style={styles.icons}>
               <a style={{ marginLeft: 10 }} href="https://github.com/rblakeman">
                 <FontAwesomeIcon style={{ color: 'black' }} icon={faGithub} />
               </a>
@@ -103,10 +116,17 @@ export default class Home extends Component {
                   icon={faLinkedin}
                 />
               </a>
-            </p>
+            </Typography>
           </div>
           <div style={styles.profilePic}>
-            <img src={ProfilePic} alt="Profile Picture" />
+            <img
+              style={{
+                borderRadius: '10px',
+                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px'
+              }}
+              src={ProfilePic}
+              alt="Profile Pict"
+            />
           </div>
         </div>
         <div style={styles.blurbs}>
@@ -117,7 +137,7 @@ export default class Home extends Component {
               title="Education"
               contents="Bachelor of Science in Computer Science & Information Technology. Graduated Spring 2018 with Honors and an emphasis in Game Development"
               button_text="CSUMB"
-              button_url="https://csumb.edu/games"
+              button_url="https://studentgames.itch.io/"
             />
           </div>
           <div>
@@ -126,8 +146,9 @@ export default class Home extends Component {
               circle={false}
               title="Game Research Lab"
               contents="Private lab and workspace for HCI, Robotics, Computer Graphics, and Game research. Annual host of many undergraduate funded research projects and papers."
-              button_text="GRL Site"
-              button_url="http://gameresearchlab.org/"
+              button_text="Research"
+              // button_url="http://gameresearchlab.org/"
+              button_url="https://www.pietroszek.com/research/"
             />
           </div>
           <div>
@@ -137,7 +158,7 @@ export default class Home extends Component {
               title="Experience"
               contents="Involved and completed many different projects in a variety of different backgrounds, including: Software, Games, and Undergraduate Research."
               button_text="Resume"
-              button_url="#"
+              button_url="/resume"
             />
           </div>
         </div>
@@ -153,10 +174,6 @@ export default class Home extends Component {
             contents="Walked across the stage to receive my B.S. along with several colleagues. Best part of the day? Hearing my name pronounced correctly."
             image={Event_Graduation}
           />
-          {/* <Divider
-            variant="middle"
-            style={{ marginTop: 50, marginBottom: 50 }}
-          /> */}
           <Event
             title="Senior Capstone"
             date="May 2018"
