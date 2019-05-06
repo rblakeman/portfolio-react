@@ -70,30 +70,50 @@ export default function SoftwareProject({
   tags,
   contents,
   list,
-  images
+  images,
+  icons
 }) {
   const [currImage, setCurrImage] = useState(images[0].img)
 
   const renderLeftSide = () => {
     return (
       <div style={styles.left}>
-        <div style={styles.title}>{title}</div>
-        <div style={styles.tags}>{tags}</div>
-        <div style={styles.description}>
-          {contents}
-          {list ? (list.length > 0 ? renderList() : null) : null}
+        <div>
+          <div style={styles.title}>{title}</div>
+          <div style={styles.tags}>{tags}</div>
+          <div style={styles.description}>
+            {contents}
+            {list ? (list.length > 0 ? renderBulletList() : null) : null}
+          </div>
+        </div>
+        <div style={{ marginTop: '30px' }}>
+          {icons ? (icons.length > 0 ? renderIcons() : null) : null}
         </div>
       </div>
     )
   }
 
-  const renderList = () => {
+  const renderBulletList = () => {
     return (
       <ul>
-        {_.map(list, (li, idx) => {
-          return <li key={idx}>{li}</li>
+        {_.map(list, (bullet, idx) => {
+          return <li key={idx}>{bullet}</li>
         })}
       </ul>
+    )
+  }
+
+  const renderIcons = () => {
+    return (
+      <div>
+        {_.map(icons, (icon, idx) => {
+          if (icon.type && icon.type === 'fa') {
+            return icon.obj
+          } else {
+            return <img src={icon.img} alt={icon.text} />
+          }
+        })}
+      </div>
     )
   }
 
