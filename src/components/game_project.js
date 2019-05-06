@@ -71,6 +71,7 @@ export default function GamesProject({
   contents,
   list,
   images,
+  imageSize,
   icons
 }) {
   const [currImage, setCurrImage] = useState(images[0].img)
@@ -132,7 +133,7 @@ export default function GamesProject({
             style={{
               borderRadius: '10px',
               boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
-              maxWidth: '500px'
+              maxWidth: imageSize || '500px'
             }}
             src={currImage}
             alt="Games Project"
