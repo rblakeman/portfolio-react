@@ -1,16 +1,9 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import MenuBar from './components/menu_bar'
 import NotificationBar from './components/notification_bar'
 import Footer from './components/footer'
-
 import Home from './pages/home'
-import Software from './pages/software'
-import Games from './pages/games'
-import Research from './pages/research'
-import Resume from './pages/resume'
-
 const styles = {
   root: {
     fontFamily:
@@ -21,19 +14,12 @@ const styles = {
 class App extends Component {
   render() {
     return (
-      <Router style={styles.root} className="App">
-        <div>
-          <NotificationBar />
-          <MenuBar />
-          <Route path="/" exact component={Home} />
-          <Route path="/home" component={Home} />
-          <Route path="/software" component={Software} />
-          <Route path="/games" component={Games} />
-          <Route path="/research" component={Research} />
-          <Route path="/resume" component={Resume} />
-          <Footer />
-        </div>
-      </Router>
+      <div style={styles.root} className="App">
+        <NotificationBar />
+        <MenuBar />
+        <Home />
+        <Footer />
+      </div>
     )
   }
 }

@@ -1,13 +1,14 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import AppBar from '@material-ui/core/AppBar'
-import MenuItem from '@material-ui/core/MenuItem'
+import { AppBar, MenuItem, Typography } from '@material-ui/core'
 const styles = {
   appBar: {
     display: 'flex',
     flexDirection: 'row',
     backgroundColor: '#343a40',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: '46px',
+    padding: '0px 20px'
   },
   left: {
     display: 'flex',
@@ -20,26 +21,14 @@ const styles = {
 export default (props) => {
   return (
     <AppBar style={styles.appBar}>
-      <div style={styles.left}>
-        <Link style={{ textDecoration: 'none' }} to="/">
-          <MenuItem style={styles.nameText}>Ryan Blakeman</MenuItem>
-        </Link>
-        <Link style={styles.linkText} to="/home">
-          <MenuItem style={styles.linkText}>Home</MenuItem>
-        </Link>
-        <Link style={styles.linkText} to="/software">
-          <MenuItem style={styles.linkText}>Software</MenuItem>
-        </Link>
-        <Link style={styles.linkText} to="/games">
-          <MenuItem style={styles.linkText}>Games</MenuItem>
-        </Link>
-        <Link style={styles.linkText} to="/research">
-          <MenuItem style={styles.linkText}>Research</MenuItem>
-        </Link>
-      </div>
-      <Link style={styles.linkText} to="/resume">
-        <MenuItem style={styles.linkText}>Resume</MenuItem>
-      </Link>
+      {/* <div style={styles.left}> */}
+      <MenuItem style={styles.nameText}>Ryan Blakeman</MenuItem>
+      {/* <MenuItem style={styles.linkText}>Home</MenuItem>
+      <MenuItem style={styles.linkText}>Software</MenuItem>
+      <MenuItem style={styles.linkText}>Games</MenuItem>
+      <MenuItem style={styles.linkText}>Research</MenuItem> */}
+      {/* </div> */}
+      {/* <MenuItem style={styles.linkText}>Resume</MenuItem> */}
     </AppBar>
   )
 }
