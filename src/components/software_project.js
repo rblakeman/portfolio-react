@@ -51,17 +51,19 @@ const styles = {
   },
 
   //right
-  picture: {},
+  picture: {}, //display: 'flex', justifyContent: 'center' },
   buttons: { alignSelf: 'center' },
   buttonSelected: {
     backgroundColor: 'rgb(2, 117, 216)',
     color: 'white',
-    margin: '0px 5px'
+    margin: '0px 5px',
+    textTransform: 'none'
   },
   buttonUnselected: {
     backgroundColor: 'white',
     color: 'black',
-    margin: '0px 5px'
+    margin: '0px 5px',
+    textTransform: 'none'
   }
 }
 
@@ -126,6 +128,7 @@ export default function SoftwareProject({
               borderRadius: '10px',
               boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
               maxWidth: '500px'
+              // maxHeight: '500px'
             }}
             src={currImage}
             alt="Software Project"

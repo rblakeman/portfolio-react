@@ -56,12 +56,14 @@ const styles = {
   buttonSelected: {
     backgroundColor: 'rgb(2, 117, 216)',
     color: 'white',
-    margin: '0px 5px'
+    margin: '0px 5px',
+    textTransform: 'none'
   },
   buttonUnselected: {
     backgroundColor: 'white',
     color: 'black',
-    margin: '0px 5px'
+    margin: '0px 5px',
+    textTransform: 'none'
   }
 }
 
@@ -115,10 +117,11 @@ export default function GamesProject({
               <img
                 style={{ maxWidth: `${icon.size}`, marginLeft: '10px' }}
                 src={icon.svg}
+                key={idx}
               />
             )
           } else {
-            return <img src={icon.img} alt={icon.text} />
+            return <img key={idx} src={icon.img} alt={icon.text} />
           }
         })}
       </div>
