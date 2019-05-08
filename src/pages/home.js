@@ -2,25 +2,31 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import moment from 'moment'
 import { BarLoader } from 'react-spinners'
-import Divider from '@material-ui/core/Divider'
+import { Divider, Tabs, Tab, AppBar } from '@material-ui/core'
+import {
+  Event,
+  Code,
+  VideogameAsset,
+  Edit,
+  Description
+} from '@material-ui/icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import Blurb from '../components/blurb'
 import Banner from '../components/banner'
-import Event from '../components/event'
+import Events from '../pages/events'
+import Software from '../pages/software'
+import Games from '../pages/games'
+import Research from '../pages/research'
+import Resume from '../pages/resume'
 
 import ProfilePic from '../img/profile_pic.jpg'
 import Blurb_CSUMBLogo from '../img/csumb_logo.png'
 import Blurb_GRLLogo from '../img/grl_logo.png'
 import Blurb_Experience from '../img/experience_pic.png'
-import Event_Graduation from '../img/events/graduation.jpg'
-import Event_Capstone from '../img/events/capstone.jpg'
-import Event_GDC18 from '../img/events/gdc_2018.jpeg'
-import Event_UROC from '../img/events/uroc_symposium_2017.jpg'
-import Event_GameJam from '../img/events/gamejam_2017.jpg'
-import Event_GDC17 from '../img/events/gdc_2017.jpg'
+
 import { Typography } from '@material-ui/core'
 const styles = {
   root: {
@@ -76,12 +82,37 @@ const styles = {
   chart: {
     padding: 16
   },
-  events: {
+  pages: {
     padding: 16
   }
 }
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      currPage: 'Events'
+    }
+
+    // this.renderInnerPage = this.renderInnerPage.bind(this)
+  }
+
+  renderInnerPage() {
+    const { currPage } = this.state
+    if (currPage === '' || currPage === 'Events') {
+      return <Events />
+    } else if (currPage === 'Software') {
+      return <Software />
+    } else if (currPage === 'Games') {
+      return <Games />
+    } else if (currPage === 'Research') {
+      return <Research />
+    } else if (currPage === 'Resume') {
+      return <Resume />
+    }
+  }
+
   render() {
     return (
       <div style={styles.root}>
@@ -162,52 +193,27 @@ export default class Home extends Component {
             />
           </div>
         </div>
-        <div style={styles.events}>
-          <Divider
-            variant="middle"
-            style={{ marginTop: 50, marginBottom: 50 }}
-          />
-          <Banner text="Events" />
-          <Event
-            title="University Graduation"
-            date="May 2018"
-            contents="Walked across the stage to receive my B.S. along with several colleagues. Best part of the day? Hearing my name pronounced correctly."
-            image={Event_Graduation}
-          />
-          <Event
-            title="Senior Capstone"
-            date="May 2018"
-            contents="Presented with my team in front of faculty and visitors. Followed up with a poster session, and a live demo.
-                Learn about the project under the Games tab."
-            image={Event_Capstone}
-            orientation="flipped"
-          />
-          <Event
-            title="GDC 2018"
-            date="March 2018"
-            contents="Returned back a second year using the Student Expo Pass."
-            image={Event_GDC18}
-          />
-          <Event
-            title="UROC Summer Research Symposium 2017"
-            date="August 2017"
-            contents="We presented our final research during UROC's Summer Research Symposium in the Tanimura & Antle Library. Check out my Research tab for more info and the poster."
-            image={Event_UROC}
-            orientation="flipped"
-          />
-          <Event
-            title="GameJam 2017"
-            date="June 2017"
-            contents="Set up and assisted Dr. Krzysztof Pietroszek with the Summer GameJam in the Joel & Dena Gambord BIT Building."
-            image={Event_GameJam}
-          />
-          <Event
-            title="GDC 2017"
-            date="March 2017"
-            contents="Visited the Game Developers Conference this year thanks to the student Expo Pass."
-            image={Event_GDC17}
-            orientation="flipped"
-          />
+        <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
+        <div>
+          <AppBar position="sticky" style={{ backgroundColor: '#0275D8' }}>
+            <Tabs
+              value={this.state.currPage}
+              onChange={(ev, value) => {
+                this.setState({ currPage: value })
+              }}
+              variant="fullWidth"
+              // indicatorColor="primary"
+              // textColor="primary"
+              style={{ margin: '0px 50px' }}
+            >
+              <Tab icon={<Event />} label="Events" value="Events" />
+              <Tab icon={<Code />} label="Software" value="Software" />
+              <Tab icon={<VideogameAsset />} label="Games" value="Games" />
+              <Tab icon={<Edit />} label="Research" value="Research" />
+              <Tab icon={<Description />} label="Resume" value="Resume" />
+            </Tabs>
+          </AppBar>
+          <div style={styles.pages}>{this.renderInnerPage()}</div>
         </div>
         <Divider variant="middle" style={{ marginTop: 50, marginBottom: 50 }} />
       </div>
