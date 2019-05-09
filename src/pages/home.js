@@ -2,25 +2,11 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import moment from 'moment'
 import { BarLoader } from 'react-spinners'
-import { Divider, Tabs, Tab, AppBar } from '@material-ui/core'
-import {
-  Event,
-  Code,
-  VideogameAsset,
-  Edit,
-  Description
-} from '@material-ui/icons'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import Blurb from '../components/blurb'
-import Banner from '../components/banner'
-import Events from '../pages/events'
-import Software from '../pages/software'
-import Games from '../pages/games'
-import Research from '../pages/research'
-import Resume from '../pages/resume'
 
 import ProfilePic from '../img/profile_pic.jpg'
 import Blurb_CSUMBLogo from '../img/csumb_logo.png'
@@ -88,31 +74,6 @@ const styles = {
 }
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      currPage: 'Events'
-    }
-
-    // this.renderInnerPage = this.renderInnerPage.bind(this)
-  }
-
-  renderInnerPage() {
-    const { currPage } = this.state
-    if (currPage === '' || currPage === 'Events') {
-      return <Events />
-    } else if (currPage === 'Software') {
-      return <Software />
-    } else if (currPage === 'Games') {
-      return <Games />
-    } else if (currPage === 'Research') {
-      return <Research />
-    } else if (currPage === 'Resume') {
-      return <Resume />
-    }
-  }
-
   render() {
     return (
       <div style={styles.root}>
@@ -193,29 +154,6 @@ export default class Home extends Component {
             />
           </div>
         </div>
-        <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
-        <div>
-          <AppBar position="sticky" style={{ backgroundColor: '#0275D8' }}>
-            <Tabs
-              value={this.state.currPage}
-              onChange={(ev, value) => {
-                this.setState({ currPage: value })
-              }}
-              variant="fullWidth"
-              // indicatorColor="primary"
-              // textColor="primary"
-              style={{ margin: '0px 50px' }}
-            >
-              <Tab icon={<Event />} label="Events" value="Events" />
-              <Tab icon={<Code />} label="Software" value="Software" />
-              <Tab icon={<VideogameAsset />} label="Games" value="Games" />
-              <Tab icon={<Edit />} label="Research" value="Research" />
-              <Tab icon={<Description />} label="Resume" value="Resume" />
-            </Tabs>
-          </AppBar>
-          <div style={styles.pages}>{this.renderInnerPage()}</div>
-        </div>
-        <Divider variant="middle" style={{ marginTop: 50, marginBottom: 50 }} />
       </div>
     )
   }
