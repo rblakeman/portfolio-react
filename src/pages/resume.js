@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Banner from '../components/banner'
 import { Button, Typography } from '@material-ui/core'
 const styles = {
   columns: {
@@ -23,11 +23,13 @@ const styles = {
   },
   leftToggle: {
     borderTopRightRadius: '0px',
-    borderBottomRightRadius: '0px'
+    borderBottomRightRadius: '0px',
+    textTransform: 'none'
   },
   rightToggle: {
     borderTopLeftRadius: '0px',
-    borderBottomLeftRadius: '0px'
+    borderBottomLeftRadius: '0px',
+    textTransform: 'none'
   },
   frame: {
     width: '80%',
@@ -44,41 +46,44 @@ export default (props) => {
   const [gameResume, setGameResume] = useState(true)
 
   return (
-    <div style={{ ...styles.columns, alignItems: 'center' }}>
-      <div style={styles.title}>
-        <Typography variant="h2">Resumes</Typography>
-      </div>
-      <div style={{ ...styles.rows, paddingBottom: '20px' }}>
-        <Button
-          variant="contained"
-          style={
-            gameResume
-              ? { ...styles.leftToggle, ...styles.highlightedButton }
-              : styles.leftToggle
-          }
-          onClick={() => setGameResume(true)}
-        >
-          Game Resume
-        </Button>
-        <Button
-          variant="contained"
-          style={
-            !gameResume
-              ? { ...styles.rightToggle, ...styles.highlightedButton }
-              : styles.rightToggle
-          }
-          onClick={() => setGameResume(false)}
-        >
-          Software Resume
-        </Button>
-      </div>
-      <div style={styles.frame}>
-        <iframe
-          title={gameResume ? 'Game Resume' : 'Software Resume'}
-          src={gameResume ? gameResumeURL : softwareResumeURL}
-          width="100%"
-          height="920"
-        />
+    <div>
+      <Banner text="Resume" />
+      <div style={{ ...styles.columns, alignItems: 'center' }}>
+        {/* <div style={styles.title}>
+          <Typography variant="h2">Resumes</Typography>
+        </div> */}
+        <div style={{ ...styles.rows, paddingBottom: '20px' }}>
+          <Button
+            variant="contained"
+            style={
+              gameResume
+                ? { ...styles.leftToggle, ...styles.highlightedButton }
+                : styles.leftToggle
+            }
+            onClick={() => setGameResume(true)}
+          >
+            Game Resume
+          </Button>
+          <Button
+            variant="contained"
+            style={
+              !gameResume
+                ? { ...styles.rightToggle, ...styles.highlightedButton }
+                : styles.rightToggle
+            }
+            onClick={() => setGameResume(false)}
+          >
+            Software Resume
+          </Button>
+        </div>
+        <div style={styles.frame}>
+          <iframe
+            title={gameResume ? 'Game Resume' : 'Software Resume'}
+            src={gameResume ? gameResumeURL : softwareResumeURL}
+            width="100%"
+            height="920"
+          />
+        </div>
       </div>
     </div>
   )
