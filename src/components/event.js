@@ -38,7 +38,7 @@ const styles = {
     marginTop: 10
   },
   picture: {
-    marginLeft: 15
+    margin: '0px 15px'
   }
 }
 
