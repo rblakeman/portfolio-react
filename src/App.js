@@ -11,6 +11,7 @@ import Software from './pages/software'
 import Games from './pages/games'
 import Research from './pages/research'
 import Resume from './pages/resume'
+
 const styles = {
   root: {
     fontFamily:
@@ -21,6 +22,7 @@ const styles = {
 class App extends Component {
   constructor(props) {
     super(props)
+    this.myRef = React.createRef()
 
     this.state = {
       currPage: ''
@@ -29,12 +31,12 @@ class App extends Component {
 
   setPage = (newPage) => {
     this.setState({ currPage: newPage })
+    window.scrollTo(0, this.myRef.current.offsetTop)
   }
 
   renderContentPage() {
     const { currPage } = this.state
     if (currPage === '' || currPage === 'Events') {
-      console.log('HELLO')
       return <Events />
     } else if (currPage === 'Software') {
       return <Software />
@@ -53,7 +55,9 @@ class App extends Component {
         <NotificationBar />
         <MenuBar onPageClick={(e, v) => this.setPage(e, v)} />
         <Home />
-        <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
+        <div ref={this.myRef}>
+          <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
+        </div>
         <div style={{ margin: 32 }}>
           {/* <AppBar position="sticky" style={{ backgroundColor: '#0275D8' }}>
             <Tabs
