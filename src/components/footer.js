@@ -38,20 +38,19 @@ export default class Footer extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   window.onscroll = () => {
-  //     console.log(window.pageYOffset)
-  //     if (window.pageYOffset > 160) {
-  //       this.setState({ hidden: false })
-  //     } else {
-  //       this.setState({ hidden: true })
-  //     }
-  //   }
-  // }
+  componentDidMount() {
+    window.onscroll = () => {
+      if (window.pageYOffset > 160) {
+        this.setState({ hidden: false })
+      } else {
+        this.setState({ hidden: true })
+      }
+    }
+  }
 
-  // componentWillUnmount() {
-  //   window.onscroll = null
-  // }
+  componentWillUnmount() {
+    window.onscroll = null
+  }
 
   render() {
     return (
@@ -66,7 +65,7 @@ export default class Footer extends Component {
           <Button
             style={{
               ...styles.scrollButton,
-              visiblity: 'hidden'
+              visibility: 'hidden'
             }}
             onClick={() => {
               window.scrollTo(0, 0)
