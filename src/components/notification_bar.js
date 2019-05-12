@@ -2,6 +2,7 @@ import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 const styles = {
   appBar: {
+    height: '48px',
     display: 'flex',
     flexDirection: 'row',
     padding: 15,

@@ -6,7 +6,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: 280,
+    width: '280px',
     fontFamily:
       '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
   },
@@ -15,16 +15,14 @@ const styles = {
     fontWeight: 400,
     lineHeight: 1.2,
     color: '#5a5a5a',
-    marginTop: 5,
-    marginBottom: 5
+    margin: '5px 0px'
   },
   ptext: {
     textAlign: 'center',
     fontWeight: 400,
     lineHeight: 1.5,
     color: '#5a5a5a',
-    marginTop: 0,
-    marginBottom: 5
+    margin: '0px 0px, 5px, 0px'
   },
   button: {
     backgroundColor: '#0275d8',

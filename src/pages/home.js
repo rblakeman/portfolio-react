@@ -16,26 +16,28 @@ import Blurb_Experience from '../img/experience_pic.png'
 import { Typography } from '@material-ui/core'
 const styles = {
   root: {
-    margin: 32
+    maxWidth: '1250px',
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 'auto' //'32px'
   },
   intro: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    margin: 16,
-    marginBottom: 32
+    margin: '16px 16px 32px 16px'
   },
   header: {
     order: 1,
     flexGrow: 2,
-    marginRight: 15
+    marginRight: '15px'
   },
   name: {
     fontSize: '50px',
     color: '#5a5a5a',
     fontWeight: 400,
     lineHeight: 1,
-    marginBottom: 15
+    marginBottom: '15px'
   },
   titles: {
     fontSize: '38px',
@@ -43,7 +45,7 @@ const styles = {
     fontWeight: 400,
     lineHeight: 1.2,
     letterSpacing: '-0.05rem',
-    marginTop: 15
+    marginTop: '15px'
   },
   description: {
     fontSize: '1.25rem',
@@ -58,18 +60,12 @@ const styles = {
   profilePic: {
     order: 2,
     flexGrow: 1,
-    marginLeft: 15
+    marginLeft: '15px'
   },
   blurbs: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-evenly'
-  },
-  chart: {
-    padding: 16
-  },
-  pages: {
-    padding: 16
   }
 }
 

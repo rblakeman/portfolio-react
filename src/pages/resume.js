@@ -4,17 +4,13 @@ import { Button, Typography } from '@material-ui/core'
 const styles = {
   columns: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    alignItems: 'center'
   },
   rows: {
     display: 'flex',
-    flexDirection: 'row'
-  },
-  title: {
-    textAlign: 'center',
-    padding: '50px',
-    color: '#5a5a5a',
-    fontWeight: 400
+    flexDirection: 'row',
+    paddingBottom: '20px'
   },
   highlightedButton: {
     backgroundColor: '#0275d8',
@@ -48,11 +44,8 @@ export default (props) => {
   return (
     <div>
       <Banner text="Resume" />
-      <div style={{ ...styles.columns, alignItems: 'center' }}>
-        {/* <div style={styles.title}>
-          <Typography variant="h2">Resumes</Typography>
-        </div> */}
-        <div style={{ ...styles.rows, paddingBottom: '20px' }}>
+      <div style={styles.columns}>
+        <div style={styles.rows}>
           <Button
             variant="contained"
             style={

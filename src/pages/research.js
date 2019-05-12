@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Paper, Button, Divider, Typography } from '@material-ui/core'
+import { Paper, Button, Typography } from '@material-ui/core'
 
 // IMAGES
 import marbleIMG from '../img/research/marble1.png'
@@ -19,39 +19,9 @@ const styles = {
     //   flexDirection: 'row',
     //   alignItems: 'center',
     //   justifyContent: 'space-between',
-    margin: 16,
-    padding: 16,
+    margin: '16px',
+    padding: '16px',
     backgroundColor: '#f7fafd'
-  },
-  text: {
-    margin: 15,
-    maxWidth: 500
-  },
-  title: {
-    fontSize: '50px',
-    color: '#5a5a5a',
-    fontWeight: 400,
-    lineHeight: 1,
-    marginBottom: 15
-  },
-  date: {
-    fontSize: '38px',
-    color: '#6c757d',
-    fontWeight: 400,
-    lineHeight: 1,
-    letterSpacing: '-0.05rem',
-    marginTop: 15,
-    marginBottom: 20
-  },
-  description: {
-    fontSize: '1.25rem',
-    color: '#5a5a5a',
-    fontWeight: 300,
-    lineHeight: 1.5,
-    marginTop: 10
-  },
-  picture: {
-    marginLeft: 15
   }
 }
 

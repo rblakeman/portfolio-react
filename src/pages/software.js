@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Divider from '@material-ui/core/Divider'
 
 // IMAGES
 import WeatherIMG from '../img/software/react/weather.png'
@@ -37,44 +36,12 @@ import {
 import { faDatabase, faMicrochip } from '@fortawesome/free-solid-svg-icons'
 
 const styles = {
-  container: {
+  root: {
+    // maxWidth: '1125px',
     display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    margin: 16,
-    padding: 16,
-    backgroundColor: '#f7fafd'
-  },
-  text: {
-    margin: 15,
-    maxWidth: 500
-  },
-  title: {
-    fontSize: '50px',
-    color: '#5a5a5a',
-    fontWeight: 400,
-    lineHeight: 1,
-    marginBottom: 15
-  },
-  date: {
-    fontSize: '38px',
-    color: '#6c757d',
-    fontWeight: 400,
-    lineHeight: 1,
-    letterSpacing: '-0.05rem',
-    marginTop: 15,
-    marginBottom: 20
-  },
-  description: {
-    fontSize: '1.25rem',
-    color: '#5a5a5a',
-    fontWeight: 300,
-    lineHeight: 1.5,
-    marginTop: 10
-  },
-  picture: {
-    marginLeft: 15
+    flexDirection: 'column',
+    alignItems: 'center'
+    // margin: 'auto'
   }
 }
 
@@ -83,7 +50,7 @@ const FA_SIZE = '5x'
 export default class Software extends Component {
   render() {
     return (
-      <div style={styles.events}>
+      <div style={styles.root}>
         <Banner text="Software Projects" />
         <SoftwareProject
           title="React-Redux Projects"
@@ -264,7 +231,6 @@ export default class Software extends Component {
             }
           ]}
         />
-        <Divider variant="middle" style={{ marginTop: 50, marginBottom: 50 }} />
       </div>
     )
   }

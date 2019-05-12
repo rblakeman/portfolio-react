@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Divider from '@material-ui/core/Divider'
 
 // IMAGES
 import Event_Graduation from '../img/events/graduation.jpg'
@@ -15,7 +14,13 @@ import Event from '../components/event'
 // import {} from '@fortawesome/free-brands-svg-icons'
 // import {} from '@fortawesome/free-solid-svg-icons'
 
-const styles = {}
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  }
+}
 
 const FA_SIZE = '5x'
 const ICON_SIZE = '80px'
@@ -23,7 +28,7 @@ const ICON_SIZE = '80px'
 export default class Events extends Component {
   render() {
     return (
-      <div>
+      <div style={styles.container}>
         <Banner text="Events" />
         <Event
           title="University Graduation"

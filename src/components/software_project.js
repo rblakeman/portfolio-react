@@ -8,14 +8,14 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    margin: 16,
-    padding: 16,
+    margin: '16px',
+    padding: '16px',
     backgroundColor: '#f7fafd'
   },
   left: {
     display: 'flex',
     flexDirection: 'column',
-    margin: 15,
+    margin: '15px',
     maxWidth: 500
   },
   right: {
@@ -31,7 +31,7 @@ const styles = {
     color: '#5a5a5a',
     fontWeight: 400,
     lineHeight: 1,
-    marginBottom: 15
+    marginBottom: '15px'
   },
   tags: {
     fontSize: '38px',
@@ -39,15 +39,14 @@ const styles = {
     fontWeight: 400,
     lineHeight: 1,
     letterSpacing: '-0.05rem',
-    marginTop: 15,
-    marginBottom: 20
+    margin: '15px 0px 20px 0px'
   },
   description: {
     fontSize: '1.25rem',
     color: '#5a5a5a',
     fontWeight: 300,
     lineHeight: 1.5,
-    marginTop: 10
+    marginTop: '10px'
   },
 
   //right

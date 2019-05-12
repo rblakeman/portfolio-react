@@ -9,6 +9,7 @@ import {
 } from '@material-ui/icons'
 const styles = {
   appBar: {
+    left: 0,
     display: 'flex',
     flexDirection: 'row',
     backgroundColor: '#343a40',
@@ -22,7 +23,8 @@ const styles = {
     flexDirection: 'row'
   },
   linkText: { color: '#ddd', textDecoration: 'none' },
-  nameText: { color: '#fff', textDecoration: 'none', fontSize: 'larger' }
+  nameText: { color: '#fff', textDecoration: 'none', fontSize: 'larger' },
+  icons: { paddingRight: '5px' }
 }
 
 export default class MenuBar extends Component {
@@ -39,32 +41,32 @@ export default class MenuBar extends Component {
           onClick={() => this.props.onPageClick('Events')}
           style={styles.linkText}
         >
-          <Event style={{ paddingRight: '5px' }} /> Events
+          <Event style={styles.icons} /> Events
         </MenuItem>
         <MenuItem
           onClick={() => this.props.onPageClick('Software')}
           style={styles.linkText}
         >
-          <Code style={{ paddingRight: '5px' }} /> Software
+          <Code style={styles.icons} /> Software
         </MenuItem>
         <MenuItem
           onClick={() => this.props.onPageClick('Games')}
           style={styles.linkText}
         >
-          <VideogameAsset style={{ paddingRight: '5px' }} /> Games
+          <VideogameAsset style={styles.icons} /> Games
         </MenuItem>
         <MenuItem
           onClick={() => this.props.onPageClick('Research')}
           style={styles.linkText}
         >
-          <Edit style={{ paddingRight: '5px' }} /> Research
+          <Edit style={styles.icons} /> Research
         </MenuItem>
         {/* </div> */}
         <MenuItem
           onClick={() => this.props.onPageClick('Resume')}
           style={styles.linkText}
         >
-          <Description style={{ paddingRight: '5px' }} /> Resume
+          <Description style={styles.icons} /> Resume
         </MenuItem>
       </AppBar>
     )
