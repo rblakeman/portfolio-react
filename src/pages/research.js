@@ -14,6 +14,12 @@ import Banner from '../components/banner'
 // import {} from '@fortawesome/free-solid-svg-icons'
 
 const styles = {
+  root: {
+    // maxWidth: '1125px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
   container: {
     //   display: 'flex',
     //   flexDirection: 'row',
@@ -39,68 +45,66 @@ export default class Research extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={styles.root}>
         <Banner text="Research" />
-        <div>
-          <Paper style={styles.container}>
-            <img
-              style={{
-                maxWidth: '100%',
-                borderRadius: '10px',
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px'
-              }}
-              src={this.state.image}
-            />
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <Typography variant="h5" style={{ margin: '0px 30px' }}>
-                Stone Marble Sponza Scene
-              </Typography>
-              <div>
-                <Button
-                  onClick={() => {
-                    this.setState({ image: marbleIMG })
-                  }}
-                  style={{ margin: '0px 20px', textTransform: 'none' }}
-                >
-                  Texture
-                </Button>
-                <Button
-                  onClick={() => {
-                    this.setState({ image: voxelIMG })
-                  }}
-                  style={{ margin: '0px 20px', textTransform: 'none' }}
-                >
-                  Voxel
-                </Button>
-              </div>
+        <Paper style={styles.container}>
+          <img
+            style={{
+              maxWidth: '100%',
+              borderRadius: '10px',
+              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px'
+            }}
+            src={this.state.image}
+          />
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Typography variant="h5" style={{ margin: '0px 30px' }}>
+              Stone Marble Sponza Scene
+            </Typography>
+            <div>
+              <Button
+                onClick={() => {
+                  this.setState({ image: marbleIMG })
+                }}
+                style={{ margin: '0px 20px', textTransform: 'none' }}
+              >
+                Texture
+              </Button>
+              <Button
+                onClick={() => {
+                  this.setState({ image: voxelIMG })
+                }}
+                style={{ margin: '0px 20px', textTransform: 'none' }}
+              >
+                Voxel
+              </Button>
             </div>
-          </Paper>
-          <Paper style={styles.container}>
-            <img
-              style={{
-                maxWidth: '100%',
-                borderRadius: '10px',
-                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px'
-              }}
-              src={this.state.poster}
-            />
-            <Typography>Research Posters</Typography>
-            <Button
-              onClick={() => {
-                this.setState({ poster: urocposter2017IMG })
-              }}
-            >
-              2017
-            </Button>
-            <Button
-              onClick={() => {
-                this.setState({ poster: urocposter2016IMG })
-              }}
-            >
-              2016
-            </Button>
-          </Paper>
-        </div>
+          </div>
+        </Paper>
+        <Paper style={styles.container}>
+          <img
+            style={{
+              maxWidth: '100%',
+              borderRadius: '10px',
+              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px'
+            }}
+            src={this.state.poster}
+          />
+          <Typography>Research Posters</Typography>
+          <Button
+            onClick={() => {
+              this.setState({ poster: urocposter2017IMG })
+            }}
+          >
+            2017
+          </Button>
+          <Button
+            onClick={() => {
+              this.setState({ poster: urocposter2016IMG })
+            }}
+          >
+            2016
+          </Button>
+        </Paper>
       </div>
     )
   }

@@ -42,41 +42,39 @@ export default (props) => {
   const [gameResume, setGameResume] = useState(true)
 
   return (
-    <div>
+    <div style={styles.columns}>
       <Banner text="Resume" />
-      <div style={styles.columns}>
-        <div style={styles.rows}>
-          <Button
-            variant="contained"
-            style={
-              gameResume
-                ? { ...styles.leftToggle, ...styles.highlightedButton }
-                : styles.leftToggle
-            }
-            onClick={() => setGameResume(true)}
-          >
-            Game Resume
-          </Button>
-          <Button
-            variant="contained"
-            style={
-              !gameResume
-                ? { ...styles.rightToggle, ...styles.highlightedButton }
-                : styles.rightToggle
-            }
-            onClick={() => setGameResume(false)}
-          >
-            Software Resume
-          </Button>
-        </div>
-        <div style={styles.frame}>
-          <iframe
-            title={gameResume ? 'Game Resume' : 'Software Resume'}
-            src={gameResume ? gameResumeURL : softwareResumeURL}
-            width="100%"
-            height="920"
-          />
-        </div>
+      <div style={styles.rows}>
+        <Button
+          variant="contained"
+          style={
+            gameResume
+              ? { ...styles.leftToggle, ...styles.highlightedButton }
+              : styles.leftToggle
+          }
+          onClick={() => setGameResume(true)}
+        >
+          Game Resume
+        </Button>
+        <Button
+          variant="contained"
+          style={
+            !gameResume
+              ? { ...styles.rightToggle, ...styles.highlightedButton }
+              : styles.rightToggle
+          }
+          onClick={() => setGameResume(false)}
+        >
+          Software Resume
+        </Button>
+      </div>
+      <div style={styles.frame}>
+        <iframe
+          title={gameResume ? 'Game Resume' : 'Software Resume'}
+          src={gameResume ? gameResumeURL : softwareResumeURL}
+          width="100%"
+          height="920"
+        />
       </div>
     </div>
   )
