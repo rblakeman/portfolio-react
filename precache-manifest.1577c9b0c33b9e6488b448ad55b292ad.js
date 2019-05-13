@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/updated.f4409a3b.png"
   },
   {
-    "revision": "646143ee9ae16e0f7dc1",
+    "revision": "d80daf41e2cae75e736d",
     "url": "/static/css/main.50e4bbd2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
-    "revision": "83e5c320efc8501ed91659a1f72a9d19",
-    "url": "/static/media/marble1.83e5c320.png"
+    "revision": "8339f44b4ddbb2fbc7285a48f3ad0ab2",
+    "url": "/static/media/marble1.8339f44b.png"
   },
   {
     "revision": "32b158b648a0efb88d7548df3cb6cbef",
@@ -84,8 +84,8 @@ self.__precacheManifest = [
     "url": "/static/media/add.45fd3900.png"
   },
   {
-    "revision": "646143ee9ae16e0f7dc1",
-    "url": "/static/js/main.646143ee.chunk.js"
+    "revision": "d80daf41e2cae75e736d",
+    "url": "/static/js/main.d80daf41.chunk.js"
   },
   {
     "revision": "6ad2dfcc598f7f63b6e9aaf21ea71fcc",
@@ -156,15 +156,15 @@ self.__precacheManifest = [
     "url": "/static/media/chess_gameover.6b27439f.png"
   },
   {
-    "revision": "9eea37e868a579a0a1fa6978e083c5e8",
-    "url": "/static/media/marble1voxel.9eea37e8.png"
+    "revision": "8fe07ac77a3ad34918263256e8fd8374",
+    "url": "/static/media/marble1voxel.8fe07ac7.png"
   },
   {
     "revision": "9ff17b934b014a564d7a87331cae1998",
     "url": "/static/media/UROC_Poster_2016.9ff17b93.png"
   },
   {
-    "revision": "e000636757ee45558206b98bf552e854",
+    "revision": "370e59768087da1166ff879170628fba",
     "url": "/index.html"
   }
 ];
