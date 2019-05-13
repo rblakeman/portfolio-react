@@ -9,8 +9,9 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'left',
     justifyContent: 'space-between',
-    margin: '0px 32px 32px 32px',
-    padding: '0px 16px 16px 16px'
+    margin: 'auto', //'0px 32px 32px 32px',
+    padding: '0px 48px 48px 48px', //'0px 16px 16px 16px',
+    maxWidth: '1250px'
   },
   scrollButton: {
     // width: '64px',

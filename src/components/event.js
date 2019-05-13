@@ -2,24 +2,26 @@ import React, { Component } from 'react'
 import Paper from '@material-ui/core/Paper'
 const styles = {
   container: {
+    maxWidth: '1000px',
+    width: '100%',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    margin: 16,
-    padding: 16,
+    margin: '16px',
+    padding: '16px',
     backgroundColor: '#f7fafd'
   },
   text: {
-    margin: 15,
-    maxWidth: 500
+    margin: '15px',
+    maxWidth: '500px'
   },
   title: {
     fontSize: '50px',
     color: '#5a5a5a',
     fontWeight: 400,
     lineHeight: 1,
-    marginBottom: 15
+    marginBottom: '15px'
   },
   date: {
     fontSize: '38px',
@@ -27,15 +29,14 @@ const styles = {
     fontWeight: 400,
     lineHeight: 1,
     letterSpacing: '-0.05rem',
-    marginTop: 15,
-    marginBottom: 20
+    margin: '15px 0px 20px 0px'
   },
   description: {
     fontSize: '1.25rem',
     color: '#5a5a5a',
     fontWeight: 300,
     lineHeight: 1.5,
-    marginTop: 10
+    marginTop: '10px'
   },
   picture: {
     margin: '0px 15px'

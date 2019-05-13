@@ -4,6 +4,8 @@ import _ from 'lodash'
 import { Paper, Button, Divider } from '@material-ui/core'
 const styles = {
   container: {
+    maxWidth: '1125px',
+    width: '100%',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
@@ -16,7 +18,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     margin: '15px',
-    maxWidth: 500
+    maxWidth: '500px'
   },
   right: {
     display: 'flex',

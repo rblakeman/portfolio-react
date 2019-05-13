@@ -16,6 +16,9 @@ const styles = {
   root: {
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+  },
+  size: {
+    maxWidth: '1250px'
   }
 }
 
@@ -55,31 +58,13 @@ class App extends Component {
         <NotificationBar />
         <MenuBar onPageClick={(e, v) => this.setPage(e, v)} />
         <Home />
-        <div ref={this.myRef}>
+        <div style={styles.size} ref={this.myRef}>
           <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
         </div>
-        <div style={{ margin: 32 }}>
-          {/* <AppBar position="sticky" style={{ backgroundColor: '#0275D8' }}>
-            <Tabs
-              value={this.state.currPage}
-              onChange={(ev, value) => {
-                this.setState({ currPage: value })
-              }}
-              variant="fullWidth"
-              // indicatorColor="primary"
-              // textColor="primary"
-              style={{ margin: '0px 50px' }}
-            >
-              <Tab icon={<Event />} label="Events" value="Events" />
-              <Tab icon={<Code />} label="Software" value="Software" />
-              <Tab icon={<VideogameAsset />} label="Games" value="Games" />
-              <Tab icon={<Edit />} label="Research" value="Research" />
-              <Tab icon={<Description />} label="Resume" value="Resume" />
-            </Tabs>
-          </AppBar> */}
-          <div style={styles.pages}>{this.renderContentPage()}</div>
+        <div style={{ margin: '32px' }}>
+          <div style={{ padding: '16px' }}>{this.renderContentPage()}</div>
         </div>
-        <Divider variant="middle" style={{ marginTop: 50, marginBottom: 50 }} />
+        <Divider variant="middle" style={{ margin: '50px 0px' }} />
         <Footer />
       </div>
     )
@@ -87,29 +72,3 @@ class App extends Component {
 }
 
 export default App
-
-/*
-App
-  <HeaderLinks />
-  <MenuBar />
-  <NotificationBar />
-  <Contents />
-    <Home />
-      Profile/Info
-      <Blurbs />
-      <Event />
-      ...
-    <Software />
-      <Banner />
-      <SoftwareProject />
-      ...
-    <Games />
-      <Banner />
-      <GameProject />
-    <Research />
-      <Banner />
-    <Resume />
-      <ResumerViewer />
-  <Footer />
-
-*/

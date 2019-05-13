@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 const styles = {
   box: {
+    width: '100%',
     backgroundColor: '#e9ecef',
     padding: '4rem 2rem',
     textAlign: 'center',
     fontSize: '2.5rem',
     fontWeight: 500,
     color: '#5a5a5a',
-    marginBottom: 50
+    marginBottom: '50px'
   }
 }
 
