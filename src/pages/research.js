@@ -28,6 +28,24 @@ const styles = {
     margin: '16px',
     padding: '16px',
     backgroundColor: '#f7fafd'
+  },
+  top: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    marginBottom: '10px',
+    alignItems: 'center'
+  },
+  title: {
+    margin: '0px 30px'
+  },
+  button: {
+    margin: '0px 20px',
+    textTransform: 'none'
+  },
+  bottom: {
+    maxWidth: '100%',
+    borderRadius: '10px',
+    boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px'
   }
 }
 
@@ -48,16 +66,8 @@ export default class Research extends Component {
       <div style={styles.root}>
         <Banner text="Research" />
         <Paper style={styles.container}>
-          <img
-            style={{
-              maxWidth: '100%',
-              borderRadius: '10px',
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px'
-            }}
-            src={this.state.image}
-          />
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Typography variant="h5" style={{ margin: '0px 30px' }}>
+          <div style={styles.top}>
+            <Typography variant="h5" style={styles.title}>
               Stone Marble Sponza Scene
             </Typography>
             <div>
@@ -65,7 +75,7 @@ export default class Research extends Component {
                 onClick={() => {
                   this.setState({ image: marbleIMG })
                 }}
-                style={{ margin: '0px 20px', textTransform: 'none' }}
+                style={styles.button}
               >
                 Texture
               </Button>
@@ -73,37 +83,39 @@ export default class Research extends Component {
                 onClick={() => {
                   this.setState({ image: voxelIMG })
                 }}
-                style={{ margin: '0px 20px', textTransform: 'none' }}
+                style={styles.button}
               >
                 Voxel
               </Button>
             </div>
           </div>
+          <img style={styles.bottom} src={this.state.image} />
         </Paper>
         <Paper style={styles.container}>
-          <img
-            style={{
-              maxWidth: '100%',
-              borderRadius: '10px',
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px'
-            }}
-            src={this.state.poster}
-          />
-          <Typography>Research Posters</Typography>
-          <Button
-            onClick={() => {
-              this.setState({ poster: urocposter2017IMG })
-            }}
-          >
-            2017
-          </Button>
-          <Button
-            onClick={() => {
-              this.setState({ poster: urocposter2016IMG })
-            }}
-          >
-            2016
-          </Button>
+          <div style={styles.top}>
+            <Typography variant="h5" style={styles.title}>
+              Research Posters
+            </Typography>
+            <div>
+              <Button
+                onClick={() => {
+                  this.setState({ poster: urocposter2017IMG })
+                }}
+                style={styles.button}
+              >
+                2017
+              </Button>
+              <Button
+                onClick={() => {
+                  this.setState({ poster: urocposter2016IMG })
+                }}
+                style={styles.button}
+              >
+                2016
+              </Button>
+            </div>
+          </div>
+          <img style={styles.bottom} src={this.state.poster} />
         </Paper>
       </div>
     )
