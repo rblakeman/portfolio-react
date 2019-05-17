@@ -50,6 +50,12 @@ const styles = {
     lineHeight: 1.5,
     marginTop: '10px'
   },
+  url: {
+    marginTop: '10px'
+  },
+  urltext: {
+    color: '#0275D8'
+  },
 
   //right
   picture: {},
@@ -72,6 +78,7 @@ export default function GamesProject({
   title,
   tags,
   contents,
+  externalLink,
   list,
   images,
   imageSize,
@@ -87,6 +94,17 @@ export default function GamesProject({
           <div style={styles.tags}>{tags}</div>
           <div style={styles.description}>
             {contents}
+            {externalLink ? (
+              <div style={styles.url}>
+                <a
+                  target="_blank"
+                  style={styles.urltext}
+                  href={externalLink[0].url}
+                >
+                  {externalLink[0].text}
+                </a>
+              </div>
+            ) : null}
             {list ? (list.length > 0 ? renderBulletList() : null) : null}
           </div>
         </div>
