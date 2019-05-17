@@ -94,9 +94,9 @@ export default class Home extends Component {
               design team, collaborating on issues with the other engineers, and
               discussing feedback from our service team and their patients.
               <br />
-              My workfow involves implementing new designs for our client facing
-              and administrative web apps, and tackling styling and functional
-              bugs throughout our systems.
+              My workflow involves implementing new designs for our client
+              facing and administrative web apps, and tackling styling and
+              functional bugs throughout our systems.
               {/* Last spring I graduated from CSUMB where I received my B.S. in
               Computer Science. In my time at school I focused on Game
               Development while also co-developing my Software Engineering and
