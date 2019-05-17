@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/add.45fd3900.png"
   },
   {
-    "revision": "2d3181d8d0983c03760b",
+    "revision": "61c5c087eaeb2acb2452",
     "url": "/static/css/main.934617f4.chunk.css"
   },
   {
@@ -84,8 +84,8 @@ self.__precacheManifest = [
     "url": "/static/media/admin.d469b486.png"
   },
   {
-    "revision": "2d3181d8d0983c03760b",
-    "url": "/static/js/main.2d3181d8.chunk.js"
+    "revision": "61c5c087eaeb2acb2452",
+    "url": "/static/js/main.61c5c087.chunk.js"
   },
   {
     "revision": "f4409a3b95b544b4228de1ae3b054945",
@@ -168,7 +168,7 @@ self.__precacheManifest = [
     "url": "/static/media/UROC_Poster_2016.9ff17b93.png"
   },
   {
-    "revision": "16039bf106fd147bf4ac86266b518d54",
+    "revision": "e2f9538cc0b2430ae431de8ba9b2acac",
     "url": "/index.html"
   }
 ];
