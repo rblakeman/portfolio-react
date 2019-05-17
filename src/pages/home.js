@@ -85,12 +85,23 @@ export default class Home extends Component {
               <div>Full Stack Developer</div>
             </Typography>
             <Typography style={styles.description}>
-              I am a Software Engineer at Robin Care Inc. Last spring I
-              graduated from CSUMB where I received my B.S. in Computer Science.
-              In my time at school I focused on Game Development while also
-              co-developing my Software Engineering and Web Development skills.
-              I have an abundance of projects with a cumulative research
-              project.
+              I am a Software Engineer at Robin Care Inc. My achievements so far
+              include a newly designed customizable Patient-Onboarding
+              registration flow and an intelligent Patient Symptom Tracking
+              feature.
+              <br />
+              My daily responsibilities include meetings with the product and
+              design team, collaborating on issues with the other engineers, and
+              discussing feedback from our service team and their patients.
+              <br />
+              My workfow involves implementing new designs for our client facing
+              and administrative web apps, and tackling styling and functional
+              bugs throughout our systems.
+              {/* Last spring I graduated from CSUMB where I received my B.S. in
+              Computer Science. In my time at school I focused on Game
+              Development while also co-developing my Software Engineering and
+              Web Development skills. I have an abundance of projects with a
+              cumulative research project. */}
             </Typography>
             <Typography style={styles.icons}>
               <a style={{ marginLeft: 10 }} href="https://github.com/rblakeman">
@@ -124,7 +135,7 @@ export default class Home extends Component {
               image={Blurb_CSUMBLogo}
               circle={true}
               title="Education"
-              contents="Bachelor of Science in Computer Science & Information Technology. Graduated Spring 2018 with Honors and an emphasis in Game Development"
+              contents="Bachelor of Science in Computer Science. Graduated Spring 2018 with Honors and an emphasis in Game Development and Software Engineering"
               button_text="CSUMB"
               button_url="https://studentgames.itch.io/"
             />
