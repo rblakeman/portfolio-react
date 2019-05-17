@@ -20,12 +20,13 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     margin: 'auto' //'32px'
+    // < 875px width = stacked
   },
   intro: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    margin: '16px 16px 32px 16px'
+    margin: '32px'
   },
   header: {
     order: 1,

@@ -16,9 +16,6 @@ const styles = {
   root: {
     fontFamily:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-  },
-  size: {
-    maxWidth: '1250px'
   }
 }
 
@@ -58,7 +55,7 @@ class App extends Component {
         <NotificationBar />
         <MenuBar onPageClick={(e, v) => this.setPage(e, v)} />
         <Home />
-        <div style={styles.size} ref={this.myRef}>
+        <div ref={this.myRef}>
           <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
         </div>
         <div style={{ margin: '32px' }}>
