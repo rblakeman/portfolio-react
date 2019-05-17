@@ -147,7 +147,7 @@ export default class Home extends Component {
               title="Experience"
               contents="Involved and completed many different projects in a variety of different backgrounds, including: Software, Games, and Undergraduate Research."
               button_text="Resume"
-              button_url="/resume"
+              button_url="https://drive.google.com/file/d/1lGmm72pw18xBkF5BZ1tDzC5WI5kLVihm/view"
             />
           </div>
         </div>
