@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
 // IMAGES
-import Event_Graduation from '../img/events/graduation.jpg'
-import Event_Capstone from '../img/events/capstone.jpg'
-import Event_GDC18 from '../img/events/gdc_2018.jpeg'
-import Event_UROC from '../img/events/uroc_symposium_2017.jpg'
-import Event_GameJam from '../img/events/gamejam_2017.jpg'
 import Event_GDC17 from '../img/events/gdc_2017.jpg'
+import Event_GameJam from '../img/events/gamejam_2017.jpg'
+import Event_UROC from '../img/events/uroc_symposium_2017.jpg'
+import Event_GDC18 from '../img/events/gdc_2018.jpeg'
+import Event_Capstone from '../img/events/capstone.jpg'
+import Event_Graduation from '../img/events/graduation.jpg'
+import Event_GDC19 from '../img/events/gdc_2019.jpg'
 
 import Banner from '../components/banner'
 import Event from '../components/event'
@@ -30,6 +31,13 @@ export default class Events extends Component {
     return (
       <div style={styles.container}>
         <Banner text="Events" />
+        <Event
+          title="GDC 2019"
+          date="March 2019"
+          contents="Attended GDC for two days to listen and learn at sessions, walk and talk in the expo, but most importantly laugh and play some unique and inspiring games. My colleague captured this very candid shot of me in between the new technology booths."
+          image={Event_GDC19}
+          orientation="flipped"
+        />
         <Event
           title="University Graduation"
           date="May 2018"
