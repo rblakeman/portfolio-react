@@ -41,6 +41,12 @@ export default class Games extends Component {
           title="Open Ocean VR"
           tags="Virtual Reality Interactive Experience"
           contents="Capstone Project and Presentation for Senior Semester at University. Virtual Reality game designed for Oculus Rift using Unity3D Game Engine and C#. Player assumes role of deep-sea diver to interact and learn about the aquatic life around them. Created Dynamic Event system to allow Game Designers to create quests using an intuitive interface."
+          externalLink={[
+            {
+              url: 'https://www.youtube.com/watch?v=t73Ghh6quj8',
+              text: 'You can watch my Capstone presentation here'
+            }
+          ]}
           list={[]}
           images={[
             { text: 'Mola Mola', img: moliIMG },
@@ -51,6 +57,12 @@ export default class Games extends Component {
           title="Royal Game of Ur"
           tags="Mixed Reality Video Game"
           contents="Human-Computer Interaction Research Project under Mentor Dr. Krzysztof Pietroszek. Mixed-Reality interaction using a 3D spatial hand-tracking Leap sensor mounted on HMD. Implemented a solution in Unity3D to allow player to use their hands to move pieces and play against competitor. AI opponent powered by a Min-Max Decision Tree and animated using Inverse Kinematics."
+          externalLink={[
+            {
+              url: 'https://www.youtube.com/watch?v=0i5dbWtMu_Y',
+              text: 'Here is a short gameplay video'
+            }
+          ]}
           list={[]}
           images={[
             { text: 'Invalid Move', img: invalidmoveIMG },
@@ -60,7 +72,13 @@ export default class Games extends Component {
         <GameProject
           title="Enkindle"
           tags="3D Video Game"
-          contents="Developed and published game to simulate an industry Game Studio environment and workflow. Collaborated with Game Design course and Polish Art University to manage and visualize gameplay. Implemented mesh deformation as a tool for Unity’s built-in Terrain system. Along with a procedural generation system for creating trees and placing them in game. No two playthoughs are alike!"
+          contents="Developed and published game to simulate an industry Game Studio environment and workflow. Collaborated with Game Design program and Polish Art University to manage and visualize gameplay. Implemented mesh deformation as a tool for Unity’s built-in Terrain system. Along with a procedural generation system for creating trees and placing them in game. No two playthoughs are alike!"
+          externalLink={[
+            {
+              url: 'https://studentgames.itch.io/enkindle',
+              text: 'Check out the itch.io page'
+            }
+          ]}
           list={[]}
           images={[
             { text: 'Enkindle', img: phoenixIMG },
