@@ -124,16 +124,24 @@ export default function SoftwareProject({
     return (
       <div style={styles.right}>
         <div style={styles.picture}>
-          <img
-            style={{
-              borderRadius: '10px',
-              boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
-              maxWidth: '500px'
-              // maxHeight: '500px'
-            }}
-            src={currImage}
-            alt="Software Project"
-          />
+          {console.log(currImage)}
+          {_.startsWith(currImage, 'http') ? (
+            <iframe
+              src={currImage}
+              style={{ width: '400px', height: '400px' }}
+            />
+          ) : (
+            <img
+              style={{
+                borderRadius: '10px',
+                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
+                maxWidth: '500px'
+                // maxHeight: '500px'
+              }}
+              src={currImage}
+              alt="Software Project"
+            />
+          )}
         </div>
         <Divider variant="middle" style={{ margin: '20px 0px' }} />
         <div style={styles.buttons}>

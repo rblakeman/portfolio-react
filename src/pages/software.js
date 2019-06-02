@@ -59,7 +59,12 @@ export default class Software extends Component {
           list={['Weather Forecast App', 'YouTube Search and Viewer App']}
           images={[
             { text: 'Weather', img: WeatherIMG },
-            { text: 'YouTube', img: YouTubeIMG }
+            { text: 'YouTube', img: YouTubeIMG },
+            {
+              text: 'Pokedex',
+              img: 'https://rblakeman.github.io/PokedexApp/'
+            },
+            { text: 'Colors', img: 'https://rblakeman.github.io/ColorApp' }
           ]}
           icons={[
             {
