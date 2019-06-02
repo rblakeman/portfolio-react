@@ -53,10 +53,15 @@ export default class Software extends Component {
       <div style={styles.root}>
         <Banner text="Software Projects" />
         <SoftwareProject
-          title="React-Redux Projects"
+          title="React Apps"
           tags="ReactJS"
-          contents="Handful of Full-Stack projects from online course"
-          list={['Weather Forecast App', 'YouTube Search and Viewer App']}
+          contents="Full-Stack projects using various combinations of React, Redux, jQuery, and AJAX. Some projects are hosted on GitHub Pages, interactive demos to the right."
+          list={[
+            'Weather Forecast App',
+            'YouTube Search and Viewer App',
+            'Searchable Pokedex App',
+            'Color Palette and Photography App'
+          ]}
           images={[
             { text: 'Weather', img: WeatherIMG },
             { text: 'YouTube', img: YouTubeIMG },
