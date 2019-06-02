@@ -30,6 +30,22 @@ const styles = {
 export default class MenuBar extends Component {
   constructor(props) {
     super(props)
+
+    this.state = { width: 0, height: 0 }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions()
+    window.addEventListener('resize', this.updateWindowDimensions)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions)
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight })
   }
 
   render() {
@@ -41,32 +57,37 @@ export default class MenuBar extends Component {
           onClick={() => this.props.onPageClick('Events')}
           style={styles.linkText}
         >
-          <Event style={styles.icons} /> Events
+          <Event style={styles.icons} />
+          {this.state.width >= 560 ? 'Events' : null}
         </MenuItem>
         <MenuItem
           onClick={() => this.props.onPageClick('Software')}
           style={styles.linkText}
         >
-          <Code style={styles.icons} /> Software
+          <Code style={styles.icons} />
+          {this.state.width >= 560 ? 'Software' : null}
         </MenuItem>
         <MenuItem
           onClick={() => this.props.onPageClick('Games')}
           style={styles.linkText}
         >
-          <VideogameAsset style={styles.icons} /> Games
+          <VideogameAsset style={styles.icons} />
+          {this.state.width >= 560 ? 'Games' : null}
         </MenuItem>
         <MenuItem
           onClick={() => this.props.onPageClick('Research')}
           style={styles.linkText}
         >
-          <Edit style={styles.icons} /> Research
+          <Edit style={styles.icons} />
+          {this.state.width >= 560 ? 'Research' : null}
         </MenuItem>
         {/* </div> */}
         <MenuItem
           onClick={() => this.props.onPageClick('Resume')}
           style={styles.linkText}
         >
-          <Description style={styles.icons} /> Resume
+          <Description style={styles.icons} />
+          {this.state.width >= 560 ? 'Resume' : null}
         </MenuItem>
       </AppBar>
     )
