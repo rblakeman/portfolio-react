@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import _ from 'lodash'
 
 import { Paper, Button, Divider } from '@material-ui/core'
@@ -84,7 +84,24 @@ export default function GamesProject({
   imageSize,
   icons
 }) {
+  const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
   const [currImage, setCurrImage] = useState(images[0].img)
+  const MIN_WIDTH = 850
+
+  useEffect(() => {
+    updateWindowDimensions()
+    window.addEventListener('resize', updateWindowDimensions)
+
+    return () => {
+      window.removeEventListener('resize', updateWindowDimensions)
+    }
+  }, [])
+
+  const updateWindowDimensions = () => {
+    setWidth(window.innerWidth)
+    setHeight(window.innerHeight)
+  }
 
   const renderLeftSide = () => {
     return (
@@ -198,7 +215,13 @@ export default function GamesProject({
   }
 
   return (
-    <Paper style={styles.container}>
+    <Paper
+      style={
+        width > MIN_WIDTH
+          ? styles.container
+          : { ...styles.container, flexDirection: 'column', width: '' }
+      }
+    >
       {renderLeftSide()}
       {renderRightSide()}
     </Paper>
