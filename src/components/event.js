@@ -42,8 +42,29 @@ const styles = {
     margin: '0px 15px'
   }
 }
+const MIN_WIDTH = 850
 
 export default class Event extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { width: 0, height: 0 }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions()
+    window.addEventListener('resize', this.updateWindowDimensions)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions)
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight })
+  }
+
   renderText() {
     return (
       <div style={styles.text}>
@@ -70,16 +91,22 @@ export default class Event extends Component {
   }
 
   render() {
-    if (this.props.orientation === 'flipped') {
+    if (this.state.width > MIN_WIDTH) {
       return (
         <Paper style={styles.container}>
-          {this.renderPicture()}
-          {this.renderText()}
+          {this.props.orientation === 'flipped'
+            ? this.renderPicture()
+            : this.renderText()}
+          {this.props.orientation === 'flipped'
+            ? this.renderText()
+            : this.renderPicture()}
         </Paper>
       )
     } else {
       return (
-        <Paper style={styles.container}>
+        <Paper
+          style={{ ...styles.container, flexDirection: 'column', width: '' }}
+        >
           {this.renderText()}
           {this.renderPicture()}
         </Paper>
