@@ -60,28 +60,18 @@ export default class Footer extends Component {
           <a href="https://www.linkedin.com/in/rblakeman/">LinkedIn</a>
           <br />
         </p>
-        {this.state.hidden ? (
-          <Button
-            style={{
-              ...styles.scrollButton,
-              visibility: 'hidden'
-            }}
-            onClick={() => {
-              window.scrollTo(0, 0)
-            }}
-          >
-            <KeyboardArrowUpRounded style={{ height: '36px', width: '36px' }} />
-          </Button>
-        ) : (
-          <Button
-            style={styles.scrollButton}
-            onClick={() => {
-              window.scrollTo(0, 0)
-            }}
-          >
-            <KeyboardArrowUpRounded style={{ height: '36px', width: '36px' }} />
-          </Button>
-        )}
+        <Button
+          style={
+            this.state.hidden
+              ? { ...styles.scrollButton, visibility: 'hidden' }
+              : styles.scrollButton
+          }
+          onClick={() => {
+            window.scrollTo(0, 0)
+          }}
+        >
+          <KeyboardArrowUpRounded style={{ height: '36px', width: '36px' }} />
+        </Button>
       </div>
     )
   }
