@@ -39,7 +39,7 @@ const softwareResumeURL =
   'https://drive.google.com/file/d/1lGmm72pw18xBkF5BZ1tDzC5WI5kLVihm/preview'
 
 export default (props) => {
-  const [gameResume, setGameResume] = useState(true)
+  const [gameResume, setGameResume] = useState(false)
 
   return (
     <div style={styles.columns}>
@@ -48,24 +48,24 @@ export default (props) => {
         <Button
           variant="contained"
           style={
-            gameResume
+            !gameResume
               ? { ...styles.leftToggle, ...styles.highlightedButton }
               : styles.leftToggle
-          }
-          onClick={() => setGameResume(true)}
-        >
-          Game Resume
-        </Button>
-        <Button
-          variant="contained"
-          style={
-            !gameResume
-              ? { ...styles.rightToggle, ...styles.highlightedButton }
-              : styles.rightToggle
           }
           onClick={() => setGameResume(false)}
         >
           Software Resume
+        </Button>
+        <Button
+          variant="contained"
+          style={
+            gameResume
+              ? { ...styles.rightToggle, ...styles.highlightedButton }
+              : styles.rightToggle
+          }
+          onClick={() => setGameResume(true)}
+        >
+          Game Resume
         </Button>
       </div>
       <div style={styles.frame}>

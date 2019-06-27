@@ -139,7 +139,7 @@ export default class Home extends Component {
               <br />
               My workflow involved implementing new designs for our client
               facing and administrative web apps, and tackling styling and
-              functional bugs throughout our systems.
+              functional bugs throughout the platform.
               {/* Last spring I graduated from CSUMB where I received my B.S. in
               Computer Science. In my time at school I focused on Game
               Development while also co-developing my Software Engineering and
