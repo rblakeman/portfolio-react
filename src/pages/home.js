@@ -111,9 +111,9 @@ export default class Home extends Component {
               Ryan Blakeman
             </Typography>
             <Typography variant="h2" style={styles.titles}>
-              <div>Game Developer</div>
               <div>Software Engineer</div>
               <div>Full Stack Developer</div>
+              <div>Game Developer</div>
             </Typography>
             {this.state.width < 830 ? (
               <div style={styles.profilePic}>
@@ -128,16 +128,16 @@ export default class Home extends Component {
               </div>
             ) : null}
             <Typography style={styles.description}>
-              I am a Software Engineer at Robin Care Inc. My achievements so far
-              include a newly designed customizable Patient-Onboarding
-              registration flow and an intelligent Patient Symptom Tracking
-              feature.
+              I was previously a Software Engineer at Robin Care Inc. My
+              achievements include a newly designed customizable
+              Patient-Onboarding registration flow and an intelligent Patient
+              Symptom Tracking feature.
               <br />
-              My daily responsibilities include meetings with the product and
+              My daily responsibilities included meetings with the product and
               design team, collaborating on issues with the other engineers, and
               discussing feedback from our service team and their patients.
               <br />
-              My workflow involves implementing new designs for our client
+              My workflow involved implementing new designs for our client
               facing and administrative web apps, and tackling styling and
               functional bugs throughout our systems.
               {/* Last spring I graduated from CSUMB where I received my B.S. in
