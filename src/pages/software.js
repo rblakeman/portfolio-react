@@ -34,6 +34,7 @@ import {
   faRaspberryPi
 } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faMicrochip } from '@fortawesome/free-solid-svg-icons'
+import ReduxLogo from '../img/software/react/redux_logo.svg'
 
 const styles = {
   root: {
@@ -54,13 +55,14 @@ export default class Software extends Component {
         <Banner text="Software Projects" />
         <SoftwareProject
           title="React Apps"
-          tags="ReactJS"
-          contents="Full-Stack projects using various combinations of React, Redux, jQuery, and AJAX. Some projects are hosted on GitHub Pages, interactive demos to the right."
+          tags="ReactJS, Redux, AJAX"
+          contents="Full-Stack projects using various combinations of React, Redux, and AJAX. Some projects are hosted on GitHub Pages, interactive demos to the right."
           list={[
             'Weather Forecast App',
             'YouTube Search and Viewer App',
             'Searchable Pokedex App',
-            'Color Palette and Photography App'
+            'Color Palette and Photography App',
+            'Tic-Tac-Toe App'
           ]}
           images={[
             { text: 'Weather', img: WeatherIMG },
@@ -69,7 +71,8 @@ export default class Software extends Component {
               text: 'Pokedex',
               img: 'https://rblakeman.github.io/PokedexApp/'
             },
-            { text: 'Colors', img: 'https://rblakeman.github.io/ColorApp' }
+            { text: 'Colors', img: 'https://rblakeman.github.io/ColorApp' },
+            { text: 'TicTacToe', img: 'https://rblakeman.github.io/TicTacToe' }
           ]}
           icons={[
             {
@@ -91,12 +94,15 @@ export default class Software extends Component {
                 />
               ),
               type: 'fa'
+            },
+            {
+              img: ReduxLogo
             }
           ]}
         />
         <SoftwareProject
           title="Web Development Catalog"
-          tags="HTML, PHP, JS, CSS"
+          tags="HTML, CSS, PHP, JS, jQuery"
           contents="GitHub Repository from all of my projects and assignments from university course. Screenshots are from final project, demonstrating the basic CRUD operations on the database."
           images={[
             { text: 'Home', img: HomeWebIMG },

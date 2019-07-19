@@ -52,19 +52,30 @@ const styles = {
   },
 
   //right
-  picture: {}, //display: 'flex', justifyContent: 'center' },
-  buttons: { alignSelf: 'center' },
+  icons: {
+    display: 'flex',
+    marginTop: '30px'
+  },
+  picture: { alignSelf: 'center' }, //display: 'flex', justifyContent: 'center' },
+  buttons: {
+    alignSelf: 'center',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center'
+  },
   buttonSelected: {
     backgroundColor: 'rgb(2, 117, 216)',
     color: 'white',
     margin: '0px 5px',
-    textTransform: 'none'
+    textTransform: 'none',
+    marginBottom: '10px'
   },
   buttonUnselected: {
     backgroundColor: 'white',
     color: 'black',
     margin: '0px 5px',
-    textTransform: 'none'
+    textTransform: 'none',
+    marginBottom: '10px'
   }
 }
 
@@ -106,9 +117,7 @@ export default function SoftwareProject({
             {list ? (list.length > 0 ? renderBulletList() : null) : null}
           </div>
         </div>
-        <div style={{ marginTop: '30px' }}>
-          {icons ? (icons.length > 0 ? renderIcons() : null) : null}
-        </div>
+        {icons ? (icons.length > 0 ? renderIcons() : null) : null}
       </div>
     )
   }
@@ -125,12 +134,18 @@ export default function SoftwareProject({
 
   const renderIcons = () => {
     return (
-      <div>
+      <div style={styles.icons}>
         {_.map(icons, (icon, idx) => {
           if (icon.type && icon.type === 'fa') {
             return icon.obj
           } else {
-            return <img src={icon.img} alt={icon.text} />
+            return (
+              <img
+                style={{ width: '80px', height: '80px', marginLeft: '10px' }}
+                src={icon.img}
+                alt={icon.text}
+              />
+            )
           }
         })}
       </div>
