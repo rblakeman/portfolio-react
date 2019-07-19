@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "1f9289a6876a8c2dbf00",
-    "url": "/static/css/main.f7bcfa05.chunk.css"
+    "revision": "e03505a4317dbd65e051",
+    "url": "/static/css/main.fec0b7ec.chunk.css"
   },
   {
-    "revision": "1f9289a6876a8c2dbf00",
-    "url": "/static/js/main.1f9289a6.chunk.js"
+    "revision": "e03505a4317dbd65e051",
+    "url": "/static/js/main.e03505a4.chunk.js"
   },
   {
-    "revision": "d0e2f36136fbfced5a0a",
-    "url": "/static/js/1.d0e2f361.chunk.js"
+    "revision": "e9485760ed2095aed749",
+    "url": "/static/js/1.e9485760.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -124,6 +124,10 @@ self.__precacheManifest = [
     "url": "/static/media/process_diagram.599e3936.png"
   },
   {
+    "revision": "5ae1af16ffc2f55bd739da81176302e9",
+    "url": "/static/media/redux_logo.5ae1af16.svg"
+  },
+  {
     "revision": "3aefe86bfbde182983b8535925f2130f",
     "url": "/static/media/Moli_Hello_jellygif.3aefe86b.gif"
   },
@@ -168,7 +172,7 @@ self.__precacheManifest = [
     "url": "/static/media/UROC_Poster_2016.9ff17b93.png"
   },
   {
-    "revision": "efa97bd97cdb041b42fc62963bbb83e6",
+    "revision": "0be4f807915025eae24a5f6abf3c8c34",
     "url": "/index.html"
   }
 ];
