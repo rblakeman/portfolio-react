@@ -1,9 +1,9 @@
 {
-  "main.css": "/static/css/main.fec0b7ec.chunk.css",
-  "main.js": "/static/js/main.e03505a4.chunk.js",
-  "main.js.map": "/static/js/main.e03505a4.chunk.js.map",
-  "static/js/1.e9485760.chunk.js": "/static/js/1.e9485760.chunk.js",
-  "static/js/1.e9485760.chunk.js.map": "/static/js/1.e9485760.chunk.js.map",
+  "main.css": "/static/css/main.22bea9ad.chunk.css",
+  "main.js": "/static/js/main.fe0ad644.chunk.js",
+  "main.js.map": "/static/js/main.fe0ad644.chunk.js.map",
+  "static/js/1.7ec8008f.chunk.js": "/static/js/1.7ec8008f.chunk.js",
+  "static/js/1.7ec8008f.chunk.js.map": "/static/js/1.7ec8008f.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/profile_pic.jpg": "/static/media/profile_pic.8517b1f9.jpg",
@@ -45,8 +45,8 @@
   "static/media/chess_gameover.png": "/static/media/chess_gameover.6b27439f.png",
   "static/media/marble1voxel.png": "/static/media/marble1voxel.8fe07ac7.png",
   "static/media/UROC_Poster_2016.png": "/static/media/UROC_Poster_2016.9ff17b93.png",
-  "static/css/main.fec0b7ec.chunk.css.map": "/static/css/main.fec0b7ec.chunk.css.map",
+  "static/css/main.22bea9ad.chunk.css.map": "/static/css/main.22bea9ad.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.7743a4ef7057b755c72a1353600cbcd2.js": "/precache-manifest.7743a4ef7057b755c72a1353600cbcd2.js",
+  "precache-manifest.5bfc711b43799f3e53475e209075140d.js": "/precache-manifest.5bfc711b43799f3e53475e209075140d.js",
   "service-worker.js": "/service-worker.js"
 }
