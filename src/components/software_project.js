@@ -159,7 +159,7 @@ export default function SoftwareProject({
           {_.startsWith(currImage, 'http') ? (
             <iframe
               src={currImage}
-              style={{ width: '400px', height: '400px' }}
+              style={{ width: '450px', height: '400px' }}
             />
           ) : (
             <img
