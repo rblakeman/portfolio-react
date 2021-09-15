@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import _ from 'lodash';
 
 import { Paper, Button, Divider } from '@material-ui/core';
 const styles = {
@@ -134,7 +133,7 @@ export default function GamesProject({
     const renderBulletList = () => {
         return (
             <ul>
-                {_.map(list, (bullet, idx) => {
+                {list.map((bullet, idx) => {
                     return <li key={idx}>{bullet}</li>;
                 })}
             </ul>
@@ -144,7 +143,7 @@ export default function GamesProject({
     const renderIcons = () => {
         return (
             <div>
-                {_.map(icons, (icon, idx) => {
+                {icons.map((icon, idx) => {
                     if (icon.type && icon.type === 'fa') {
                         return icon.obj;
                     } else if (icon.type && icon.type === 'svg') {
@@ -177,7 +176,7 @@ export default function GamesProject({
                 </div>
                 <Divider variant="middle" style={{ margin: '20px 0px' }} />
                 <div style={styles.buttons}>
-                    {_.map(images, (image, idx) => {
+                    {images.map((image, idx) => {
                         if (currImage === image.img)
                             return (
                                 <Button

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -143,12 +142,16 @@ export default class Home extends Component {
                             cumulative research project. */}
                         </Typography>
                         <Typography style={styles.icons}>
-                            <a style={{ marginLeft: 10 }} href="https://github.com/rblakeman">
+                            <a
+                                style={{ marginLeft: 10 }}
+                                href="https://github.com/rblakeman"
+                                target="_blank">
                                 <FontAwesomeIcon style={{ color: 'black' }} icon={faGithub} />
                             </a>
                             <a
                                 style={{ marginLeft: 10 }}
-                                href="https://www.linkedin.com/in/rblakeman/">
+                                href="https://www.linkedin.com/in/rblakeman/"
+                                target="_blank">
                                 <FontAwesomeIcon
                                     style={{ color: '#007bb5' }}
                                     icon={faLinkedin} />

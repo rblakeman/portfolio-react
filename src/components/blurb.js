@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
 import Button from '@material-ui/core/Button';
 const styles = {
     blurb: {
@@ -49,7 +48,7 @@ export default class Blurb extends Component {
                 <p style={styles.ptext}>{this.props.contents}</p>
                 <p>
                     <Button
-                        target={_.startsWith(this.props.button_url, 'https://') ? '_blank' : ''}
+                        target={this.props.button_url.startsWith('https://') ? '_blank' : ''}
                         style={styles.button}
                         variant="outlined"
                         color="primary"
