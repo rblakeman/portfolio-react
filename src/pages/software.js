@@ -65,11 +65,11 @@ export default class Software extends Component {
                         'Tic-Tac-Toe App'
                     ]}
                     images={[
-                        { text: 'Weather', img: WeatherIMG },
-                        { text: 'YouTube', img: YouTubeIMG },
-                        { text: 'Pokedex', img: 'https://rblakeman.github.io/PokedexApp/' },
-                        { text: 'Colors', img: 'https://rblakeman.github.io/ColorApp' },
-                        { text: 'TicTacToe', img: 'https://rblakeman.github.io/TicTacToe' }
+                        { text: 'Weather', img: WeatherIMG, link: 'https://rblakeman.github.io/WeatherMapApp/' },
+                        { text: 'YouTube', img: YouTubeIMG, link: 'https://rblakeman.github.io/YouTubeApp/' },
+                        { text: 'Pokedex', img: null, link: 'https://rblakeman.github.io/PokedexApp/' },
+                        { text: 'Colors', img: null, link: 'https://rblakeman.github.io/ColorApp' },
+                        { text: 'TicTacToe', img: null, link: 'https://rblakeman.github.io/TicTacToe' }
                     ]}
                     icons={[
                         {

@@ -89,7 +89,9 @@ export default function SoftwareProject({
 }) {
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
+    const [currText, setCurrText] = useState(images[0].text);
     const [currImage, setCurrImage] = useState(images[0].img);
+    const [currLink, setCurrLink] = useState(images[0].link);
     const MIN_WIDTH = 850;
 
     useEffect(() => {
@@ -155,26 +157,40 @@ export default function SoftwareProject({
         return (
             <div style={styles.right}>
                 <div style={styles.picture}>
-                    {_.startsWith(currImage, 'http') ? (
-                        <iframe
-                            src={currImage}
-                            style={{ width: '450px', height: '400px' }} />
+                    {currImage !== null ? (
+                        currLink ? (
+                            <a href={currLink} target="_blank">
+                                <img
+                                    style={{
+                                        borderRadius: '10px',
+                                        boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
+                                        maxWidth: '500px'
+                                        // maxHeight: '500px'
+                                    }}
+                                    src={currImage}
+                                    alt="Software Project" />
+                            </a>
+                        ) : (
+                            <img
+                                style={{
+                                    borderRadius: '10px',
+                                    boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
+                                    maxWidth: '500px'
+                                    // maxHeight: '500px'
+                                }}
+                                src={currImage}
+                                alt="Software Project" />
+                        )
                     ) : (
-                        <img
-                            style={{
-                                borderRadius: '10px',
-                                boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
-                                maxWidth: '500px'
-                                // maxHeight: '500px'
-                            }}
-                            src={currImage}
-                            alt="Software Project" />
+                        <iframe
+                            src={currLink}
+                            style={{ width: '450px', height: '400px' }} />
                     )}
                 </div>
                 <Divider variant="middle" style={{ margin: '20px 0px' }} />
                 <div style={styles.buttons}>
                     {_.map(images, (image, idx) => {
-                        if (currImage === image.img)
+                        if (currText === image.text)
                             return (
                                 <Button
                                     variant="outlined"
@@ -182,7 +198,9 @@ export default function SoftwareProject({
                                     key={idx}
                                     onClick={(ev) => {
                                         ev.preventDefault();
+                                        setCurrText(image.text);
                                         setCurrImage(image.img);
+                                        setCurrLink(image.link);
                                     }}>
                                     {image.text}
                                 </Button>
@@ -195,7 +213,9 @@ export default function SoftwareProject({
                                 key={idx}
                                 onClick={(ev) => {
                                     ev.preventDefault();
+                                    setCurrText(image.text);
                                     setCurrImage(image.img);
+                                    setCurrLink(image.link);
                                 }}>
                                 {image.text}
                             </Button>
