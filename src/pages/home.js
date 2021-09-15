@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
-import moment from 'moment'
-import { BarLoader } from 'react-spinners'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
