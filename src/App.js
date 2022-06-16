@@ -27,7 +27,7 @@ class App extends Component {
             currPage: ''
         };
 
-        console.log('last updated: September 14, 2021');
+        console.log('last updated: June 16, 2022');
     }
 
   setPage = (newPage) => {
