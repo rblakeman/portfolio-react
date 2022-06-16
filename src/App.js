@@ -30,43 +30,43 @@ class App extends Component {
         console.log('last updated: June 16, 2022');
     }
 
-  setPage = (newPage) => {
-      this.setState({ currPage: newPage });
-      window.scrollTo(0, this.myRef.current.offsetTop);
-  }
+    setPage = (newPage) => {
+        this.setState({ currPage: newPage });
+        window.scrollTo(0, this.myRef.current.offsetTop);
+    };
 
-  renderContentPage() {
-      const { currPage } = this.state;
-      if (currPage === '' || currPage === 'Events') {
-          return <Events />;
-      } else if (currPage === 'Software') {
-          return <Software />;
-      } else if (currPage === 'Games') {
-          return <Games />;
-      } else if (currPage === 'Research') {
-          return <Research />;
-      } else if (currPage === 'Resume') {
-          return <Resume />;
-      }
-  }
+    renderContentPage() {
+        const { currPage } = this.state;
+        if (currPage === '' || currPage === 'Events') {
+            return <Events />;
+        } else if (currPage === 'Software') {
+            return <Software />;
+        } else if (currPage === 'Games') {
+            return <Games />;
+        } else if (currPage === 'Research') {
+            return <Research />;
+        } else if (currPage === 'Resume') {
+            return <Resume />;
+        }
+    }
 
-  render() {
-      return (
-          <div style={styles.root} className="App">
-              <NotificationBar />
-              <MenuBar onPageClick={(e, v) => this.setPage(e, v)} />
-              <Home />
-              <div ref={this.myRef}>
-                  <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
-              </div>
-              <div style={{ margin: '32px' }}>
-                  <div style={{ padding: '16px' }}>{this.renderContentPage()}</div>
-              </div>
-              <Divider variant="middle" style={{ margin: '50px 0px' }} />
-              <Footer />
-          </div>
-      );
-  }
+    render() {
+        return (
+            <div style={styles.root} className="App">
+                <NotificationBar />
+                <MenuBar onPageClick={(e, v) => this.setPage(e, v)} />
+                <Home />
+                <div ref={this.myRef}>
+                    <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
+                </div>
+                <div style={{ margin: '32px' }}>
+                    <div style={{ padding: '16px' }}>{this.renderContentPage()}</div>
+                </div>
+                <Divider variant="middle" style={{ margin: '50px 0px' }} />
+                <Footer />
+            </div>
+        );
+    }
 }
 
 export default App;
