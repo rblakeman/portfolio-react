@@ -75,6 +75,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faReact'
                                     icon={faReact}
                                     style={{ color: 'rgb(100,212,242)', marginLeft: '10px' }}
                                     size={FA_SIZE} />
@@ -84,6 +85,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faJs'
                                     icon={faJs}
                                     style={{ color: 'rgb(246,222,56)', marginLeft: '10px' }}
                                     size={FA_SIZE} />
@@ -109,6 +111,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faHtml5'
                                     icon={faHtml5}
                                     style={{ color: 'rgb(226,77,44)', marginLeft: '10px' }}
                                     size={FA_SIZE} />
@@ -118,6 +121,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faPhp'
                                     icon={faPhp}
                                     style={{
                                         backgroundColor: 'rgb(85,86,133)',
@@ -132,6 +136,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faJs'
                                     icon={faJs}
                                     style={{ color: 'rgb(246,222,56)', marginLeft: '10px' }}
                                     size={FA_SIZE} />
@@ -141,6 +146,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faCss3Alt'
                                     icon={faCss3Alt}
                                     style={{ color: 'rgb(16,113,181)', marginLeft: '10px' }}
                                     size={FA_SIZE} />
@@ -163,6 +169,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faAndroid'
                                     icon={faAndroid}
                                     style={{ color: 'rgb(103,174,74)', marginLeft: '10px' }}
                                     size={FA_SIZE} />
@@ -172,6 +179,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faJava'
                                     icon={faJava}
                                     style={{
                                         color: 'rgb(84,131,161)',
@@ -195,6 +203,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faDatabase'
                                     icon={faDatabase}
                                     style={{
                                         color: 'grey',
@@ -207,6 +216,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faMicrochip'
                                     icon={faMicrochip}
                                     style={{
                                         color: 'rgb(18,77,58)',
@@ -219,6 +229,7 @@ export default class Software extends Component {
                         {
                             obj: (
                                 <FontAwesomeIcon
+                                    key='faRaspberryPi'
                                     icon={faRaspberryPi}
                                     style={{
                                         color: 'rgb(194,30,75)',

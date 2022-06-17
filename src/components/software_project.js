@@ -142,6 +142,7 @@ export default function SoftwareProject({
                     } else {
                         return (
                             <img
+                                key={idx}
                                 style={{ width: '80px', height: '80px', marginLeft: '10px' }}
                                 src={icon.img}
                                 alt={icon.text} />
