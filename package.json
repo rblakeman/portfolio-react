@@ -11,7 +11,9 @@
         "typecheck": "tsc --noEmit",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "gh-pages -d build",
+        "verify": "yarn lint && yarn typecheck && yarn test",
+        "verify:ci": "yarn verify && yarn build"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -36,9 +38,8 @@
         "gh-pages": "^4.0.0"
     },
     "browserslist": [
-        ">0.2%",
-        "not dead",
-        "not ie <= 11",
+        ">0.25%",
+        "not ie 11",
         "not op_mini all"
     ]
 }
