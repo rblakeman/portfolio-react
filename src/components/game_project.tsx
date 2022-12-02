@@ -12,19 +12,19 @@ const styles = {
         margin: '16px',
         padding: '16px',
         backgroundColor: '#f7fafd'
-    },
+    } as React.CSSProperties,
     left: {
         display: 'flex',
         flexDirection: 'column',
         margin: '15px',
         maxWidth: '500px'
-    },
+    } as React.CSSProperties,
     right: {
         display: 'flex',
         flexDirection: 'column',
         margin: '15px 0px',
         maxWidth: '500px'
-    },
+    } as React.CSSProperties,
 
     //left
     title: {
@@ -33,7 +33,7 @@ const styles = {
         fontWeight: 400,
         lineHeight: 1,
         marginBottom: '15px'
-    },
+    } as React.CSSProperties,
     tags: {
         fontSize: '38px',
         color: '#6c757d',
@@ -41,48 +41,68 @@ const styles = {
         lineHeight: 1,
         letterSpacing: '-0.05rem',
         margin: '15px 0px 20px 0px'
-    },
+    } as React.CSSProperties,
     description: {
         fontSize: '1.25rem',
         color: '#5a5a5a',
         fontWeight: 300,
         lineHeight: 1.5,
         marginTop: '10px'
-    },
+    } as React.CSSProperties,
     url: {
         marginTop: '10px'
-    },
+    } as React.CSSProperties,
     urltext: {
         color: '#0275D8'
-    },
+    } as React.CSSProperties,
 
     //right
-    picture: {},
-    buttons: { alignSelf: 'center' },
+    picture: {} as React.CSSProperties,
+    buttons: { alignSelf: 'center' } as React.CSSProperties,
     buttonSelected: {
         backgroundColor: 'rgb(2, 117, 216)',
         color: 'white',
         margin: '0px 5px',
         textTransform: 'none'
-    },
+    } as React.CSSProperties,
     buttonUnselected: {
         backgroundColor: 'white',
         color: 'black',
         margin: '0px 5px',
         textTransform: 'none'
-    }
+    } as React.CSSProperties
 };
 
-export default function GamesProject({
-    title,
-    tags,
-    contents,
-    externalLink,
-    list,
-    images,
-    imageSize,
-    icons
-}) {
+type Icon = {
+    type?: 'fa' | 'svg';
+    size: string;
+    text: string;
+    img?: string;
+    svg?: string;
+    obj?: string;
+};
+
+type Props = {
+    title: string;
+    tags: string;
+    contents: string;
+    externalLink?: { url: string; text: string; }[];
+    list?: React.ReactNode[];
+    images: { img: any; text: string }[];
+    imageSize?: string;
+    icons?: Icon[];
+};
+export default function GamesProject(props: Props) {
+    const {
+        title,
+        tags,
+        contents,
+        externalLink,
+        list = [],
+        images,
+        imageSize,
+        icons = []
+    } = props;
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
     const [currImage, setCurrImage] = useState(images[0].img);

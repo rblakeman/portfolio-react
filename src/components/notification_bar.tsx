@@ -9,14 +9,15 @@ const styles = {
         marginTop: 45,
         backgroundColor: '#0275d8',
         justifyContent: 'center'
-    },
+    } as React.CSSProperties,
     linkText: {
         textDecoration: 'none',
         color: 'white'
-    }
+    } as React.CSSProperties
 };
 
-export default (props) => {
+type Props = { };
+export default (props: Props) => {
     return (
         <AppBar style={styles.appBar} position="relative">
             <a

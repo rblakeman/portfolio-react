@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 const styles = {
     box: {
         width: '100%',
@@ -9,29 +10,33 @@ const styles = {
         fontWeight: 500,
         color: '#5a5a5a',
         marginBottom: '50px'
-    }
+    } as React.CSSProperties
 };
 
-export default class Banner extends Component {
-    renderBanner() {
-        return (
-            <div>
-                <h1>{this.props.title}</h1>
-                <p>{this.props.subtitle}</p>
-                <p>
-                    {/* <a href="#">Primary Button</a> */}
-                    {/* <a href="#">Secondary Button</a> */}
-                </p>
-            </div>
-        );
-    }
+type Props = {
+    // title: string;
+    // subtitle: string;
+    text: string;
+    description?: string;
+};
+export default function Banner (props: Props) {
+    // renderBanner = () => {
+    //     return (
+    //         <div>
+    //             <h1>{props.title}</h1>
+    //             <p>{props.subtitle}</p>
+    //             <p>
+    //                 {/* <a href="#">Primary Button</a> */}
+    //                 {/* <a href="#">Secondary Button</a> */}
+    //             </p>
+    //         </div>
+    //     );
+    // };
 
-    render() {
-        return (
-            <div style={styles.box}>
-                {this.props.text}
-                {this.props.description}
-            </div>
-        );
-    }
+    return (
+        <div style={styles.box}>
+            {props.text}
+            {props.description}
+        </div>
+    );
 }

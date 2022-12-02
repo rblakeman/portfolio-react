@@ -26,7 +26,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center'
-    }
+    } as React.CSSProperties
 };
 
 const FA_SIZE = '5x';
@@ -47,7 +47,6 @@ export default class Games extends Component {
                             text: 'You can watch my Capstone presentation here'
                         }
                     ]}
-                    list={[]}
                     images={[
                         { text: 'Mola Mola', img: moliIMG },
                         { text: 'Poster', img: oceanposterIMG }
@@ -62,7 +61,6 @@ export default class Games extends Component {
                             text: 'Here is a short gameplay video'
                         }
                     ]}
-                    list={[]}
                     images={[
                         { text: 'Invalid Move', img: invalidmoveIMG },
                         { text: 'Correct Move', img: correctmoveIMG }
@@ -77,24 +75,20 @@ export default class Games extends Component {
                             text: 'Check out the itch.io page'
                         }
                     ]}
-                    list={[]}
                     images={[
                         { text: 'Enkindle', img: phoenixIMG },
                         { text: 'Unity', img: enkindlescreenshotIMG }
-                    ]}
-                    icons={[{}]} />
+                    ]} />
                 <GameProject
                     title="Chess"
                     tags="C++ Console Window"
                     contents="Original Chess game written in C++ using the console window for input/output. First programming project for a lower level University class. Although this focused more on software basics, it kickstarted my passion for game programming."
-                    list={[]}
                     images={[
                         { text: 'Start', img: chessstartIMG },
                         { text: 'During', img: chessmiddleIMG },
                         { text: 'Game Over', img: chessgameoverIMG }
                     ]}
-                    imageSize="300px"
-                    icons={[{}]} />
+                    imageSize="300px" />
             </div>
         );
     }
