@@ -20,7 +20,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center'
-    }
+    } as React.CSSProperties
 };
 
 const FA_SIZE = '5x';

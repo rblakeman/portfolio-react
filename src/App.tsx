@@ -11,15 +11,20 @@ import Software from './pages/software';
 import Games from './pages/games';
 import Research from './pages/research';
 import Resume from './pages/resume';
+import type { Page } from './pages/typings';
 
 const styles = {
     root: {
         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-    }
+    } as React.CSSProperties
 };
 
-class App extends Component {
-    constructor(props) {
+type Props = { };
+type State = { currPage: string; };
+class App extends Component<Props, State> {
+    myRef: React.RefObject<HTMLDivElement>;
+
+    constructor(props: Props) {
         super(props);
         this.myRef = React.createRef();
 
@@ -27,12 +32,12 @@ class App extends Component {
             currPage: ''
         };
 
-        console.log('last updated: June 16, 2022');
+        console.log('last updated: Dec 1, 2022');
     }
 
-    setPage = (newPage) => {
+    setPage = (newPage: Page) => {
         this.setState({ currPage: newPage });
-        window.scrollTo(0, this.myRef.current.offsetTop);
+        window.scrollTo(0, this.myRef.current!.offsetTop);
     };
 
     renderContentPage() {
@@ -54,7 +59,7 @@ class App extends Component {
         return (
             <div style={styles.root} className="App">
                 <NotificationBar />
-                <MenuBar onPageClick={(e, v) => this.setPage(e, v)} />
+                <MenuBar onPageClick={(newPage: Page) => this.setPage(newPage)} />
                 <Home />
                 <div ref={this.myRef}>
                     <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />

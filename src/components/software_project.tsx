@@ -12,19 +12,19 @@ const styles = {
         margin: '16px',
         padding: '16px',
         backgroundColor: '#f7fafd'
-    },
+    } as React.CSSProperties,
     left: {
         display: 'flex',
         flexDirection: 'column',
         margin: '15px',
         maxWidth: '500px'
-    },
+    } as React.CSSProperties,
     right: {
         display: 'flex',
         flexDirection: 'column',
         margin: '15px 0px',
         maxWidth: '500px'
-    },
+    } as React.CSSProperties,
 
     //left
     title: {
@@ -33,7 +33,7 @@ const styles = {
         fontWeight: 400,
         lineHeight: 1,
         marginBottom: '15px'
-    },
+    } as React.CSSProperties,
     tags: {
         fontSize: '38px',
         color: '#6c757d',
@@ -41,53 +41,69 @@ const styles = {
         lineHeight: 1,
         letterSpacing: '-0.05rem',
         margin: '15px 0px 20px 0px'
-    },
+    } as React.CSSProperties,
     description: {
         fontSize: '1.25rem',
         color: '#5a5a5a',
         fontWeight: 300,
         lineHeight: 1.5,
         marginTop: '10px'
-    },
+    } as React.CSSProperties,
 
     //right
     icons: {
         display: 'flex',
         marginTop: '30px'
-    },
+    } as React.CSSProperties,
     picture: { alignSelf: 'center' }, //display: 'flex', justifyContent: 'center' },
     buttons: {
         alignSelf: 'center',
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center'
-    },
+    } as React.CSSProperties,
     buttonSelected: {
         backgroundColor: 'rgb(2, 117, 216)',
         color: 'white',
         margin: '0px 5px',
         textTransform: 'none',
         marginBottom: '10px'
-    },
+    } as React.CSSProperties,
     buttonUnselected: {
         backgroundColor: 'white',
         color: 'black',
         margin: '0px 5px',
         textTransform: 'none',
         marginBottom: '10px'
-    }
+    } as React.CSSProperties
 };
 
-export default function SoftwareProject({
-    title,
-    tags,
-    contents,
-    list,
-    images,
-    icons
-}) {
+type Icon = {
+    type?: 'fa';
+    text?: string;
+    img?: any;
+    obj?: any;
+};
+
+type Props = {
+    title: string;
+    tags: string;
+    contents: string;
+    list?: React.ReactNode[];
+    images: { img: any; text: string; link?: string }[];
+    icons: Icon[];
+};
+export default function SoftwareProject(props: Props) {
+    const {
+        title,
+        tags,
+        contents,
+        list = [],
+        images,
+        icons
+    } = props;
     const [width, setWidth] = useState(0);
-    const [height, setHeight] = useState(0);
+    // const [height, setHeight] = useState(0);
     const [currText, setCurrText] = useState(images[0].text);
     const [currImage, setCurrImage] = useState(images[0].img);
     const [currLink, setCurrLink] = useState(images[0].link);
@@ -104,7 +120,7 @@ export default function SoftwareProject({
 
     const updateWindowDimensions = () => {
         setWidth(window.innerWidth);
-        setHeight(window.innerHeight);
+        // setHeight(window.innerHeight);
     };
 
     const renderLeftSide = () => {
