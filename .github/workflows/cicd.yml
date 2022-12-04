@@ -107,7 +107,7 @@ jobs:
     needs: checks
     # OS of the runner
     runs-on: ubuntu-latest
-    # if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master'
 
     # A step is an individual task that can run commands in a job
     # and share the same runner.

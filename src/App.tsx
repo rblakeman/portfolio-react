@@ -32,7 +32,7 @@ class App extends Component<Props, State> {
             currPage: ''
         };
 
-        console.log('[Testing GitHub Actions Deploy] last updated: Dec 4, 2022');
+        console.log('last updated: Dec 4, 2022');
     }
 
     setPage = (newPage: Page) => {
