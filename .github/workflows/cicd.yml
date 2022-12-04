@@ -133,14 +133,17 @@ jobs:
       - name: Health Check
         run: echo yarn && yarn -v && echo node && node -v
 
-      - name: Temp Check
-        run: echo ls -l && ls -l && echo node-modules/ && ls -al node-modules/
-
       - name: Install Dependencies
         run: yarn install
 
+      - name: Temp Check
+        run: echo ls -l && ls -l && echo node_modules/ && ls -al node_modules/
+
       - name: Build Site
         run: yarn build
+
+      - name: Temp Check 2
+        run: echo ls -l && ls -l && echo node_modules/ && ls -al node_modules/
 
       # Ref: https://dev.to/dyarleniber/setting-up-a-ci-cd-workflow-on-github-actions-for-a-react-app-with-github-pages-and-codecov-4hnp
       - name: Deploy to GitHub Pages
