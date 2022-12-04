@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.28fcb44c.css",
-    "main.js": "/static/js/main.3e1cbe42.js",
+    "main.js": "/static/js/main.8e91959d.js",
     "static/media/UROC_Poster_2017.png": "/static/media/UROC_Poster_2017.dba4d97cb2fecbbd8163.png",
     "static/media/UROC_Poster_2016.png": "/static/media/UROC_Poster_2016.eababd98df0e3bb8aecd.png",
     "static/media/unity_screenshot.png": "/static/media/unity_screenshot.a4374fb992b5447102b5.png",
@@ -43,10 +43,10 @@
     "static/media/redux_logo.svg": "/static/media/redux_logo.26af2f77153e7ecb088494ad78d56734.svg",
     "index.html": "/index.html",
     "main.28fcb44c.css.map": "/static/css/main.28fcb44c.css.map",
-    "main.3e1cbe42.js.map": "/static/js/main.3e1cbe42.js.map"
+    "main.8e91959d.js.map": "/static/js/main.8e91959d.js.map"
   },
   "entrypoints": [
     "static/css/main.28fcb44c.css",
-    "static/js/main.3e1cbe42.js"
+    "static/js/main.8e91959d.js"
   ]
 }
