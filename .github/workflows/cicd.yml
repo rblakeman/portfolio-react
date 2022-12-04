@@ -107,7 +107,7 @@ jobs:
     needs: checks
     # OS of the runner
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    # if: github.ref == 'refs/heads/master'
 
     # A step is an individual task that can run commands in a job
     # and share the same runner.
@@ -131,7 +131,7 @@ jobs:
           (yarn -v || corepack enable && corepack prepare yarn@1.22.15 --activate)
 
       - name: Health Check
-        run: echo yarn && yarn -v && echo node && node -v && echo node-modules/ && ls -al node-modules/
+        run: echo yarn && yarn -v && echo node && node -v
 
       - name: Temp Check
         run: echo ls -l && ls -l && echo node-modules/ && ls -al node-modules/
