@@ -1,19 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.28fcb44c.css",
-    "main.js": "/static/js/main.418218cd.js",
-    "static/media/UROC_Poster_2017.png": "/static/media/UROC_Poster_2017.dba4d97cb2fecbbd8163.png",
-    "static/media/UROC_Poster_2016.png": "/static/media/UROC_Poster_2016.eababd98df0e3bb8aecd.png",
-    "static/media/unity_screenshot.png": "/static/media/unity_screenshot.a4374fb992b5447102b5.png",
-    "static/media/invalid_move.png": "/static/media/invalid_move.d8b7f2ce7f372ce20669.png",
-    "static/media/correct_move.png": "/static/media/correct_move.5a3689a112467cc92668.png",
+    "main.js": "/static/js/main.73ce9dfd.js",
     "static/media/Moli_Hello_jellygif.gif": "/static/media/Moli_Hello_jellygif.def058952c4fec84f2ca.gif",
-    "static/media/OpenOceanVRPosterFinal.png": "/static/media/OpenOceanVRPosterFinal.2a401869013cff5f95fa.png",
-    "static/media/phoenix_screenshot.png": "/static/media/phoenix_screenshot.51e655de532d9841d186.png",
     "static/media/marble1.png": "/static/media/marble1.c1207b60ff1423a30027.png",
-    "static/media/youtube.png": "/static/media/youtube.48b2d6e66ac398347b52.png",
+    "static/media/UROC_Poster_2016.png": "/static/media/UROC_Poster_2016.cb3ffec48f69dd4eb2fb.png",
+    "static/media/invalid_move.png": "/static/media/invalid_move.eeef5367d865d497f535.png",
+    "static/media/UROC_Poster_2017.png": "/static/media/UROC_Poster_2017.743d53647bbb61d162d3.png",
+    "static/media/correct_move.png": "/static/media/correct_move.ca08873cad61c14fef25.png",
+    "static/media/phoenix_screenshot.png": "/static/media/phoenix_screenshot.c4d2cea2116d4443d011.png",
+    "static/media/OpenOceanVRPosterFinal.png": "/static/media/OpenOceanVRPosterFinal.d1d5a89f7a701e77508c.png",
     "static/media/weather.png": "/static/media/weather.831400d5ddf068abe4ce.png",
-    "static/media/experience_pic.png": "/static/media/experience_pic.8597e215ee5c84867474.png",
+    "static/media/youtube.png": "/static/media/youtube.125bc758bcaf1604cda6.png",
+    "static/media/unity_screenshot.png": "/static/media/unity_screenshot.a75590d0eb34449d60dd.png",
     "static/media/updated.png": "/static/media/updated.ef569e1b36e756aad80c.png",
     "static/media/admin.png": "/static/media/admin.590849c85a4f8f8f98ac.png",
     "static/media/home.png": "/static/media/home.b397be0bc2d8408f9be3.png",
@@ -21,12 +20,13 @@
     "static/media/bottom_view.jpg": "/static/media/bottom_view.052c628f9c3ced89a91a.jpg",
     "static/media/marble1voxel.png": "/static/media/marble1voxel.b284e8cf5a1e74057ecc.png",
     "static/media/csumb_logo.png": "/static/media/csumb_logo.0d6892404a067c5cbb34.png",
+    "static/media/profile_pic.jpeg": "/static/media/profile_pic.947ed4a0a73c834c392d.jpeg",
     "static/media/create_account_fail.png": "/static/media/create_account_fail.7cbd94f411169c7c0632.png",
     "static/media/create_account_success.png": "/static/media/create_account_success.c0a4433c0d8ccb476020.png",
     "static/media/reserve.png": "/static/media/reserve.c754c2268e62f018c779.png",
     "static/media/cancel_reservation.png": "/static/media/cancel_reservation.1b30983de79560d081f8.png",
     "static/media/home_screen.png": "/static/media/home_screen.999d585a817c993e9b62.png",
-    "static/media/profile_pic.jpg": "/static/media/profile_pic.3cec8ac80eb3fbc3d382.jpg",
+    "static/media/experience_pic.png": "/static/media/experience_pic.d9868277badf7c3a3d8b.png",
     "static/media/add.png": "/static/media/add.c190e98aa37edfa2f7c4.png",
     "static/media/log_in.png": "/static/media/log_in.c913d63b1510488bde19.png",
     "static/media/process_diagram.png": "/static/media/process_diagram.158321fa256b27625e52.png",
@@ -43,10 +43,10 @@
     "static/media/redux_logo.svg": "/static/media/redux_logo.26af2f77153e7ecb088494ad78d56734.svg",
     "index.html": "/index.html",
     "main.28fcb44c.css.map": "/static/css/main.28fcb44c.css.map",
-    "main.418218cd.js.map": "/static/js/main.418218cd.js.map"
+    "main.73ce9dfd.js.map": "/static/js/main.73ce9dfd.js.map"
   },
   "entrypoints": [
     "static/css/main.28fcb44c.css",
-    "static/js/main.418218cd.js"
+    "static/js/main.73ce9dfd.js"
   ]
 }
