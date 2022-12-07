@@ -49,8 +49,8 @@ type Props = {
     title: string;
     date: string;
     contents: string;
-    image: string;
-    orientation?: string;
+    image: any;
+    flipped?: boolean;
 };
 export default function Event (props: Props) {
     const [width, setWidth] = useState(0);
@@ -98,10 +98,10 @@ export default function Event (props: Props) {
     if (width > MIN_WIDTH) {
         return (
             <Paper style={styles.container}>
-                {props.orientation === 'flipped'
+                {props.flipped
                     ? renderPicture()
                     : renderText()}
-                {props.orientation === 'flipped'
+                {props.flipped
                     ? renderText()
                     : renderPicture()}
             </Paper>
