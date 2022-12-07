@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Banner from '../components/banner';
-import { Button, Typography } from '@material-ui/core';
+// import { Button, Typography } from '@material-ui/core';
 const styles = {
     columns: {
         display: 'flex',
@@ -43,7 +43,7 @@ export default function Resume (props: Props) {
     return (
         <div style={styles.columns}>
             <Banner text="Resume" />
-            <div style={styles.rows}>
+            {/* <div style={styles.rows}>
                 <Button
                     variant="contained"
                     style={
@@ -64,7 +64,7 @@ export default function Resume (props: Props) {
                     onClick={() => setGameResume(true)}>
                     Game Resume
                 </Button>
-            </div>
+            </div> */}
             <div style={styles.frame}>
                 <iframe
                     title={gameResume ? 'Game Resume' : 'Software Resume'}
