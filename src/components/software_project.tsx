@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState } from 'react';
 import { Paper, Button, Divider } from '@material-ui/core';
+
+import { useWindowDimensions } from '../utils';
+
+const MIN_DESKTOP_WIDTH = 850;
 const styles = {
     container: {
         maxWidth: '1125px',
@@ -102,26 +105,10 @@ export default function SoftwareProject(props: Props) {
         images,
         icons
     } = props;
-    const [width, setWidth] = useState(0);
-    // const [height, setHeight] = useState(0);
+    const { width } = useWindowDimensions();
     const [currText, setCurrText] = useState(images[0].text);
     const [currImage, setCurrImage] = useState(images[0].img);
     const [currLink, setCurrLink] = useState(images[0].link);
-    const MIN_WIDTH = 850;
-
-    useEffect(() => {
-        updateWindowDimensions();
-        window.addEventListener('resize', updateWindowDimensions);
-
-        return () => {
-            window.removeEventListener('resize', updateWindowDimensions);
-        };
-    }, []);
-
-    const updateWindowDimensions = () => {
-        setWidth(window.innerWidth);
-        // setHeight(window.innerHeight);
-    };
 
     const renderLeftSide = () => {
         return (
@@ -245,7 +232,7 @@ export default function SoftwareProject(props: Props) {
     return (
         <Paper
             style={
-                width > MIN_WIDTH
+                width > MIN_DESKTOP_WIDTH
                     ? styles.container
                     : { ...styles.container, flexDirection: 'column', width: '' }
             }>

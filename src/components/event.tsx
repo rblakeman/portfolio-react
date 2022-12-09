@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Paper from '@material-ui/core/Paper';
 
+import { useWindowDimensions } from '../utils';
+
+const MIN_DESKTOP_WIDTH = 850;
 const styles = {
     container: {
         maxWidth: '1000px',
@@ -43,7 +46,6 @@ const styles = {
         margin: '0px 15px'
     } as React.CSSProperties
 };
-const MIN_WIDTH = 850;
 
 type Props = {
     title: string;
@@ -53,23 +55,7 @@ type Props = {
     flipped?: boolean;
 };
 export default function Event (props: Props) {
-    const [width, setWidth] = useState(0);
-    // const [height, setHeight] = useState(0);
-
-    useEffect(() => {
-        updateWindowDimensions();
-        window.addEventListener('resize', updateWindowDimensions);
-
-        // componentWillUnmount
-        return function cleanup() {
-            window.removeEventListener('resize', updateWindowDimensions);
-        };
-    });
-
-    const updateWindowDimensions = () => {
-        setWidth(window.innerWidth);
-        // setHeight(window.innerHeight);
-    };
+    const { width } = useWindowDimensions();
 
     const renderText = () => {
         return (
@@ -95,7 +81,7 @@ export default function Event (props: Props) {
         );
     };
 
-    if (width > MIN_WIDTH) {
+    if (width > MIN_DESKTOP_WIDTH) {
         return (
             <Paper style={styles.container}>
                 {props.flipped

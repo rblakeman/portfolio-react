@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Typography } from '@material-ui/core';
 
 import Blurb from '../components/blurb';
+import { useWindowDimensions } from '../utils';
 
+// Images
 import ProfilePic from '../img/profile_pic.jpeg';
 import Blurb_CSUMBLogo from '../img/csumb_logo.png';
 import Blurb_GRLLogo from '../img/grl_logo.png';
 import Blurb_Experience from '../img/experience_pic.png';
 
 const MIN_DESKTOP_WIDTH = 830;
-
 const styles = {
     root: {
         maxWidth: '1250px',
@@ -93,23 +94,7 @@ const styles = {
 
 type Props = { };
 export default function Home (props: Props) {
-    const [width, setWidth] = useState(0);
-    // const [height, setHeight] = useState(0);
-
-    useEffect(() => {
-        updateWindowDimensions();
-        window.addEventListener('resize', updateWindowDimensions);
-
-        // componentWillUnmount
-        return function cleanup() {
-            window.removeEventListener('resize', updateWindowDimensions);
-        };
-    });
-
-    const updateWindowDimensions = () => {
-        setWidth(window.innerWidth);
-        // setHeight(window.innerHeight);
-    };
+    const { width } = useWindowDimensions();
 
     return (
         <div style={styles.root}>
