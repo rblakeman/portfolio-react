@@ -5,6 +5,7 @@
     "homepage": "https://ryanblakeman.com",
     "scripts": {
         "start": "react-scripts start",
+        "server": "cd server && yarn && yarn start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
