@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { AppBar, MenuItem, Typography } from '@material-ui/core';
 import {
     Event,
@@ -7,8 +7,11 @@ import {
     Edit,
     Description
 } from '@material-ui/icons';
-import type { Page } from '../pages/typings';
 
+import type { Page } from '../pages/typings';
+import { useWindowDimensions } from '../utils';
+
+const MIN_DESKTOP_WIDTH = 560;
 const styles = {
     appBar: {
         left: 0,
@@ -34,23 +37,7 @@ type Props = {
 };
 export default function MenuBar (props: Props) {
     const { onPageClick } = props;
-    const [width, setWidth] = useState(0);
-    // const [height, setHeight] = useState(0);
-
-    useEffect(() => {
-        updateWindowDimensions();
-        window.addEventListener('resize', updateWindowDimensions);
-
-        // componentWillUnmount
-        return function cleanup() {
-            window.removeEventListener('resize', updateWindowDimensions);
-        };
-    });
-
-    const updateWindowDimensions = () => {
-        setWidth(window.innerWidth);
-        // setHeight(window.innerHeight);
-    };
+    const { width } = useWindowDimensions();
 
     return (
         <AppBar style={styles.appBar}>
@@ -60,32 +47,32 @@ export default function MenuBar (props: Props) {
                 onClick={() => onPageClick('Events')}
                 style={styles.linkText}>
                 <Event style={styles.icons} />
-                {width >= 560 ? 'Events' : null}
+                {width >= MIN_DESKTOP_WIDTH ? 'Events' : null}
             </MenuItem>
             <MenuItem
                 onClick={() => onPageClick('Software')}
                 style={styles.linkText}>
                 <Code style={styles.icons} />
-                {width >= 560 ? 'Software' : null}
+                {width >= MIN_DESKTOP_WIDTH ? 'Software' : null}
             </MenuItem>
             <MenuItem
                 onClick={() => onPageClick('Games')}
                 style={styles.linkText}>
                 <VideogameAsset style={styles.icons} />
-                {width >= 560 ? 'Games' : null}
+                {width >= MIN_DESKTOP_WIDTH ? 'Games' : null}
             </MenuItem>
             <MenuItem
                 onClick={() => onPageClick('Research')}
                 style={styles.linkText}>
                 <Edit style={styles.icons} />
-                {width >= 560 ? 'Research' : null}
+                {width >= MIN_DESKTOP_WIDTH ? 'Research' : null}
             </MenuItem>
             {/* </div> */}
             <MenuItem
                 onClick={() => onPageClick('Resume')}
                 style={styles.linkText}>
                 <Description style={styles.icons} />
-                {width >= 560 ? 'Resume' : null}
+                {width >= MIN_DESKTOP_WIDTH ? 'Resume' : null}
             </MenuItem>
         </AppBar>
     );

@@ -45,12 +45,17 @@ export default function Footer (props: Props) {
         };
     });
 
+    const getYear = () => {
+        return new Date().getFullYear();
+    };
+
     return (
         <div style={styles.footer}>
             <p style={{ margin: 0 }}>
-                &copy; 2018 Ryan Blakeman &middot;
+                &copy; {getYear()} Ryan Blakeman &middot;
                 <a href="mailto:rblakeman31@gmail.com">Email</a> &middot;
-                <a href="https://www.linkedin.com/in/rblakeman/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/rblakeman/">LinkedIn</a> &middot;
+                <a href="https://www.github.com/rblakeman/">GitHub</a>
                 <br />
             </p>
             <Button
