@@ -13,7 +13,8 @@ const styles = {
         fontWeight: 400,
         lineHeight: 1.2,
         color: '#5a5a5a',
-        margin: '5px 0px'
+        margin: '5px 0px',
+        whiteSpace: 'nowrap'
     } as React.CSSProperties,
     ptext: {
         textAlign: 'center',

@@ -21,14 +21,14 @@ const styles = {
         maxWidth: '500px'
     } as React.CSSProperties,
     title: {
-        fontSize: '50px',
+        fontSize: '46px',
         color: '#5a5a5a',
         fontWeight: 400,
         lineHeight: 1,
         marginBottom: '15px'
     } as React.CSSProperties,
     date: {
-        fontSize: '38px',
+        fontSize: '32px',
         color: '#6c757d',
         fontWeight: 400,
         lineHeight: 1,
@@ -36,7 +36,7 @@ const styles = {
         margin: '15px 0px 20px 0px'
     } as React.CSSProperties,
     description: {
-        fontSize: '1.25rem',
+        fontSize: '1.125rem',
         color: '#5a5a5a',
         fontWeight: 300,
         lineHeight: 1.5,
