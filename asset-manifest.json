@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.28fcb44c.css",
-    "main.js": "/static/js/main.f27cc6f8.js",
+    "main.js": "/static/js/main.eb5f651d.js",
     "static/media/Moli_Hello_jellygif.gif": "/static/media/Moli_Hello_jellygif.def058952c4fec84f2ca.gif",
     "static/media/marble1.png": "/static/media/marble1.c1207b60ff1423a30027.png",
     "static/media/UROC_Poster_2016.png": "/static/media/UROC_Poster_2016.cb3ffec48f69dd4eb2fb.png",
@@ -30,23 +30,16 @@
     "static/media/add.png": "/static/media/add.c190e98aa37edfa2f7c4.png",
     "static/media/log_in.png": "/static/media/log_in.c913d63b1510488bde19.png",
     "static/media/process_diagram.png": "/static/media/process_diagram.158321fa256b27625e52.png",
-    "static/media/gdc_2018.jpeg": "/static/media/gdc_2018.45ef7e3e8be2ce0d2f9b.jpeg",
-    "static/media/graduation.jpg": "/static/media/graduation.c9dae6b2f89d7512857a.jpg",
-    "static/media/gdc_2019.jpg": "/static/media/gdc_2019.aad648e1bb88ea39c01e.jpg",
     "static/media/chess_start.png": "/static/media/chess_start.e09a98631c2532e9cb34.png",
     "static/media/chess_gameover.png": "/static/media/chess_gameover.b1178698ebc3e18e18bb.png",
     "static/media/chess_middle.png": "/static/media/chess_middle.9c396e116a7f62ba16be.png",
-    "static/media/gdc_2017.jpg": "/static/media/gdc_2017.90287c3316f3e529fe1e.jpg",
-    "static/media/capstone.jpg": "/static/media/capstone.2f464768e2654ee31fea.jpg",
-    "static/media/uroc_symposium_2017.jpg": "/static/media/uroc_symposium_2017.39d516455ca49f3fd098.jpg",
-    "static/media/gamejam_2017.jpg": "/static/media/gamejam_2017.35a449ce92122e85227a.jpg",
     "static/media/redux_logo.svg": "/static/media/redux_logo.26af2f77153e7ecb088494ad78d56734.svg",
     "index.html": "/index.html",
     "main.28fcb44c.css.map": "/static/css/main.28fcb44c.css.map",
-    "main.f27cc6f8.js.map": "/static/js/main.f27cc6f8.js.map"
+    "main.eb5f651d.js.map": "/static/js/main.eb5f651d.js.map"
   },
   "entrypoints": [
     "static/css/main.28fcb44c.css",
-    "static/js/main.f27cc6f8.js"
+    "static/js/main.eb5f651d.js"
   ]
 }
