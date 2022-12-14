@@ -6,10 +6,10 @@
     "scripts": {
         "setup": "yarn install && cd server && yarn install",
         "start": "react-scripts start",
-        "dev:server": "cd server && yarn && yarn dev",
-        "start:server": "cd server && yarn && yarn start",
+        "dev:server": "cd server && yarn dev",
+        "start:server": "cd server && yarn start",
         "build": "react-scripts build",
-        "build:server": "cd server && yarn && yarn build",
+        "build:server": "cd server && yarn build",
         "test": "react-scripts test",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
         "typecheck": "tsc --noEmit",

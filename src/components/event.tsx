@@ -73,7 +73,8 @@ export default function Event (props: Props) {
                 <img
                     style={{
                         borderRadius: '5px',
-                        boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 5px 1px'
+                        boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 5px 1px',
+                        maxWidth: '500px'
                     }}
                     src={props.image}
                     alt="Event" />
