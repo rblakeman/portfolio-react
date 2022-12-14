@@ -21,7 +21,8 @@ type EventPayload = {
 
 const FA_SIZE = '5x';
 const ICON_SIZE = '80px';
-const VERCEL_DEPLOY = 'https://portfolio-express-rblakeman.vercel.app';
+// Not ideal, band-aid for now
+const VERCEL_DEPLOY = process.env.REACT_APP_BASE_URL || '';
 
 type Props = {};
 export default function Events (props: Props) {

@@ -10,12 +10,13 @@ node_modules
 
 # production
 /build
+dist
 
 # misc
 .DS_Store
 .vscode
 
-# dev
+# secrets
 .env
 .env.local
 .env.development
