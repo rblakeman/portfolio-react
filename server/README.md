@@ -13,5 +13,5 @@ yarn install
 ### Developing
 
 ```bash
-yarn start
+yarn dev
 ```
