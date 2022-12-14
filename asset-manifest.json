@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.28fcb44c.css",
-    "main.js": "/static/js/main.7d55624f.js",
+    "main.js": "/static/js/main.f4f6e710.js",
     "static/media/Moli_Hello_jellygif.gif": "/static/media/Moli_Hello_jellygif.def058952c4fec84f2ca.gif",
     "static/media/marble1.png": "/static/media/marble1.c1207b60ff1423a30027.png",
     "static/media/UROC_Poster_2016.png": "/static/media/UROC_Poster_2016.cb3ffec48f69dd4eb2fb.png",
@@ -36,10 +36,10 @@
     "static/media/redux_logo.svg": "/static/media/redux_logo.26af2f77153e7ecb088494ad78d56734.svg",
     "index.html": "/index.html",
     "main.28fcb44c.css.map": "/static/css/main.28fcb44c.css.map",
-    "main.7d55624f.js.map": "/static/js/main.7d55624f.js.map"
+    "main.f4f6e710.js.map": "/static/js/main.f4f6e710.js.map"
   },
   "entrypoints": [
     "static/css/main.28fcb44c.css",
-    "static/js/main.7d55624f.js"
+    "static/js/main.f4f6e710.js"
   ]
 }
