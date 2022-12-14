@@ -7,8 +7,10 @@ An interactive resume, a side-project I like to revisit over the years.
 ## Getting Started
 
 ```bash
-yarn install
+yarn setup
 ```
+
+## UI
 
 ### Developing
 
@@ -38,6 +40,14 @@ yarn test
 
 Hosts static information and images, currently just used for the "Events"
 
+### Developing
+
 ```bash
-yarn server
+yarn dev:server
+```
+
+### Typechecking
+
+```bash
+yarn typecheck:server
 ```
