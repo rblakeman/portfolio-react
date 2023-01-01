@@ -4,9 +4,10 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npx tsc && cp -r public/ dist/public/",
+    "build": "npx tsc && yarn build:assets",
+    "build:assets": "cp -r public/ dist/public/",
     "start": "node dist/index.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "dev": "concurrently \"yarn build && npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "typecheck": "tsc --noEmit"
   },
   "author": "Ryan Blakeman",
