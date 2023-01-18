@@ -32,7 +32,7 @@ class App extends Component<Props, State> {
             currPage: ''
         };
 
-        console.log('last updated: Jan 1, 2023 (Happy New Year)');
+        console.log('last updated: Jan 17, 2023');
     }
 
     setPage = (newPage: Page) => {

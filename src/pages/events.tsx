@@ -21,8 +21,11 @@ type EventPayload = {
 
 const FA_SIZE = '5x';
 const ICON_SIZE = '80px';
-// Not ideal, band-aid for now
-const VERCEL_DEPLOY = process.env.REACT_APP_BASE_URL || '';
+let VERCEL_DEPLOY = 'https://portfolio-express-rblakeman.vercel.app';
+// Can't use simple if() since '' is a valid local base_url
+if (typeof process.env.REACT_APP_BASE_URL === 'string') {
+    VERCEL_DEPLOY = process.env.REACT_APP_BASE_URL;
+}
 
 type Props = {};
 export default function Events (props: Props) {
