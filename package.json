@@ -8,6 +8,7 @@
         "dev": "concurrently \"yarn dev:ui\" \"yarn dev:server\"",
         "dev:ui": "react-scripts start",
         "dev:server": "cd server && yarn dev",
+        "build": "yarn build:ui && yarn build:server",
         "build:ui": "react-scripts build",
         "build:server": "cd server && yarn build",
         "test": "react-scripts test",
@@ -18,7 +19,7 @@
         "deploy": "gh-pages -d build",
         "verify": "yarn lint && yarn typecheck && yarn test --watchAll=false && yarn verify:server",
         "verify:server": "cd server && yarn typecheck",
-        "verify:ci": "yarn verify && yarn build:ui"
+        "verify:ci": "yarn verify && yarn build"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -28,7 +29,7 @@
         "@material-ui/core": "^4.12.4",
         "@material-ui/icons": "^4.11.3",
         "@types/jest": "^29.5.14",
-        "@types/node": "^20.17.24",
+        "@types/node": "^22.13.10",
         "@types/react": "^18.3.18",
         "@types/react-dom": "^18.3.5",
         "react": "^18.3.1",
