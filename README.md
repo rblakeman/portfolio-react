@@ -2,12 +2,13 @@
 
 Ryan Blakeman | rblakeman31@gmail.com | ryanblakeman.com
 
-An interactive resume, a side-project I like to revisit over the years.
+An interactive resume, a side-project I try to revisit over the years.
 
 ## Getting Started
 
 ```bash
 yarn setup
+yarn dev
 ```
 
 ## UI
@@ -15,7 +16,7 @@ yarn setup
 ### Developing
 
 ```bash
-yarn start
+yarn dev:ui
 ```
 
 ### Linting
