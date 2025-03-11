@@ -4,22 +4,21 @@
     "private": true,
     "homepage": "https://ryanblakeman.com",
     "scripts": {
-        "setup": "yarn install && cd server && yarn install",
-        "start": "react-scripts start",
-        "dev": "concurrently \"yarn start\" \"yarn dev:server\"",
-        "start:server": "cd server && yarn start",
+        "setup": "yarn install --frozen-lockfile && cd server && yarn install --frozen-lockfile",
+        "dev": "concurrently \"yarn dev:ui\" \"yarn dev:server\"",
+        "dev:ui": "react-scripts start",
         "dev:server": "cd server && yarn dev",
-        "build": "react-scripts build",
+        "build:ui": "react-scripts build",
         "build:server": "cd server && yarn build",
         "test": "react-scripts test",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
         "typecheck": "tsc --noEmit",
         "eject": "react-scripts eject",
-        "predeploy": "npm run build",
+        "predeploy": "yarn build:ui",
         "deploy": "gh-pages -d build",
         "verify": "yarn lint && yarn typecheck && yarn test --watchAll=false && yarn verify:server",
         "verify:server": "cd server && yarn typecheck",
-        "verify:ci": "yarn verify && yarn build"
+        "verify:ci": "yarn verify && yarn build:ui"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.2.1",
