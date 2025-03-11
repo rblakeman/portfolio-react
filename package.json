@@ -37,6 +37,9 @@
         "react-scripts": "5.0.1",
         "typescript": "^5.8.2"
     },
+    "resolutions": {
+        "react-scripts/**/postcss": "^8.4.31"
+    },
     "devDependencies": {
         "@babel/eslint-parser": "^7.26.8",
         "@babel/preset-react": "^7.26.3",
