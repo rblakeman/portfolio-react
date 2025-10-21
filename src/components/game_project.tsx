@@ -1,5 +1,5 @@
+import { Button, Divider, Paper } from '@mui/material';
 import React, { useState } from 'react';
-import { Paper, Button, Divider } from '@material-ui/core';
 
 import { useWindowDimensions } from '../utils';
 
@@ -14,19 +14,19 @@ const styles = {
         justifyContent: 'space-between',
         margin: '16px',
         padding: '16px',
-        backgroundColor: '#f7fafd'
+        backgroundColor: '#f7fafd',
     } as React.CSSProperties,
     left: {
         display: 'flex',
         flexDirection: 'column',
         margin: '15px',
-        maxWidth: '500px'
+        maxWidth: '500px',
     } as React.CSSProperties,
     right: {
         display: 'flex',
         flexDirection: 'column',
         margin: '15px 0px',
-        maxWidth: '500px'
+        maxWidth: '500px',
     } as React.CSSProperties,
 
     //left
@@ -35,7 +35,7 @@ const styles = {
         color: '#5a5a5a',
         fontWeight: 400,
         lineHeight: 1,
-        marginBottom: '15px'
+        marginBottom: '15px',
     } as React.CSSProperties,
     tags: {
         fontSize: '38px',
@@ -43,20 +43,20 @@ const styles = {
         fontWeight: 400,
         lineHeight: 1,
         letterSpacing: '-0.05rem',
-        margin: '15px 0px 20px 0px'
+        margin: '15px 0px 20px 0px',
     } as React.CSSProperties,
     description: {
         fontSize: '1.25rem',
         color: '#5a5a5a',
         fontWeight: 300,
         lineHeight: 1.5,
-        marginTop: '10px'
+        marginTop: '10px',
     } as React.CSSProperties,
     url: {
-        marginTop: '10px'
+        marginTop: '10px',
     } as React.CSSProperties,
     urltext: {
-        color: '#0275D8'
+        color: '#0275D8',
     } as React.CSSProperties,
 
     //right
@@ -66,14 +66,14 @@ const styles = {
         backgroundColor: 'rgb(2, 117, 216)',
         color: 'white',
         margin: '0px 5px',
-        textTransform: 'none'
+        textTransform: 'none',
     } as React.CSSProperties,
     buttonUnselected: {
         backgroundColor: 'white',
         color: 'black',
         margin: '0px 5px',
-        textTransform: 'none'
-    } as React.CSSProperties
+        textTransform: 'none',
+    } as React.CSSProperties,
 };
 
 type Icon = {
@@ -89,13 +89,13 @@ type Props = {
     title: string;
     tags: string;
     contents: string;
-    externalLink?: { url: string; text: string; }[];
+    externalLink?: { url: string; text: string }[];
     list?: React.ReactNode[];
-    images: { img: any; text: string }[];
+    images: { img: string; text: string }[];
     imageSize?: string;
     icons?: Icon[];
 };
-export default function GamesProject(props: Props) {
+export const GameProject = (props: Props) => {
     const {
         title,
         tags,
@@ -104,7 +104,7 @@ export default function GamesProject(props: Props) {
         list = [],
         images,
         imageSize,
-        icons = []
+        icons = [],
     } = props;
     const { width } = useWindowDimensions();
     const [currImage, setCurrImage] = useState(images[0].img);
@@ -120,14 +120,18 @@ export default function GamesProject(props: Props) {
                         {externalLink ? (
                             <div style={styles.url}>
                                 <a
-                                    target="_blank"
+                                    target='_blank'
                                     style={styles.urltext}
                                     href={externalLink[0].url}>
                                     {externalLink[0].text}
                                 </a>
                             </div>
                         ) : null}
-                        {list ? (list.length > 0 ? renderBulletList() : null) : null}
+                        {list
+                            ? list.length > 0
+                                ? renderBulletList()
+                                : null
+                            : null}
                     </div>
                 </div>
                 <div style={{ marginTop: '30px' }}>
@@ -156,12 +160,22 @@ export default function GamesProject(props: Props) {
                     } else if (icon.type && icon.type === 'svg') {
                         return (
                             <img
-                                style={{ maxWidth: `${icon.size}`, marginLeft: '10px' }}
+                                style={{
+                                    maxWidth: `${icon.size}`,
+                                    marginLeft: '10px',
+                                }}
                                 src={icon.svg}
-                                key={idx} />
+                                key={idx}
+                            />
                         );
                     } else {
-                        return <img key={idx} src={icon.img} alt={icon.text} />;
+                        return (
+                            <img
+                                key={idx}
+                                src={icon.img}
+                                alt={icon.text}
+                            />
+                        );
                     }
                 })}
             </div>
@@ -176,18 +190,22 @@ export default function GamesProject(props: Props) {
                         style={{
                             borderRadius: '10px',
                             boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
-                            maxWidth: imageSize || '500px'
+                            maxWidth: imageSize || '500px',
                         }}
                         src={currImage}
-                        alt="Games Project" />
+                        alt='Games Project'
+                    />
                 </div>
-                <Divider variant="middle" style={{ margin: '20px 0px' }} />
+                <Divider
+                    variant='middle'
+                    style={{ margin: '20px 0px' }}
+                />
                 <div style={styles.buttons}>
                     {images.map((image, idx) => {
                         if (currImage === image.img)
                             return (
                                 <Button
-                                    variant="outlined"
+                                    variant='outlined'
                                     style={styles.buttonSelected}
                                     key={idx}
                                     onClick={(ev) => {
@@ -200,7 +218,7 @@ export default function GamesProject(props: Props) {
 
                         return (
                             <Button
-                                variant="outlined"
+                                variant='outlined'
                                 style={styles.buttonUnselected}
                                 key={idx}
                                 onClick={(ev) => {
@@ -221,10 +239,14 @@ export default function GamesProject(props: Props) {
             style={
                 width > MIN_DESKTOP_WIDTH
                     ? styles.container
-                    : { ...styles.container, flexDirection: 'column', width: '' }
+                    : {
+                          ...styles.container,
+                          flexDirection: 'column',
+                          width: '',
+                      }
             }>
             {renderLeftSide()}
             {renderRightSide()}
         </Paper>
     );
-}
+};

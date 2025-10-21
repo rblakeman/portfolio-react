@@ -1,126 +1,157 @@
-import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faReact,
-    faJs,
-    faHtml5,
-    faPhp,
-    faCss3Alt,
     faAndroid,
+    faCss3Alt,
+    faHtml5,
     faJava,
-    faRaspberryPi
+    faJs,
+    faPhp,
+    faRaspberryPi,
+    faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faMicrochip } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
 
 // IMAGES
 import WeatherIMG from '../img/software/react/weather.png';
 import YouTubeIMG from '../img/software/react/youtube.png';
 //
+import AddIMG from '../img/software/web/add.png';
+import AdminIMG from '../img/software/web/admin.png';
 import HomeWebIMG from '../img/software/web/home.png';
 import LogInIMG from '../img/software/web/log_in.png';
-import AdminIMG from '../img/software/web/admin.png';
-import AddIMG from '../img/software/web/add.png';
 import UpdatedIMG from '../img/software/web/updated.png';
 //
-import HomeAndroidIMG from '../img/software/android/home_screen.png';
-import CreateAccountSuccessIMG from '../img/software/android/create_account_success.png';
-import CreateAccountFailIMG from '../img/software/android/create_account_fail.png';
-import ReserveIMG from '../img/software/android/reserve.png';
 import CancelReservationIMG from '../img/software/android/cancel_reservation.png';
+import CreateAccountFailIMG from '../img/software/android/create_account_fail.png';
+import CreateAccountSuccessIMG from '../img/software/android/create_account_success.png';
+import HomeAndroidIMG from '../img/software/android/home_screen.png';
+import ReserveIMG from '../img/software/android/reserve.png';
 //
-import TopViewIMG from '../img/software/clamshell/top_view.jpg';
 import BottomViewIMG from '../img/software/clamshell/bottom_view.jpg';
 import DiagramIMG from '../img/software/clamshell/process_diagram.png';
+import TopViewIMG from '../img/software/clamshell/top_view.jpg';
 
-import Banner from '../components/banner';
-import SoftwareProject from '../components/software_project';
+import { Banner } from '../components/banner';
+import { SoftwareProject } from '../components/software_project';
 
 import ReduxLogo from '../img/software/react/redux_logo.svg';
+import { FA_SIZE } from './constants';
 
 const styles = {
     root: {
         // maxWidth: '1125px',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
         // margin: 'auto'
-    } as React.CSSProperties
+    } as React.CSSProperties,
 };
 
-const FA_SIZE = '5x';
-
-type Props = { };
-export default function Software (props: Props) {
+export const Software = () => {
     return (
         <div style={styles.root}>
-            <Banner text="Software Projects" />
+            <Banner text='Software Projects' />
             <SoftwareProject
-                title="React Apps"
-                tags="ReactJS, Redux, AJAX"
-                contents="Full-Stack projects using various combinations of React, Redux, and AJAX. Some projects are hosted on GitHub Pages, interactive demos to the right."
+                title='React Apps'
+                tags='ReactJS, Redux, AJAX'
+                contents='Full-Stack projects using various combinations of React, Redux, and AJAX. Some projects are hosted on GitHub Pages, interactive demos to the right.'
                 list={[
                     'Weather Forecast App',
                     'YouTube Search and Viewer App',
                     'Searchable Pokedex App',
                     'Color Palette and Photography App',
-                    'Tic-Tac-Toe App'
+                    'Tic-Tac-Toe App',
                 ]}
                 images={[
-                    { text: 'Weather', img: WeatherIMG, link: 'https://rblakeman.github.io/WeatherMapApp/' },
-                    { text: 'YouTube', img: YouTubeIMG, link: 'https://rblakeman.github.io/YouTubeApp/' },
-                    { text: 'Pokedex', img: null, link: 'https://rblakeman.github.io/PokedexApp/' },
-                    { text: 'Colors', img: null, link: 'https://rblakeman.github.io/ColorApp' },
-                    { text: 'TicTacToe', img: null, link: 'https://rblakeman.github.io/TicTacToe' }
+                    {
+                        text: 'Weather',
+                        img: WeatherIMG,
+                        link: 'https://rblakeman.github.io/WeatherMapApp/',
+                    },
+                    {
+                        text: 'YouTube',
+                        img: YouTubeIMG,
+                        link: 'https://rblakeman.github.io/YouTubeApp/',
+                    },
+                    {
+                        text: 'Pokedex',
+                        img: null,
+                        link: 'https://rblakeman.github.io/PokedexApp/',
+                    },
+                    {
+                        text: 'Colors',
+                        img: null,
+                        link: 'https://rblakeman.github.io/ColorApp',
+                    },
+                    {
+                        text: 'TicTacToe',
+                        img: null,
+                        link: 'https://rblakeman.github.io/TicTacToe',
+                    },
                 ]}
                 icons={[
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faReact'
                                 icon={faReact}
-                                style={{ color: 'rgb(100,212,242)', marginLeft: '10px' }}
-                                size={FA_SIZE} />
+                                style={{
+                                    color: 'rgb(100,212,242)',
+                                    marginLeft: '10px',
+                                }}
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
+                        type: 'fa',
                     },
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faJs'
                                 icon={faJs}
-                                style={{ color: 'rgb(246,222,56)', marginLeft: '10px' }}
-                                size={FA_SIZE} />
+                                style={{
+                                    color: 'rgb(246,222,56)',
+                                    marginLeft: '10px',
+                                }}
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
+                        type: 'fa',
                     },
                     {
-                        img: ReduxLogo
-                    }
-                ]} />
+                        img: ReduxLogo,
+                    },
+                ]}
+            />
             <SoftwareProject
-                title="Web Development Catalog"
-                tags="HTML, CSS, PHP, JS, jQuery"
-                contents="GitHub Repository from all of my projects and assignments from university course. Screenshots are from final project, demonstrating the basic CRUD operations on the database."
+                title='Web Development Catalog'
+                tags='HTML, CSS, PHP, JS, jQuery'
+                contents='GitHub Repository from all of my projects and assignments from university course. Screenshots are from final project, demonstrating the basic CRUD operations on the database.'
                 images={[
                     { text: 'Home', img: HomeWebIMG },
                     { text: 'LogIn', img: LogInIMG },
                     { text: 'Admin', img: AdminIMG },
                     { text: 'Add', img: AddIMG },
-                    { text: 'Updated', img: UpdatedIMG }
+                    { text: 'Updated', img: UpdatedIMG },
                 ]}
                 icons={[
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faHtml5'
                                 icon={faHtml5}
-                                style={{ color: 'rgb(226,77,44)', marginLeft: '10px' }}
-                                size={FA_SIZE} />
+                                style={{
+                                    color: 'rgb(226,77,44)',
+                                    marginLeft: '10px',
+                                }}
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
+                        type: 'fa',
                     },
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faPhp'
                                 icon={faPhp}
@@ -128,119 +159,142 @@ export default function Software (props: Props) {
                                     backgroundColor: 'rgb(85,86,133)',
                                     color: 'white',
                                     marginLeft: '10px',
-                                    borderRadius: '10px'
+                                    borderRadius: '10px',
                                 }}
-                                size={FA_SIZE} />
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
+                        type: 'fa',
                     },
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faJs'
                                 icon={faJs}
-                                style={{ color: 'rgb(246,222,56)', marginLeft: '10px' }}
-                                size={FA_SIZE} />
+                                style={{
+                                    color: 'rgb(246,222,56)',
+                                    marginLeft: '10px',
+                                }}
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
+                        type: 'fa',
                     },
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faCss3Alt'
                                 icon={faCss3Alt}
-                                style={{ color: 'rgb(16,113,181)', marginLeft: '10px' }}
-                                size={FA_SIZE} />
+                                style={{
+                                    color: 'rgb(16,113,181)',
+                                    marginLeft: '10px',
+                                }}
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
-                    }
-                ]} />
+                        type: 'fa',
+                    },
+                ]}
+            />
             <SoftwareProject
-                title="Otter Flight Reservation System"
-                tags="Android App"
-                contents="App allows customers of an airline company to create accounts and manage reservations. Demonstrated use-case scenarios for both users and administrators to manage SQLite database. Created with Android Studio and applied Java focused design skills"
+                title='Otter Flight Reservation System'
+                tags='Android App'
+                contents='App allows customers of an airline company to create accounts and manage reservations. Demonstrated use-case scenarios for both users and administrators to manage SQLite database. Created with Android Studio and applied Java focused design skills'
                 images={[
                     { text: 'Home', img: HomeAndroidIMG },
                     { text: 'Create Account', img: CreateAccountSuccessIMG },
-                    { text: 'Create Account (fail)', img: CreateAccountFailIMG },
+                    {
+                        text: 'Create Account (fail)',
+                        img: CreateAccountFailIMG,
+                    },
                     { text: 'Reserve', img: ReserveIMG },
-                    { text: 'Cancel Reservation', img: CancelReservationIMG }
+                    { text: 'Cancel Reservation', img: CancelReservationIMG },
                 ]}
                 icons={[
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faAndroid'
                                 icon={faAndroid}
-                                style={{ color: 'rgb(103,174,74)', marginLeft: '10px' }}
-                                size={FA_SIZE} />
+                                style={{
+                                    color: 'rgb(103,174,74)',
+                                    marginLeft: '10px',
+                                }}
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
+                        type: 'fa',
                     },
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faJava'
                                 icon={faJava}
                                 style={{
                                     color: 'rgb(84,131,161)',
-                                    marginLeft: '10px'
+                                    marginLeft: '10px',
                                 }}
-                                size={FA_SIZE} />
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
-                    }
-                ]} />
+                        type: 'fa',
+                    },
+                ]}
+            />
             <SoftwareProject
                 title='Parking Detector "Clamshell"'
-                tags="Iot: Integrated Microcontroller Project"
-                contents="Designed and fabricated a self-contained, 3d-printed parking detector. Communicates with a database to allows users to see available parking spots in crowded lots. Developed using Microcontroller, ultrasonic sensor, and solar panel"
+                tags='Iot: Integrated Microcontroller Project'
+                contents='Designed and fabricated a self-contained, 3d-printed parking detector. Communicates with a database to allows users to see available parking spots in crowded lots. Developed using Microcontroller, ultrasonic sensor, and solar panel'
                 images={[
                     { text: 'Top', img: TopViewIMG },
                     { text: 'Bottom', img: BottomViewIMG },
-                    { text: 'Diagram', img: DiagramIMG }
+                    { text: 'Diagram', img: DiagramIMG },
                 ]}
                 icons={[
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faDatabase'
                                 icon={faDatabase}
                                 style={{
                                     color: 'grey',
-                                    marginLeft: '10px'
+                                    marginLeft: '10px',
                                 }}
-                                size={FA_SIZE} />
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
+                        type: 'fa',
                     },
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faMicrochip'
                                 icon={faMicrochip}
                                 style={{
                                     color: 'rgb(18,77,58)',
-                                    marginLeft: '10px'
+                                    marginLeft: '10px',
                                 }}
-                                size={FA_SIZE} />
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
+                        type: 'fa',
                     },
                     {
-                        obj: (
+                        node: (
                             <FontAwesomeIcon
                                 key='faRaspberryPi'
                                 icon={faRaspberryPi}
                                 style={{
                                     color: 'rgb(194,30,75)',
-                                    marginLeft: '10px'
+                                    marginLeft: '10px',
                                 }}
-                                size={FA_SIZE} />
+                                size={FA_SIZE}
+                            />
                         ),
-                        type: 'fa'
-                    }
-                ]} />
+                        type: 'fa',
+                    },
+                ]}
+            />
         </div>
     );
-}
+};

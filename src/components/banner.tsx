@@ -9,8 +9,8 @@ const styles = {
         fontSize: '2.5rem',
         fontWeight: 500,
         color: '#5a5a5a',
-        marginBottom: '50px'
-    } as React.CSSProperties
+        marginBottom: '50px',
+    } as React.CSSProperties,
 };
 
 type Props = {
@@ -19,7 +19,7 @@ type Props = {
     text: string;
     description?: string;
 };
-export default function Banner (props: Props) {
+export const Banner = (props: Props) => {
     // renderBanner = () => {
     //     return (
     //         <div>
@@ -39,4 +39,4 @@ export default function Banner (props: Props) {
             {props.description}
         </div>
     );
-}
+};

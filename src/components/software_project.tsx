@@ -1,5 +1,5 @@
+import { Button, Divider, Paper } from '@mui/material';
 import React, { useState } from 'react';
-import { Paper, Button, Divider } from '@material-ui/core';
 
 import { useWindowDimensions } from '../utils';
 
@@ -14,19 +14,19 @@ const styles = {
         justifyContent: 'space-between',
         margin: '16px',
         padding: '16px',
-        backgroundColor: '#f7fafd'
+        backgroundColor: '#f7fafd',
     } as React.CSSProperties,
     left: {
         display: 'flex',
         flexDirection: 'column',
         margin: '15px',
-        maxWidth: '500px'
+        maxWidth: '500px',
     } as React.CSSProperties,
     right: {
         display: 'flex',
         flexDirection: 'column',
         margin: '15px 0px',
-        maxWidth: '500px'
+        maxWidth: '500px',
     } as React.CSSProperties,
 
     //left
@@ -35,7 +35,7 @@ const styles = {
         color: '#5a5a5a',
         fontWeight: 400,
         lineHeight: 1,
-        marginBottom: '15px'
+        marginBottom: '15px',
     } as React.CSSProperties,
     tags: {
         fontSize: '38px',
@@ -43,49 +43,49 @@ const styles = {
         fontWeight: 400,
         lineHeight: 1,
         letterSpacing: '-0.05rem',
-        margin: '15px 0px 20px 0px'
+        margin: '15px 0px 20px 0px',
     } as React.CSSProperties,
     description: {
         fontSize: '1.25rem',
         color: '#5a5a5a',
         fontWeight: 300,
         lineHeight: 1.5,
-        marginTop: '10px'
+        marginTop: '10px',
     } as React.CSSProperties,
 
     //right
     icons: {
         display: 'flex',
-        marginTop: '30px'
+        marginTop: '30px',
     } as React.CSSProperties,
     picture: { alignSelf: 'center' }, //display: 'flex', justifyContent: 'center' },
     buttons: {
         alignSelf: 'center',
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'center'
+        justifyContent: 'center',
     } as React.CSSProperties,
     buttonSelected: {
         backgroundColor: 'rgb(2, 117, 216)',
         color: 'white',
         margin: '0px 5px',
         textTransform: 'none',
-        marginBottom: '10px'
+        marginBottom: '10px',
     } as React.CSSProperties,
     buttonUnselected: {
         backgroundColor: 'white',
         color: 'black',
         margin: '0px 5px',
         textTransform: 'none',
-        marginBottom: '10px'
-    } as React.CSSProperties
+        marginBottom: '10px',
+    } as React.CSSProperties,
 };
 
 type Icon = {
     type?: 'fa';
     text?: string;
-    img?: any;
-    obj?: any;
+    img?: string;
+    node?: React.ReactNode;
 };
 
 type Props = {
@@ -93,18 +93,11 @@ type Props = {
     tags: string;
     contents: string;
     list?: React.ReactNode[];
-    images: { img: any; text: string; link?: string }[];
+    images: { img: string; text: string; link?: string }[];
     icons: Icon[];
 };
-export default function SoftwareProject(props: Props) {
-    const {
-        title,
-        tags,
-        contents,
-        list = [],
-        images,
-        icons
-    } = props;
+export const SoftwareProject = (props: Props) => {
+    const { title, tags, contents, list = [], images, icons } = props;
     const { width } = useWindowDimensions();
     const [currText, setCurrText] = useState(images[0].text);
     const [currImage, setCurrImage] = useState(images[0].img);
@@ -118,7 +111,11 @@ export default function SoftwareProject(props: Props) {
                     <div style={styles.tags}>{tags}</div>
                     <div style={styles.description}>
                         {contents}
-                        {list ? (list.length > 0 ? renderBulletList() : null) : null}
+                        {list
+                            ? list.length > 0
+                                ? renderBulletList()
+                                : null
+                            : null}
                     </div>
                 </div>
                 {icons ? (icons.length > 0 ? renderIcons() : null) : null}
@@ -141,14 +138,19 @@ export default function SoftwareProject(props: Props) {
             <div style={styles.icons}>
                 {icons.map((icon, idx) => {
                     if (icon.type && icon.type === 'fa') {
-                        return icon.obj;
+                        return icon.node;
                     } else {
                         return (
                             <img
                                 key={idx}
-                                style={{ width: '80px', height: '80px', marginLeft: '10px' }}
+                                style={{
+                                    width: '80px',
+                                    height: '80px',
+                                    marginLeft: '10px',
+                                }}
                                 src={icon.img}
-                                alt={icon.text} />
+                                alt={icon.text}
+                            />
                         );
                     }
                 })}
@@ -162,41 +164,51 @@ export default function SoftwareProject(props: Props) {
                 <div style={styles.picture}>
                     {currImage !== null ? (
                         currLink ? (
-                            <a href={currLink} target="_blank">
+                            <a
+                                href={currLink}
+                                target='_blank'>
                                 <img
                                     style={{
                                         borderRadius: '10px',
-                                        boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
-                                        maxWidth: '500px'
+                                        boxShadow:
+                                            'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
+                                        maxWidth: '500px',
                                         // maxHeight: '500px'
                                     }}
                                     src={currImage}
-                                    alt="Software Project" />
+                                    alt='Software Project'
+                                />
                             </a>
                         ) : (
                             <img
                                 style={{
                                     borderRadius: '10px',
-                                    boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
-                                    maxWidth: '500px'
+                                    boxShadow:
+                                        'rgba(0, 0, 0, 0.2) 0px 1px 10px 4px',
+                                    maxWidth: '500px',
                                     // maxHeight: '500px'
                                 }}
                                 src={currImage}
-                                alt="Software Project" />
+                                alt='Software Project'
+                            />
                         )
                     ) : (
                         <iframe
                             src={currLink}
-                            style={{ width: '450px', height: '400px' }} />
+                            style={{ width: '450px', height: '400px' }}
+                        />
                     )}
                 </div>
-                <Divider variant="middle" style={{ margin: '20px 0px' }} />
+                <Divider
+                    variant='middle'
+                    style={{ margin: '20px 0px' }}
+                />
                 <div style={styles.buttons}>
                     {images.map((image, idx) => {
                         if (currText === image.text)
                             return (
                                 <Button
-                                    variant="outlined"
+                                    variant='outlined'
                                     style={styles.buttonSelected}
                                     key={idx}
                                     onClick={(ev) => {
@@ -211,7 +223,7 @@ export default function SoftwareProject(props: Props) {
 
                         return (
                             <Button
-                                variant="outlined"
+                                variant='outlined'
                                 style={styles.buttonUnselected}
                                 key={idx}
                                 onClick={(ev) => {
@@ -234,10 +246,14 @@ export default function SoftwareProject(props: Props) {
             style={
                 width > MIN_DESKTOP_WIDTH
                     ? styles.container
-                    : { ...styles.container, flexDirection: 'column', width: '' }
+                    : {
+                          ...styles.container,
+                          flexDirection: 'column',
+                          width: '',
+                      }
             }>
             {renderLeftSide()}
             {renderRightSide()}
         </Paper>
     );
-}
+};

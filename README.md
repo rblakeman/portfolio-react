@@ -7,8 +7,8 @@ An interactive resume, a side-project I try to revisit over the years.
 ## Getting Started
 
 ```bash
-yarn setup
-yarn dev
+npm run :i # npm run init
+npm run :s # npm run start
 ```
 
 ## UI
@@ -16,39 +16,49 @@ yarn dev
 ### Developing
 
 ```bash
-yarn dev:ui
+npm run dev:ui
 ```
 
-### Linting
+### Checks
+
+Run all checks
 
 ```bash
-yarn lint
+npm run :v
 ```
 
-### Typechecking
+OR individually:
+
+#### Formatting
 
 ```bash
-yarn typecheck
+npm run format
 ```
 
-### Testing
+#### Linting
 
 ```bash
-yarn test
+npm run lint
+```
+
+#### Typechecking
+
+```bash
+npm run typecheck
 ```
 
 ## Express Server
 
-Hosts static information and images, currently just used for the "Events"
+Hosts static information and images, currently just used for the "Events" assets
 
 ### Developing
 
 ```bash
-yarn dev:server
+npm run dev:server
 ```
 
 ### Typechecking
 
 ```bash
-yarn typecheck:server
+npm run typecheck:server
 ```

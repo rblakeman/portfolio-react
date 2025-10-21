@@ -1,5 +1,5 @@
+import AppBar from '@mui/material/AppBar';
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
 const styles = {
     appBar: {
         height: '48px',
@@ -8,21 +8,22 @@ const styles = {
         padding: 15,
         marginTop: 45,
         backgroundColor: '#0275d8',
-        justifyContent: 'center'
+        justifyContent: 'center',
     } as React.CSSProperties,
     linkText: {
         textDecoration: 'none',
-        color: 'white'
-    } as React.CSSProperties
+        color: 'white',
+    } as React.CSSProperties,
 };
 
-type Props = { };
-export default (props: Props) => {
+export const NotificationBar = () => {
     return (
-        <AppBar style={styles.appBar} position="relative">
+        <AppBar
+            style={styles.appBar}
+            position='relative'>
             <a
                 style={styles.linkText}
-                href="https://github.com/rblakeman/portfolio-react">
+                href='https://github.com/rblakeman/portfolio-react'>
                 Click here to view Repository
             </a>
         </AppBar>

@@ -7,11 +7,11 @@ Simple express server to host static information and images. Deployed and Hosted
 ## Getting Started
 
 ```bash
-yarn install
+npm ci
 ```
 
 ### Developing
 
 ```bash
-yarn dev
+npm run dev
 ```

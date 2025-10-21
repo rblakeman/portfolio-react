@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from '@material-ui/core';
-import KeyboardArrowUpRounded from '@material-ui/icons/KeyboardArrowUpRounded';
+import KeyboardArrowUpRounded from '@mui/icons-material/KeyboardArrowUpRounded';
+import { Button } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 
 const styles = {
     footer: {
@@ -10,7 +10,7 @@ const styles = {
         justifyContent: 'space-between',
         margin: 'auto', //'0px 32px 32px 32px',
         padding: '0px 48px 48px 48px', //'0px 16px 16px 16px',
-        maxWidth: '1250px'
+        maxWidth: '1250px',
     } as React.CSSProperties,
     scrollButton: {
         // width: '64px',
@@ -22,12 +22,12 @@ const styles = {
         borderRadius: '100%',
         backgroundColor: '#FFFFFF',
         color: '#0275D8',
-        boxShadow: '0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12)'
-    } as React.CSSProperties
+        boxShadow:
+            '0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12)',
+    } as React.CSSProperties,
 };
 
-type Props = { };
-export default function Footer (props: Props) {
+export const Footer = () => {
     const [hidden, setHidden] = useState(true);
 
     useEffect(() => {
@@ -53,9 +53,12 @@ export default function Footer (props: Props) {
         <div style={styles.footer}>
             <p style={{ margin: 0 }}>
                 &copy; {getYear()} Ryan Blakeman &middot;
-                <a href="mailto:rblakeman31@gmail.com">Email</a> &middot;
-                <a href="https://www.linkedin.com/in/rblakeman/">LinkedIn</a> &middot;
-                <a href="https://www.github.com/rblakeman/">GitHub</a>
+                <a href='mailto:rblakeman31@gmail.com'>Email</a> &middot;
+                <a href='https://www.linkedin.com/in/rblakeman/'>
+                    LinkedIn
+                </a>{' '}
+                &middot;
+                <a href='https://www.github.com/rblakeman/'>GitHub</a>
                 <br />
             </p>
             <Button
@@ -67,8 +70,10 @@ export default function Footer (props: Props) {
                 onClick={() => {
                     window.scrollTo(0, 0);
                 }}>
-                <KeyboardArrowUpRounded style={{ height: '36px', width: '36px' }} />
+                <KeyboardArrowUpRounded
+                    style={{ height: '36px', width: '36px' }}
+                />
             </Button>
         </div>
     );
-}
+};

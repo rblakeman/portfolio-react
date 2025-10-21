@@ -1,5 +1,5 @@
+import Paper from '@mui/material/Paper';
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
 
 import { useWindowDimensions } from '../utils';
 
@@ -14,18 +14,18 @@ const styles = {
         justifyContent: 'space-between',
         margin: '16px',
         padding: '16px',
-        backgroundColor: '#f7fafd'
+        backgroundColor: '#f7fafd',
     } as React.CSSProperties,
     text: {
         margin: '15px',
-        maxWidth: '500px'
+        maxWidth: '500px',
     } as React.CSSProperties,
     title: {
         fontSize: '46px',
         color: '#5a5a5a',
         fontWeight: 400,
         lineHeight: 1,
-        marginBottom: '15px'
+        marginBottom: '15px',
     } as React.CSSProperties,
     date: {
         fontSize: '32px',
@@ -33,28 +33,28 @@ const styles = {
         fontWeight: 400,
         lineHeight: 1,
         letterSpacing: '-0.05rem',
-        margin: '15px 0px 20px 0px'
+        margin: '15px 0px 20px 0px',
     } as React.CSSProperties,
     description: {
         fontSize: '1.125rem',
         color: '#5a5a5a',
         fontWeight: 300,
         lineHeight: 1.5,
-        marginTop: '10px'
+        marginTop: '10px',
     } as React.CSSProperties,
     picture: {
-        margin: '0px 15px'
-    } as React.CSSProperties
+        margin: '0px 15px',
+    } as React.CSSProperties,
 };
 
 type Props = {
     title: string;
     date: string;
     contents: string;
-    image: any;
+    image: string;
     flipped?: boolean;
 };
-export default function Event (props: Props) {
+export const Event = (props: Props) => {
     const { width } = useWindowDimensions();
 
     const renderText = () => {
@@ -74,10 +74,11 @@ export default function Event (props: Props) {
                     style={{
                         borderRadius: '5px',
                         boxShadow: 'rgba(0, 0, 0, 0.2) 0px 1px 5px 1px',
-                        maxWidth: '500px'
+                        maxWidth: '500px',
                     }}
                     src={props.image}
-                    alt="Event" />
+                    alt='Event'
+                />
             </div>
         );
     };
@@ -85,20 +86,21 @@ export default function Event (props: Props) {
     if (width > MIN_DESKTOP_WIDTH) {
         return (
             <Paper style={styles.container}>
-                {props.flipped
-                    ? renderPicture()
-                    : renderText()}
-                {props.flipped
-                    ? renderText()
-                    : renderPicture()}
+                {props.flipped ? renderPicture() : renderText()}
+                {props.flipped ? renderText() : renderPicture()}
             </Paper>
         );
     } else {
         return (
-            <Paper style={{ ...styles.container, flexDirection: 'column', width: '' }}>
+            <Paper
+                style={{
+                    ...styles.container,
+                    flexDirection: 'column',
+                    width: '',
+                }}>
                 {renderText()}
                 {renderPicture()}
             </Paper>
         );
     }
-}
+};

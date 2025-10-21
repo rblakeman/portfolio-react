@@ -9,9 +9,15 @@ const app: Express = express();
 const PORT = 3001;
 const BASE = '/api';
 
-app.use(cors({
-    origin: ['https://ryanblakeman.com', 'https://rblakeman.github.io/', 'http://localhost:3000']
-}));
+app.use(
+    cors({
+        origin: [
+            'https://ryanblakeman.com',
+            'https://rblakeman.github.io/',
+            'http://localhost:3000',
+        ],
+    }),
+);
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
