@@ -1,27 +1,27 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "npx tsc && yarn build:assets",
-    "build:assets": "cp -r public/ dist/public/",
-    "start": "node dist/index.js",
-    "dev": "concurrently \"yarn build && npx tsc --watch\" \"nodemon -q dist/index.js\"",
-    "typecheck": "tsc --noEmit"
-  },
-  "author": "Ryan Blakeman",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.2"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.13.10",
-    "concurrently": "^9.1.2",
-    "nodemon": "^3.1.9",
-    "typescript": "^5.8.2"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Simple static asset server",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "npx tsc && npm run build:assets",
+        "build:assets": "cp -r public/ dist/public/",
+        "start": "node dist/index.js",
+        "dev": "concurrently \"npm run build && npx tsc --watch\" \"nodemon -q dist/index.js\"",
+        "typecheck": "tsc --noEmit"
+    },
+    "author": "Ryan Blakeman",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.3",
+        "@types/node": "^22.18.12",
+        "concurrently": "^9.2.1",
+        "nodemon": "^3.1.10",
+        "typescript": "^5.9.3"
+    }
 }

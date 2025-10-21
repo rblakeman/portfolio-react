@@ -1,12 +1,12 @@
-import React from 'react';
-import { AppBar, MenuItem, Typography } from '@material-ui/core';
 import {
-    Event,
     Code,
-    VideogameAsset,
+    Description,
     Edit,
-    Description
-} from '@material-ui/icons';
+    Event,
+    VideogameAsset,
+} from '@mui/icons-material';
+import { AppBar, MenuItem } from '@mui/material';
+import React from 'react';
 
 import type { Page } from '../pages/typings';
 import { useWindowDimensions } from '../utils';
@@ -21,21 +21,25 @@ const styles = {
         justifyContent: 'space-evenly',
         alignItems: 'center',
         height: '46px',
-        padding: '0px 20px'
+        padding: '0px 20px',
     } as React.CSSProperties,
     left: {
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
     } as React.CSSProperties,
     linkText: { color: '#ddd', textDecoration: 'none' } as React.CSSProperties,
-    nameText: { color: '#fff', textDecoration: 'none', fontSize: 'larger' } as React.CSSProperties,
-    icons: { paddingRight: '5px' } as React.CSSProperties
+    nameText: {
+        color: '#fff',
+        textDecoration: 'none',
+        fontSize: 'larger',
+    } as React.CSSProperties,
+    icons: { paddingRight: '5px' } as React.CSSProperties,
 };
 
 type Props = {
     onPageClick: (pageName: Page) => void;
 };
-export default function MenuBar (props: Props) {
+export const MenuBar = (props: Props) => {
     const { onPageClick } = props;
     const { width } = useWindowDimensions();
 
@@ -76,4 +80,4 @@ export default function MenuBar (props: Props) {
             </MenuItem>
         </AppBar>
     );
-}
+};

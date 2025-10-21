@@ -1,47 +1,40 @@
-import React, { Component } from 'react';
-import { Divider, Tabs, Tab, AppBar } from '@material-ui/core';
+import { Divider } from '@mui/material';
+import React, { useRef, useState } from 'react';
 
-import MenuBar from './components/menu_bar';
-import NotificationBar from './components/notification_bar';
-import Footer from './components/footer';
+import { Footer } from './components/footer';
+import { MenuBar } from './components/menu_bar';
+import { NotificationBar } from './components/notification_bar';
 
-import Home from './pages/home';
-import Events from './pages/events';
-import Software from './pages/software';
+import { Events } from './pages/events';
 import Games from './pages/games';
-import Research from './pages/research';
-import Resume from './pages/resume';
+import { Home } from './pages/home';
+import { Research } from './pages/research';
+import { Resume } from './pages/resume';
+import { Software } from './pages/software';
 import type { Page } from './pages/typings';
+import { useOnMount } from './utils';
 
 const styles = {
     root: {
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
-    } as React.CSSProperties
+        fontFamily:
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    } as React.CSSProperties,
 };
 
-type Props = { };
-type State = { currPage: string; };
-class App extends Component<Props, State> {
-    myRef: React.RefObject<HTMLDivElement>;
+export const App = () => {
+    const [currPage, setCurrPage] = useState('');
+    const myRef = useRef<HTMLDivElement>(null);
 
-    constructor(props: Props) {
-        super(props);
-        this.myRef = React.createRef();
+    useOnMount(() => {
+        console.log('last updated: Oct 20, 2025');
+    });
 
-        this.state = {
-            currPage: ''
-        };
-
-        console.log('last updated: Mar 10, 2025');
-    }
-
-    setPage = (newPage: Page) => {
-        this.setState({ currPage: newPage });
-        window.scrollTo(0, this.myRef.current!.offsetTop);
+    const setPage = (newPage: Page) => {
+        setCurrPage(newPage);
+        window.scrollTo(0, myRef.current!.offsetTop);
     };
 
-    renderContentPage() {
-        const { currPage } = this.state;
+    const renderContentPage = () => {
         if (currPage === '' || currPage === 'Events') {
             return <Events />;
         } else if (currPage === 'Software') {
@@ -53,25 +46,31 @@ class App extends Component<Props, State> {
         } else if (currPage === 'Resume') {
             return <Resume />;
         }
-    }
+    };
 
-    render() {
-        return (
-            <div style={styles.root} className="App">
-                <NotificationBar />
-                <MenuBar onPageClick={(newPage: Page) => this.setPage(newPage)} />
-                <Home />
-                <div ref={this.myRef}>
-                    <Divider variant="middle" style={{ margin: '50px 16px 16px 16px' }} />
-                </div>
-                <div style={{ margin: '32px' }}>
-                    <div style={{ padding: '16px' }}>{this.renderContentPage()}</div>
-                </div>
-                <Divider variant="middle" style={{ margin: '50px 0px' }} />
-                <Footer />
+    return (
+        <div
+            style={styles.root}
+            className='App'>
+            <NotificationBar />
+            <MenuBar onPageClick={(newPage: Page) => setPage(newPage)} />
+            <Home />
+            <div ref={myRef}>
+                <Divider
+                    variant='middle'
+                    style={{ margin: '50px 16px 16px 16px' }}
+                />
             </div>
-        );
-    }
-}
+            <div style={{ margin: '32px' }}>
+                <div style={{ padding: '16px' }}>{renderContentPage()}</div>
+            </div>
+            <Divider
+                variant='middle'
+                style={{ margin: '50px 0px' }}
+            />
+            <Footer />
+        </div>
+    );
+};
 
 export default App;

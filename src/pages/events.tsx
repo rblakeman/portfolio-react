@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Banner from '../components/banner';
-import Event from '../components/event';
+import { Banner } from '../components/banner';
+import { Event } from '../components/event';
 import { useFetch } from '../utils';
 
 const styles = {
     container: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
-    } as React.CSSProperties
+        alignItems: 'center',
+    } as React.CSSProperties,
 };
 
 type EventPayload = {
@@ -19,22 +19,19 @@ type EventPayload = {
     image: string;
 };
 
-const FA_SIZE = '5x';
-const ICON_SIZE = '80px';
 let VERCEL_DEPLOY = 'https://portfolio-express-rblakeman.vercel.app';
-// Can't use simple if() since '' is a valid local base_url
-if (typeof process.env.REACT_APP_BASE_URL === 'string') {
-    VERCEL_DEPLOY = process.env.REACT_APP_BASE_URL;
+// Can't use simple if() since '' is a valid base_url for local development
+if (typeof import.meta.env.VITE_BASE_URL === 'string') {
+    VERCEL_DEPLOY = import.meta.env.VITE_BASE_URL;
 }
 
-type Props = {};
-export default function Events (props: Props) {
-    const [ res, err ] = useFetch(`${VERCEL_DEPLOY}/api/events`);
+export const Events = () => {
+    const [res, err] = useFetch(`${VERCEL_DEPLOY}/api/events`);
 
     const renderEventList = () => {
-        const events = res.events! || [];
+        const events = res?.events || [];
 
-        if (!events.length) {
+        if (!events || !events.length) {
             return <div>Loading...</div>;
         }
 
@@ -47,19 +44,21 @@ export default function Events (props: Props) {
                 contents,
                 image: `${VERCEL_DEPLOY}${image}`,
                 flipped: idx % 2 === 0,
-                key: idx
+                key: idx,
             };
 
-            return (
-                <Event {...eventProps} />
-            );
+            return <Event {...eventProps} />;
         });
     };
 
     return (
         <div style={styles.container}>
-            <Banner text="Events" />
-            {renderEventList()}
+            <Banner text='Events' />
+            {err ? (
+                <div>D'oh! Something went wrong, please try again later.</div>
+            ) : (
+                renderEventList()
+            )}
         </div>
     );
 };

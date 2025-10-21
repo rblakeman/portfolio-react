@@ -1,14 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useOnMount } from './on-mount';
 
-export function useFetch(url: string) {
-    const [response, setResponse] = useState({}) as any;
-    const [error, setError] = useState({}) as any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useFetch<T = any, E = any>(url: string) {
+    const [response, setResponse] = useState<T>();
+    const [error, setError] = useState<E>();
 
-    useEffect(() => {
+    useOnMount(() => {
         callBackendAPI()
-            .then((res: any) => setResponse(res))
-            .catch((err: any) => setError(err));
-    }, []);
+            .then((res: T) => setResponse(res))
+            .catch((err: E) => setError(err));
+    });
 
     const callBackendAPI = async () => {
         const response = await fetch(url);
@@ -21,5 +23,5 @@ export function useFetch(url: string) {
         return body;
     };
 
-    return [ response, error ];
+    return [response, error];
 }
