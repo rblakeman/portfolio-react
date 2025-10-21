@@ -2,6 +2,60 @@ const IMAGE_URL = '/static/images';
 
 export const eventList = [
     {
+        title: 'New Furry Family Member',
+        date: 'September 2025',
+        contents: `A friend once famously said, "Two Dachshund is easier than one", after settling down from a busy couple years we adopted Zelda, Mipha's baby sister.`,
+        image: `${IMAGE_URL}/zelda.jpeg`,
+    },
+    {
+        title: 'Japan',
+        date: 'May 2025',
+        contents:
+            'Bucket list trip exploring Japan during some time out of office.',
+        image: `${IMAGE_URL}/japan.jpeg`,
+    },
+    {
+        title: 'Wedding',
+        date: 'September 2024',
+        contents:
+            'The weather held out for a beautiful, sunny ceremony surrounded by our family and friends.',
+        image: `${IMAGE_URL}/wedding.jpeg`,
+    },
+    {
+        title: 'First Home',
+        date: 'March 2024',
+        contents:
+            'Unforgettable experience watching our pup explore her first ever backyard.',
+        image: `${IMAGE_URL}/first_home.jpeg`,
+    },
+    {
+        title: 'First Snow Day',
+        date: 'January 2024',
+        contents: 'First time experiencing snow at home.',
+        image: `${IMAGE_URL}/first_snow.jpeg`,
+    },
+    {
+        title: 'PAX West 2023',
+        date: 'September 2023',
+        contents:
+            'Not quite a replacement for GDC but we were lucky enough to catch a seat for a keynote from Reggie Fils-Aimé.',
+        image: `${IMAGE_URL}/pax_2023.jpeg`,
+    },
+    {
+        title: 'Moving to Washington State',
+        date: 'August 2023',
+        contents:
+            'After much planning, my partner and I moved to Washington state to enjoy the seasons and start new roots.',
+        image: `${IMAGE_URL}/moving_wa.jpeg`,
+    },
+    {
+        title: 'GDC 2023',
+        date: 'March 2023',
+        contents:
+            'In tradition, catching up with some colleagues in between the game demos and speakers. Pictured is a rooftop spot above Moscone Center to enjoy some fresh air, looking North towards Mission street.',
+        image: `${IMAGE_URL}/gdc_2023.jpeg`,
+    },
+    {
         title: 'Tenable UI/Design Local Meetup',
         date: 'September 2022',
         contents:
@@ -9,10 +63,17 @@ export const eventList = [
         image: `${IMAGE_URL}/tenb_ux_meetup.jpg`,
     },
     {
+        title: 'First Puppy',
+        date: 'July 2022',
+        contents:
+            'Despite being known as the cat person, we welcomed a new furry family member, Mipha the miniature Dachshund. I only now understand what "crazy puppy energy" truly means.',
+        image: `${IMAGE_URL}/mipha.jpeg`,
+    },
+    {
         title: 'GDC 2022',
         date: 'March 2022',
         contents:
-            'Back in person for the first time since 2019, it was nice to catch up with friends despite the lower attendance from both attendees and companies. Pictured is a rooftop spot above Moscone Center to enjoy some fresh air, looking North towards Mission street.',
+            'Back in person for the first time since 2019, it was nice to catch up with friends despite the lower attendance from both attendees and companies.',
         image: `${IMAGE_URL}/gdc_2022.jpeg`,
     },
     {
@@ -51,17 +112,11 @@ export const eventList = [
     },
     {
         title: 'The New Normal',
-        date: '2020',
+        date: 'March 2020',
         contents:
             'With the onset of a global pandemic and the cabin fever growing stronger, I tried to take more trips away from the city and into nature. Pictured is a hike in the Sanborn Parks just outside Saratoga.',
         image: `${IMAGE_URL}/sanborn_hike.jpeg`,
     },
-    // {
-    //     title: 'Working From Home',
-    //     date: 'March 2020',
-    //     contents: '',
-    //     image: null
-    // },
     {
         title: 'New Bay Area Tenable Office',
         date: 'February 2020',
@@ -69,12 +124,12 @@ export const eventList = [
             'We were so excited to have a new official space in Santa Clara. It was very spacious and quiet compared to WeWork. Unfortunately we were only in here for about a month before 2020 took its course.',
         image: `${IMAGE_URL}/tenable_santaclara.jpeg`,
     },
-    // {
-    //     title: 'Downtown Bicycle Commute',
-    //     date: 'Fall 2019',
-    //     contents: `After settling in at Tenable I decided to start biking to work a few days out of the week. A nice change from the previous driving commute and on my off days I could still take the local light rail transit.`,
-    //     image: null
-    // },
+    {
+        title: 'Downtown Bicycle Commute',
+        date: 'Fall 2019',
+        contents: `After settling in at Tenable I decided to start biking to work a few days out of the week. A nice change from the previous driving commute and on my off-days I could still take the local light rail transit.`,
+        image: `${IMAGE_URL}/downtown_commute.jpg`,
+    },
     {
         title: 'First Day at Tenable',
         date: 'August 2019',
