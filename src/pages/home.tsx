@@ -15,7 +15,7 @@ import { useWindowDimensions } from '../utils';
 import Blurb_CSUMBLogo from '../img/csumb_logo.png';
 import Blurb_Experience from '../img/experience_pic.png';
 import Blurb_GRLLogo from '../img/grl_logo.png';
-import ProfilePic from '../img/profile_pic.jpeg';
+import ProfilePic from '../img/profile_pic.png';
 
 const MIN_DESKTOP_WIDTH = 830;
 const styles = {
@@ -129,9 +129,9 @@ export const Home = () => {
                                 ? styles.titles
                                 : styles.smallTitles
                         }>
-                        <div>Software Engineer</div>
-                        <div>Front-End UI Developer</div>
-                        <div>Game Developer</div>
+                        <div>Senior Software Engineer</div>
+                        <div>Front-End UI/UX Developer</div>
+                        {/* <div>Game Developer</div> */}
                     </Typography>
                     {width < MIN_DESKTOP_WIDTH ? (
                         <div style={styles.profilePic}>
@@ -153,30 +153,52 @@ export const Home = () => {
                                 ? styles.description
                                 : styles.smallDescription
                         }>
-                        I am currently a UI Software Engineer at Tenable,
-                        working on the Design Engineering team. The main focus
-                        for our team is to bridge the gap between Design and
-                        Engineering. We are responsible for creating the
-                        Portfolio Design System, a library of theming tokens and
-                        framework agnostic web-components designed for use in
-                        all Tenable products, regardless of tech-stack.
+                        I am a Senior Software Engineer at Tenable, currently
+                        working on the UI Team. The main focus for our team is
+                        to deliver on new and improved features for the Tenable
+                        VM and EM product suite. Most recently we've released
+                        brand new VM-based solutions{' '}
+                        <a
+                            target='__blank'
+                            href='https://www.tenable.com/lp/vulnerability-intelligence/'>
+                            Vulnerability Intelligence, Exposure Response
+                        </a>
+                        , and re-built the Explore Assets & Findings Workbench.
                         <br />
+                        <br />
+                        To enable our fast paced development, I've worked
+                        closely with my teammates, some neighboring product
+                        teams, and our design team to develop a set of shared
+                        internal tools. Including a global header and navigation
+                        library that is used as the anchor point for all Tenable
+                        UI applications. As well as a new set of themeable React
+                        component libraries, ranging from atomic elements to
+                        molecular filtering and paginated grid systems.
+                        <br />
+                        <br />
+                        In my 6+ years here at Tenable I've seen countless
+                        projects and many teams. Notably I worked on the Design
+                        Engineering team to bridge the gap between Design and
+                        Engineering. We were responsible for creating a
+                        universal Design System, a library of theming tokens and
+                        framework agnostic Lit web-components designed for use
+                        in all Tenable products, regardless of tech-stack.
+                        {/* <br />
                         <br />
                         My responsibilities include component creation, meetings
                         with the Design & UX team, collaborating on issues with
                         my teammates, and providing guidance for our feature
-                        teams adopting the design-system into their product.
+                        teams adopting the design-system into their product. */}
+                        {/* <br />
                         <br />
-                        <br />
-                        Prior to this, my team initially started as the UI
-                        Platform team, where we maintained and enhanced the
-                        monolithic Tenable IO platform and assisted its suite of
-                        product teams. This includes expanding on its own
-                        internal design system, alongside other theming tools
-                        and frameworks to ensure cross-app consistency. We also
-                        worked closely with the T.io Dashboards and Reporting
-                        team to integrate an API focused reusable visualization
-                        framework.
+                        Initially, we started as the UI Platform team, where we
+                        maintained and enhanced the monolithic Tenable IO
+                        platform and assisted its suite of product teams. This
+                        includes expanding on its own internal design system,
+                        alongside other theming tools and frameworks to ensure
+                        cross-app consistency. We also worked closely with the
+                        T.io Dashboards and Reporting team to integrate an API
+                        focused reusable visualization framework. */}
                         {/* I was previously a Software Engineer at Robin Care Inc. My
                         achievements include a newly designed customizable
                         Patient-Onboarding registration flow and an intelligent Patient
