@@ -295,7 +295,8 @@ export const Home = () => {
                     contents='Private lab and workspace for HCI, Robotics, Computer Graphics, and Game research. Annual host of many undergraduate funded research projects and papers.'
                     button_text='Research'
                     // button_url="http://gameresearchlab.org/"
-                    button_url='https://www.pietroszek.com/research/'
+                    // button_url='https://www.pietroszek.com/research/'
+                    button_url='https://csumb.edu/magazine/new-reality/'
                 />
             </div>
         </div>
