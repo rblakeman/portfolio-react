@@ -5,7 +5,7 @@ import {
     Event,
     VideogameAsset,
 } from '@mui/icons-material';
-import { AppBar, MenuItem } from '@mui/material';
+import { AppBar, Button } from '@mui/material';
 import React from 'react';
 
 import type { Page } from '../pages/typings';
@@ -47,37 +47,62 @@ export const MenuBar = (props: Props) => {
         <AppBar style={styles.appBar}>
             {/* <div style={styles.left}> */}
             {/* <MenuItem style={styles.nameText}>Ryan Blakeman</MenuItem> */}
-            <MenuItem
+            <Button
+                sx={{
+                    textTransform: 'none',
+                    fontSize: '16px',
+                    fontWeight: 400,
+                }}
                 onClick={() => onPageClick('Events')}
                 style={styles.linkText}>
                 <Event style={styles.icons} />
                 {width >= MIN_DESKTOP_WIDTH ? 'Events' : null}
-            </MenuItem>
-            <MenuItem
+            </Button>
+            <Button
+                sx={{
+                    textTransform: 'none',
+                    fontSize: '16px',
+                    fontWeight: 400,
+                }}
                 onClick={() => onPageClick('Software')}
                 style={styles.linkText}>
                 <Code style={styles.icons} />
                 {width >= MIN_DESKTOP_WIDTH ? 'Software' : null}
-            </MenuItem>
-            <MenuItem
+            </Button>
+            <Button
+                sx={{
+                    textTransform: 'none',
+                    fontSize: '16px',
+                    fontWeight: 400,
+                }}
                 onClick={() => onPageClick('Games')}
                 style={styles.linkText}>
                 <VideogameAsset style={styles.icons} />
                 {width >= MIN_DESKTOP_WIDTH ? 'Games' : null}
-            </MenuItem>
-            <MenuItem
+            </Button>
+            <Button
+                sx={{
+                    textTransform: 'none',
+                    fontSize: '16px',
+                    fontWeight: 400,
+                }}
                 onClick={() => onPageClick('Research')}
                 style={styles.linkText}>
                 <Edit style={styles.icons} />
                 {width >= MIN_DESKTOP_WIDTH ? 'Research' : null}
-            </MenuItem>
+            </Button>
             {/* </div> */}
-            <MenuItem
+            <Button
+                sx={{
+                    textTransform: 'none',
+                    fontSize: '16px',
+                    fontWeight: 400,
+                }}
                 onClick={() => onPageClick('Resume')}
                 style={styles.linkText}>
                 <Description style={styles.icons} />
                 {width >= MIN_DESKTOP_WIDTH ? 'Resume' : null}
-            </MenuItem>
+            </Button>
         </AppBar>
     );
 };

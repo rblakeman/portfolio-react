@@ -154,10 +154,18 @@ export const Home = () => {
                                 : styles.smallDescription
                         }>
                         I am a Senior Software Engineer at Tenable, currently
-                        working on the UI Team. The main focus for our team is
-                        to deliver on new and improved features for the Tenable
-                        VM and EM product suite. Most recently we've released
-                        brand new VM-based solutions{' '}
+                        working on the UI and AI Platform Team. The main focus
+                        for our team is to deliver on new and improved features
+                        for the Tenable VM and EM product suite. We just
+                        released 🐝{' '}
+                        <a
+                            target='__blank'
+                            href='https://www.tenable.com/blog/hexa-ai-agentic-ai-for-exposure-management'>
+                            Hexa AI
+                        </a>
+                        , an agentic advisor to assist and automate your
+                        Exposure workflow. Prior to that, we released brand new
+                        VM-based solutions{' '}
                         <a
                             target='__blank'
                             href='https://www.tenable.com/lp/vulnerability-intelligence/'>

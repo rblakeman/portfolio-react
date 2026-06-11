@@ -4,7 +4,7 @@ export const eventList = [
     {
         title: 'New Furry Family Member',
         date: 'September 2025',
-        contents: `A friend once famously said, "Two Dachshund is easier than one", after settling down from a busy couple years we adopted Zelda, Mipha's baby sister.`,
+        contents: `A friend once famously said, "Two Dachshunds are easier than one", after settling down from a busy couple years we adopted Zelda, Mipha's baby sister.`,
         image: `${IMAGE_URL}/zelda.jpeg`,
     },
     {
@@ -134,7 +134,7 @@ export const eventList = [
         title: 'First Day at Tenable',
         date: 'August 2019',
         contents:
-            'Working in downtown out of a medium-sized WeWork office with some of the other Bay Area hub coworkers. Pictured is the view from the office of the San Jose city hall.',
+            'Working in downtown out of a medium-sized WeWork office with some of the other Bay Area hub coworkers. Pictured is the view from the office looking at San Jose city hall.',
         image: `${IMAGE_URL}/tenable_downtown.jpeg`,
     },
     {
