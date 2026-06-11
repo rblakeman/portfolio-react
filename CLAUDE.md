@@ -25,7 +25,7 @@ This is a portfolio site with a React/Vite frontend and a small Express backend.
 
 **Frontend** (`src/`)
 - React 19 + TypeScript, built with Vite (rolldown-vite)
-- MUI v7 for UI components; FontAwesome for icons
+- MUI v9 for UI components; FontAwesome for icons
 - **Routing is manual**: `App.tsx` holds current page in state and renders pages via a `switch` in `renderContentPage()`. There is no React Router. The `Page` union type lives in `src/pages/typings/index.ts`.
 - **No global state management** — navigation state lives in `App.tsx`, everything else uses props and local hooks.
 - Styling is inline `React.CSSProperties` objects; MUI's `sx` prop is used for MUI-specific styling.
