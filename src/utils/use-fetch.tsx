@@ -6,12 +6,6 @@ export function useFetch<T = any, E = any>(url: string) {
     const [response, setResponse] = useState<T>();
     const [error, setError] = useState<E>();
 
-    useOnMount(() => {
-        callBackendAPI()
-            .then((res: T) => setResponse(res))
-            .catch((err: E) => setError(err));
-    });
-
     const callBackendAPI = async () => {
         const response = await fetch(url);
         const body = await response.json();
@@ -22,6 +16,12 @@ export function useFetch<T = any, E = any>(url: string) {
 
         return body;
     };
+
+    useOnMount(() => {
+        callBackendAPI()
+            .then((res: T) => setResponse(res))
+            .catch((err: E) => setError(err));
+    });
 
     return [response, error];
 }

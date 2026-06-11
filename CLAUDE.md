@@ -24,6 +24,7 @@ No test runner is configured — there are no unit or integration tests.
 This is a portfolio site with a React/Vite frontend and a small Express backend.
 
 **Frontend** (`src/`)
+
 - React 19 + TypeScript, built with Vite (rolldown-vite)
 - MUI v9 for UI components; FontAwesome for icons
 - **Routing is manual**: `App.tsx` holds current page in state and renders pages via a `switch` in `renderContentPage()`. There is no React Router. The `Page` union type lives in `src/pages/typings/index.ts`.
@@ -32,12 +33,14 @@ This is a portfolio site with a React/Vite frontend and a small Express backend.
 - Custom hooks in `src/utils/`: `useOnMount`, `useFetch`, `useWindowDimensions`.
 
 **Backend** (`server/`)
+
 - Express 5 serving events data (`event-list.ts`) and static assets.
 - Deployed to Vercel (`server/vercel.json`).
 - CORS allows `localhost:3000`, `ryanblakeman.com`, `rblakeman.github.io`.
 - Dev proxy: Vite proxies `/api` and `/static` to `localhost:3001`.
 
 **Deployment**
+
 - UI → GitHub Pages (`gh-pages` package, deploys `dist/`)
 - Server → Vercel
 
