@@ -43,7 +43,7 @@ This is a portfolio site with a React/Vite frontend and a small Express backend.
 
 ## Key Conventions
 
-- Node `^22.20.0` required.
+- Node `^24.12.0` required.
 - TypeScript strict mode is on; no unused locals/parameters allowed (`tsconfig.app.json`).
 - ESLint uses flat config (`eslint.config.js`); Prettier is enforced via `npm run lint:prettier`.
 - To add a new page: create a file in `src/pages/`, add its name to the `Page` union in `src/pages/typings/index.ts`, add a `case` in `App.tsx`'s switch, and add a menu entry in `src/components/menu_bar.tsx`.
